@@ -19,3 +19,9 @@ tr{
 td{
     margin: 50px;
 }
+p{
+    margin-left: 20xp;
+    margin-right: 20xp;
+    color: red;
+    font-size: large;
+}

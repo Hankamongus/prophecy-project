@@ -2,10 +2,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Background Image</title>
+    <title>Prophecies Christ Fulfilled</title>
     <style>
         body {
-            background-image: url('https://cliparting.com/wp-content/uploads/2018/03/cross-pictures-2018-1.jpg');
+            background-image: url('https://images.unsplash.com/photo-1590070168023-5395dfaa6b24?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
             background-size: cover;
             background-attachment: fixed;
             background-repeat: no-repeat;
@@ -14,18 +14,15 @@
 
     </style>
 </head>
-  <title>Christmas verses</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
   </head>
   <body>
     <div style max-width: 100ch>
        <h1 style="display: flex; width: 100%; justify-content: center; text-align: center;">
-        <strong>ProtoEvangelium</strong>&nbsp;
+        <strong>The one the Prophets Fortold</strong>&nbsp;
      </h1>
-     <h1 style="display: flex; width: 100%; justify-content: center; text-align: center;">
-      (<em>The First Gospel</em>)&nbsp;
-     </h1>
+
     </div>
   <link href="https://fonts.googleapis.com/css?family=Lato: 100,300,400,700|Luckiest+Guy|Oxygen:300,400" rel="stylesheet">
   <link href="style.css" type="text/css" rel="stylesheet">
@@ -48,15 +45,12 @@
       </div> -->
       <div style="display: flex; width: 100%; justify-content: center; margin-top: 50px; margin-bottom: 20px;">
         <form action="/search" method="get">
-          <input type="text" name="q" placeholder="Search...">
-          <input type="submit" value="Search">
+          <input type="text" name="q" placeholder="Search..." style="width: 300px; height: 40px; border-radius: 10px;">
+          <input type="submit" value="">
         </form>
       </div>
       <div style="display: flex; width: 100%; justify-content: center; margin-top: 50px; margin-bottom: 20px; margin-left: 20px; margin-right: 20px;">
-      <p><em><strong>But when the fullness of time had come, God sent forth his Son, born of woman, born under the law, to redeem those who were under the law, so that we might receive adoption as sons.</strong></em></p>
-      </div>
-      <div style="display: flex; width: 100%; justify-content: center; margin-top: 50px; margin-bottom: 20px; margin-left: 20px; margin-right: 20px;">
-        <p><em><strong>Do not think that I have come to abolish the Law or the Prophets; I have not come to abolish them but to fulfill them.</strong></em></p>
+        <p><em><strong>"Do not think that I have come to abolish the Law or the Prophets; I have not come to abolish them but to fulfill them."</strong>(Mathew 5:17)</em></p>
       </div>
 
         <!--
@@ -67,14 +61,15 @@
              <option><a href="#exodus">Exodus</a></option>
                <option><a href="#leviticus">Leviticus</a></option>
            </select>
-        </form> -->
+        </form>
     </div>
     <div id="genesis" display: flex; width: 100%; justify-content: center; margin-top: 50px; margin-bottom: 20px;">
       <em><strong><h1>Genesis:</h1></strong></em>
     </div>
+-->
     <div
          id ="app" style= "width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding-top: 10rem; padding-bottom: 5rem; padding-left: 1rem; padding-right: 1rem;">
-        <div style="max-width: 68ch; color: white;">
+        <div style="max-width: 100ch; color: white;">
 
 
           <div class="bg-black p-12 rounded-xl">
@@ -85,22 +80,28 @@
             </div>
             <div v-for="p in prophecies" class="flex justify-between space-x-4 space-y-1">
               <div><a class="hover:underline text-red-500" :href="`https://www.biblegateway.com/passage/?search=${ p.Prophecy }`">{{ p.Prophecy }}</a></div>
-              <div class="underline">{{ p.Descriptions }}</div>
+              <div>{{ p.Descriptions }}</div>
               <div><a class="hover:underline text-red-500" :href="`https://www.biblegateway.com/passage/?search=${ p.Fulfillments }`">{{ p.Fulfillments }}</a></div>
             </div>
           </div>
 
         </div>
     </div>
-    <div id="exodus" display: flex; width: 100%; justify-content: center; margin-top: 50px; margin-bottom: 20px;">
+    <!-- <div id="exodus" display: flex; width: 100%; justify-content: center; margin-top: 50px; margin-bottom: 20px;">
       <em><strong><h1>Exodus:</h1></strong></em></div>
+
 
       <div id="leviticus" display: flex; width: 100%; justify-content: center; margin-top: 50px; margin-bottom: 20px;">
         <em><strong><h1>Leviticus:</h1></strong></em></div>
       <div style="width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding-top: 2rem; padding-bottom: 2rem; padding-left: 1rem; padding-right: 1rem;">
-
-          <a class="underline text-red-700" href="https://www.sermonaudio.com/saplayer/playpopup.asp?SID=1218231313312511">Mighty Christmas</a>
-     </div>
+      -->
+      <div class="sermon-audio" style="display: flex; width: 100%; justify-content: center; text-align: center;">
+          <audio controls>
+            <source
+            src="https://www.sermonaudio.com/saplayer/playpopup.asp?SID=1218231313312511."
+            type="audio/mp3">
+          </audio>
+        </div>
 
       <div style= "width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding-top: 5rem; padding-bottom: 5rem; padding-left: 5rem; padding-right: 5rem;">
       <div style="max-width: 100ch; color: white;">
@@ -196,8 +197,8 @@
                 },
                 {
                     Prophecy: "Ex 3:13-15",
-                    Descriptions:  "The Great I AM",
-                    Fulfillments:	"John 4:26; 8:58"
+                    Descriptions: "The Great I AM",
+                    Fulfillments: "John 4:26; 8:58"
                 },
                 {
                     Prophecy: "Ex 12:5",
@@ -257,7 +258,7 @@
                 {
                     Prophecy: "Lev 16:27",
                     Descriptions: "Suffering outside the Camp",
-                    Fulfillments: "Matt 27:33; Heb. 13:11-12"
+                    Fulfillments: "Matt 27:33; Heb 13:11-12"
                 },
                 {
                     Prophecy: "Lev 17:11",
@@ -267,7 +268,7 @@
                 {
                     Prophecy: "Lev 17:11",
                     Descriptions: "It is the blood that makes atonement",
-                    Fulfillments: "Rom 3:23-24 1 John 1:7"
+                    Fulfillments: "Rom 3:23-24; 1 John 1:7"
                 },
                 {
                     Prophecy: "Lev 23:36-37",
@@ -540,14 +541,14 @@
                     Fulfillments: "John 20:17"
                 },
                 {
-                    Prophecy: "Psa 22:2",
+                    Prophecy: "Psa 22:27",
                     Descriptions: "He shall be the governor of the nations",
                     Fulfillments: "Col 1:16"
                 },
                 {
                     Prophecy: "Psa 22:3",
                     Descriptions: "It is finished",
-                    Fulfillments: "John 19:30; Heb 10:10-12, 14, 18"
+                    Fulfillments: "John 19:30; Heb 10:10-12; 14, 18"
                 },
                 {
                     Prophecy: "Psa 23:1",
@@ -602,12 +603,12 @@
                 {
                     Prophecy: "Psa 38:11",
                     Descriptions: "His friends stood afar off",
-                    Fulfillments: "Luke 23:491"
+                    Fulfillments: "Luke 23:49"
                 },
                 {
                     Prophecy: "Psa 38:12",
                     Descriptions: "Enemies try to entangle Him by craft",
-                    Fulfillments: "Mark 14:1; Matt 22:1"
+                    Fulfillments: "Mark 14:1; Matt 22:15"
                 },
                 {
                     Prophecy: "Psa 38:12-13",
@@ -617,37 +618,37 @@
                 {
                     Prophecy: "Psa 38:20",
                     Descriptions: "He went about doing good",
-                    Fulfillments: "Acts 10:3"
+                    Fulfillments: "Acts 10:38"
                 },
                 {
                     Prophecy: "Psa 40:2-5",
                     Descriptions: "The joy of His resurrection predicted",
-                    Fulfillments: "John 20:2",
+                    Fulfillments: "John 20:20",
                 },
                 {
                     Prophecy: "Psa 40:6-8",
                     Descriptions: "His delight-the will of the Father",
-                    Fulfillments: "John 4:34; Heb 10:5-1"
+                    Fulfillments: "John 4:34; Heb 10:5-10"
                 },
                 {
                     Prophecy: "Psa 40:9",
                     Descriptions: "He was to preach the Righteousness in Israel",
-                    Fulfillments: "Matt 4:1"
+                    Fulfillments: "Matt 4:17"
                 },
                 {
                     Prophecy: "Psa 40:14",
                     Descriptions: "Confronted by adversaries in the Garden",
-                    Fulfillments: "John 18:4"
+                    Fulfillments: "John 18:4-6"
                 },
                 {
                     Prophecy: "Psa 41:9",
                     Descriptions: "Betrayed by a familiar friend",
-                    Fulfillments: "John 13:1"
+                    Fulfillments: "John 13:18"
                 },
                 {
                     Prophecy: "Psa 45:2",
                     Descriptions: "Words of Grace come from His lips",
-                    Fulfillments: "John 1:17; Luke 4:2"
+                    Fulfillments: "John 1:17; Luke 4:22"
                 },
                 {
                     Prophecy: "Psa 45:6",
@@ -802,27 +803,27 @@
                    {
                        Prophecy: "Psa 91:11-12",
                        Descriptions: "11-12	Identified as Messianic, used to tempt Christ",
-                       Fulfillments:	"Luke 4:10-11"
+                       Fulfillments: "Luke 4:10-11"
                    },
                    {
                        Prophecy: "Psa 97:9",
                        Descriptions: "His exaltation predicted",
-                       Fulfillments: "Acts 1:11; Eph 1:2"
+                       Fulfillments: "Acts 1:11; Eph 1:20"
                    },
                    {
                       Prophecy: "Psa 100:5",
                       Descriptions: "His character-Goodness",
-                      Fulfillments:	"Matt 19:16-1"
+                      Fulfillments:	"Matt 19:16-17"
                    },
                    {
                       Prophecy: "Psa 102:1-11",
                       Descriptions: "The Suffering and Reproach of Calvary",
-                      Fulfillments:  "John 19:16-3"
+                      Fulfillments:  "John 19:16-30"
                    },
                    {
                       Prophecy: "Psa 102:25-27",
                       Descriptions: "Messiah is the Preexistent Son",
-                      Fulfillments:  "Heb 1:10-11"
+                      Fulfillments:  "Heb 1:10-12"
                    },
                    {
                        Prophecy: "Psa 109:25",
@@ -832,37 +833,37 @@
                    {
                       Prophecy: "Psa 110:1",
                       Descriptions: "Son of David",
-                      Fulfillments:	"Matt 22:42-43"
+                      Fulfillments:	"Matt 22:42-45"
                     },
                     {
                         Prophecy: "Psa 110:1",
                         Descriptions: "To ascend to the right-hand of the Father",
-                        Fulfillments: "Mark 16:1"
+                        Fulfillments: "Mark 16:19"
                     },
                     {
                         Prophecy: "Psa 110:1",
                         Descriptions: "David's son called Lord",
-                        Fulfillments: "Matt 22:44-4"
+                        Fulfillments: "Matt 22:44-45"
                     },
                     {
                         Prophecy: "Ps 110:4",
                         Descriptions: "A priest after Melchizedek's order",
-                        Fulfillments: "Heb 6:2"
+                        Fulfillments: "Heb 6:20"
                     },
                     {
                         Prophecy: "Psa 112:4",
                         Descriptions: "His character-Compassionate, Gracious, eternal",
-                        Fulfillments: "Matt 9:3"
+                        Fulfillments: "Matt 9:36"
                     },
                     {
                         Prophecy: "Psa 118:17-18",
                         Descriptions: ":17-18	Messiah's Resurrection assured",
-                        Fulfillments: "Luke 24:5-7; 1 Cor 15:2"
+                        Fulfillments: "Luke 24:5-7; 1 Cor 15:20"
                     },
                     {
                         Prophecy: "Psa 118:22-23",
                         Descriptions: "The stone rejected is no foremsot",
-                         Fulfillments: "Matt 21:42-4"
+                         Fulfillments: "Matt 21:42-43"
                     },
                     {
                         Prophecy: "Psa 118:26a",
@@ -877,12 +878,12 @@
                     {
                         Prophecy: "Psa 132:1",
                         Descriptions: "The Seed of David (the fruit of His Body)",
-                        Fulfillments: "Luke 1:32; Act 2:3"
+                        Fulfillments: "Luke 1:32; Act 2:30"
                     },
                     {
                         Prophecy: "Psa 129:3",
                         Descriptions: "He was scourged",
-                        Fulfillments: "Matt27:2"
+                        Fulfillments: "Matt27:26"
                     },
                     {
                         Prophecy: "Psa 138:1-6",
@@ -902,37 +903,37 @@
                     {
                         Prophecy: "Prov 8:23",
                         Descriptions: "Foreordained from everlasting",
-                        Fulfillments:  "Rev 13:8; 1 Pet 1:19-2"
+                        Fulfillments:  "Rev 13:8; 1 Pet 1:19-20"
                     },
                     {
                         Prophecy: "Song 5:16",
                         Descriptions: "The altogether lovely One",
-                        Fulfillments: "John 1:1"
+                        Fulfillments: "John 1:17"
                     },
                     {
                         Prophecy: "Isa 2:3",
                         Descriptions: "He shall teach all nations",
-                        Fulfillments: "John 4:2"
+                        Fulfillments: "John 4:25"
                     },
                     {
                         Prophecy: "Isa 2:4",
                         Descriptions: "He shall judge among the nations",
-                        Fulfillments:  "John 5:2",
+                        Fulfillments:  "John 5:22",
                     },
                     {
                         Prophecy: "Isa 6:1",
                         Descriptions: "When Isaiah saw His glory",
-                        Fulfillments: "John 12:40-4"
+                        Fulfillments: "John 12:40-41"
                     },
                     {
                         Prophecy: " Isa 6:8",
                         Descriptions: "The One Sent by God",
-                        Fulfillments: "John 12:38-4",
+                        Fulfillments: "John 12:38-45",
                     },
                     {
                         Prophecy: "Isa 6:9-10",
                         Descriptions: "Parables fall on deaf ears",
-                        Fulfillments: "Matt 13:13-14"
+                        Fulfillments: "Matt 13:13-15"
                     },
                     {
                         Prophecy: "Isa 6:9-12",
@@ -942,17 +943,17 @@
                     {
                         Prophecy: "Isa 7:14",
                         Descriptions: "To be born of a virgin",
-                        Fulfillments: "Luke 1:31"
+                        Fulfillments: "Luke 1:35"
                     },
                     {
                         Prophecy: "Isa 7:14",
                         Descriptions: "To be Emmanuel-God with us",
-                        Fulfillments:  "Matt 1:18-23; 1 Tim 3:1"
+                        Fulfillments:  "Matt 1:18-23; 1 Tim 3:16"
                     },
                     {
                         Prophecy: "Isa 8:8",
                         Descriptions: "Called Emmanuel",
-                        Fulfillments:	"Matt 28:2",
+                        Fulfillments:	"Matt 28:20",
                     },
                     {
                         Prophecy: "Isa 8:14",
@@ -962,17 +963,17 @@
                     {
                         Prophecy: "Isa 9:1-2",
                         Descriptions: "His ministry to begin in Galilee",
-                        Fulfillments: "Matt 4:12-1"
+                        Fulfillments: "Matt 4:12-17"
                     },
                     {
                         Prophecy: "Isa 9:6",
                         Descriptions: "A child born-Humanity",
-                        Fulfillments: "Luke 1:3"
+                        Fulfillments: "Luke 1:31"
                     },
                     {
                         Prophecy: "Isa 9:6",
                         Descriptions: "A Son given-Deity",
-                        Fulfillments: "Luke 1:32; John 1:14; 1 Tim 3:1",
+                        Fulfillments: "Luke 1:32; John 1:14; 1 Tim 3:16",
                     },
                     {
                         Prophecy: "Isa 9:6",
@@ -987,32 +988,32 @@
                     {
                         Prophecy: "Isa 9:6",
                         Descriptions: "The Counselor, Yaatz",
-                        Fulfillments: "Matt 13:5",
+                        Fulfillments: "Matt 13:54",
                     },
                     {
                         Prophecy: "Isa 9:6",
                         Descriptions: "The Mighty God, El Gibor",
-                        Fulfillments: "1 Cor 1:24; Titus 2:"
+                        Fulfillments: "1 Cor 1:24; Titus 2:3"
                     },
                     {
                         Prophecy: "Isa 9:6",
                         Descriptions: "The Everlasting Father, Avi Adth",
-                        Fulfillments: "John 8:58; 10:3"
+                        Fulfillments: "John 8:58; 10:30"
                     },
                     {
                         Prophecy: "Isa 9:6",
                         Descriptions: "The Prince of Peace, Sar Shalom",
-                        Fulfillments: "John 16:3"
+                        Fulfillments: "John 16:33"
                     },
                     {
                         Prophecy: "Isa 9:7",
                         Descriptions: "To establish an everlasting kingdom",
-                        Fulfillments: "Luke 1:32-35"
+                        Fulfillments: "Luke 1:32-33"
                     },
                     {
                         Prophecy: "Isa 9:7",
                         Descriptions: "His Character-Just",
-                        Fulfillments:	"John 5:3"
+                        Fulfillments:	"John 5:30"
                     },
                     {
                         Prophecy: "Isa 9:7",
@@ -1022,122 +1023,122 @@
                     {
                         Prophecy: "Isa 11:1",
                         Descriptions: "Called a Nazarene-the Branch, Netzer",
-                        Fulfillments: "Matt 2:2",
+                        Fulfillments: "Matt 2:23",
                     },
                     {
                         Prophecy: "Isa 11:1",
                         Descriptions: "A rod out of Jesse-Son of Jesse",
-                        Fulfillments: "Luke 3:23-30"
+                        Fulfillments: "Luke 3:23-32"
                     },
                     {
                         Prophecy: "Isa 11:2",
                         Descriptions: "Anointed One by the Spirit",
-                        Fulfillments: "Matt 3:16-17; Acts 10:3"
+                        Fulfillments: "Matt 3:16-17; Acts 10:38"
                     },
                     {
                         Prophecy: "Isa 11:2",
                         Descriptions: "His Character-Wisdom, Knowledge, et al",
-                        Fulfillments: "Col 2:_"
+                        Fulfillments: "Col 2:3"
                     },
                     {
                         Prophecy: "Isa 11:3",
                         Descriptions: "He would know their thoughts",
-                        Fulfillments: "Luke 6:8; John 2:2_"
+                        Fulfillments: "Luke 6:8; John 2:25"
                     },
                     {
                         Prophecy: "Isa 11:4",
                         Descriptions: "Judges with the sword of His mouth",
-                        Fulfillments: "Rev 2:16; 19:11, 1"
+                        Fulfillments: "Rev 2:16; 19:11"
                     },
                     {
                         Prophecy: "Isa 11:5",
                         Descriptions: "Character: Righteous & Faithful",
-                        Fulfillments: "Rev 19:1"
+                        Fulfillments: "Rev 19:11"
                     },
                     {
                         Prophecy: "Isa 11:10",
                         Descriptions: "The Gentiles seek Him",
-                        Fulfillments: "John 12:18-2"
+                        Fulfillments: "John 12:18-21"
                     },
                     {
                         Prophecy: "Isa 12:2",
                         Descriptions: "Called Jesus-Yeshua",
-                        Fulfillments: "Matt 1:2"
+                        Fulfillments: "Matt 1:21"
                     },
                     {
                         Proohecy: "Isa 22:22",
                         Descriptions: "The One given all authority to govern",
-                        Fulfillments: "Rev 3:"
+                        Fulfillments: "Rev 3:7"
                     },
                     {
                         Prophecy: "Isa 25:8",
                         Descriptions: "The Resurrection predicted",
-                        Fulfillments: "1 Cor 15:5"
+                        Fulfillments: "1 Cor 15:54"
                     },
                     {
                         Prophecy: "Isa 26:19",
                         Descriptions: "His power of Resurrection predicted",
-                        Fulfillments: "Matt 27:50-5"
+                        Fulfillments: "Matt 27:50-54"
                     },
                     {
                         Prophecy: "Isa 28:16",
                         Descriptions: "The Messiah is the precious corner stone",
-                        Fulfillments: "Acts 4:11-1"
+                        Fulfillments: "Acts 4:11-12"
                     },
                     {
                         Prophecy: "Isa 28:16",
                         Descriptions: "The Sure Foundation",
-                        Fulfillments: "1 Cor 3:11; Matt 16:1"
+                        Fulfillments: "1 Cor 3:11; Matt 16:18"
                     },
                     {
                         Prophecy: "Isa 29:13",
                         Descriptions: "He indicated hypocritical obedience to His Word",
-                        Fulfillments: "Matt 15:7-"
+                        Fulfillments: "Matt 15:7-9"
                     },
                     {
                         Prophecy: "Isa 29:14",
                         Descriptions: "The wise are confounded by the Word",
-                        Fulfillments: "1 Cor 1:18-3"
+                        Fulfillments: "1 Cor 1:18-31"
                     },
                     {
                         Prophecy: "Isa 32:2",
                         Descriptions: "A Refuge-A man shall be a hiding plac",
-                        Fulfillments: "Matt 23:3"
+                        Fulfillments: "Matt 23:37"
                     },
                     {
                         Prophecy: "Isa 35:4",
                         Descriptions: "He will come and save you",
-                    	Fulfillments: "Matt 1:2"
+                    	Fulfillments: "Matt 1:21"
                     },
                     {
                         Prophecy: "Isa 35:5-6",
                         Descriptions: "To have a ministry of miracles",
-                        Fulfillments: "Matt 11:2-"
+                        Fulfillments: "Matt 11:2-6"
                     },
                     {
                         Prophecy: "Isa 40:3-4",
                         Descriptions: "Preceded by forerunner",
-                        Fulfillments: "John 1:2"
+                        Fulfillments: "John 1:23"
                     },
                     {
                         Prophecy: "Isa 40:9",
                         Descriptions: "Behold your God",
-                        Fulfillments: "John 1:36; 19:1"
+                        Fulfillments: "John 1:36; 19:14"
                     },
                     {
                         Prophecy: "Isa 40:10",
                         Descriptions: "He will come to reward",
-                        Fulfillments: "Rev 22:1"
+                        Fulfillments: "Rev 22:12"
                     },
                     {
                         Prophecy: "Isa 40:11",
                         Descriptions: "A shepherd-compassionate life-giver",
-                        Fulfillments: "John 10:10-1"
+                        Fulfillments: "John 10:10-18"
                     },
                     {
                         Prophecy: "Isa 42:1-4",
                         Descriptions: "The Servant-as a faithful, patient redeemer",
-                        Fulfillments: "Matt 12:18-2"
+                        Fulfillments: "Matt 12:18-21"
                     },
                 ]
               }

@@ -34,3 +34,16 @@ audio-container{
     border-radius: 50%;
     margin-right: 10px; /* Adjust the spacing between the picture and the audio player */
   }
+  body {
+    transition: background-color 0.5s;
+  }
+
+  .container {
+    text-align: center;
+    padding: 50px;
+  }
+
+  .dark-mode {
+    background-color: #333;
+    color: #fff;
+  }

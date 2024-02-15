@@ -90,12 +90,29 @@
               <div><strong>Descriptions</strong></div>
               <div><strong>Fulfillments</strong></div>
             </div>
-            <div v-for="p in prophecies" class="flex justify-between space-x-4 space-y-1">
+            <div v-for="p in prophecies" @click="selectProphecy(p)" class="flex justify-between space-x-4 space-y-1">
               <div><a class="hover:underline text-red-500" :href="`https://www.biblegateway.com/passage/?search=${ p.Prophecy }`">{{ p.Prophecy }}</a></div>
               <div>{{ p.Descriptions }}</div>
               <div><a class="hover:underline text-red-500" :href="`https://www.biblegateway.com/passage/?search=${ p.Fulfillments }`">{{ p.Fulfillments }}</a></div>
             </div>
           </div>
+
+        </div>
+        <div v-if="selectedProphecy" @click="selectedProphecy = null" class="fixed w-full h-screen flex items-center justify-center bg-black/50 backdrop-blur z-50 top-0 left-0">
+            <div @click.stop class="bg-white rounded-lg p-8">
+                <div class="text-center">
+                    <div class="font-bold text-xl">Prophecy</div>
+                    <div class="text-sm mt-4">{{ selectedProphecy.Descriptions }}</div>
+                </div>
+                <div class="grid grid-cols-1 nd:grid-cols-2 gap-4">
+                    <div class="p-2 border rounded bg-gray-50">
+                        <div>{{ selectedProphecy.Prophecy }}</div>
+                    </div>
+                    <div class="p-2 border rounded bg-gray-50">
+                        <div>{{ selectedProphecy.Fulfillments }}</div>
+                    </div>
+                </div>
+            </div>
 
         </div>
     </div>
@@ -124,12 +141,13 @@
             </p>
         </div>
 
-      <div style= "width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding-top: 5rem; padding-bottom: 5rem; padding-left: 5rem; padding-right: 5rem;">
-      <div style="max-width: 100ch; color: white;">
-      <script>
+    <!-- <div style= "width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding-top: 5rem; padding-bottom: 5rem; padding-left: 5rem; padding-right: 5rem;">
+      <div style="max-width: 100ch; color: white;"> -->
+    <script>
         const app = Vue.createApp({
           data(){
             return {
+              selectedProphecy: null,
               prophecies:[
                 {
                   Prophecy: "Gen 3:15",
@@ -1163,10 +1181,33 @@
                     },
                 ]
               }
-            }
-          })
+          },
+            methods: {
+                async selectProphecy(p) {
+                    p.prophecyScripture = await fetch('https://api.churchandfamilylife.com/controllers/scripture/query'){
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        scripture: p.prophecy,
+                        plainText: true,
+                        version:"nkjv"
+                    })
+                }
+                    consol.log('p.prophecyScripture', p.prophecyScripture)
+                    this.selectedProphecy = p
+                }
 
-          app.mount ('#app')
-      </script>
- </body>
- </html>
+            }
+         })
+         app.mount ('#app')
+        </script>
+    </body>
+</html>
+fetch('https://api.churchandfamilylife.com/controllers/scripture/query')
+                       method: 'POST',
+                       headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ prophecy: p })

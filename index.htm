@@ -1186,31 +1186,31 @@
           },
             methods: {
                 async selectProphecy(p) {
-                      let presponse = await fetch('https://api.churchandfamilylife.com/controllers/scripture/query'){
+                      let presponse = await fetch('https://api.churchandfamilylife.com/controllers/scripture/query', {
                         method: 'POST',
                         headers: {
                           'Content-Type': 'application/json'
                       },
                       body: JSON.stringify({
-                          scripture: p.prophecy,
+                          scripture: p.Prophecy,
                           plainText: true,
                           version:"nkjv"
                       })
-                    }
-                    let fresponse = await fetch('https://api.churchandfamilylife.com/controllers/scripture/query'){
+                    })
+                    let fresponse = await fetch('https://api.churchandfamilylife.com/controllers/scripture/query', {
                        method: 'POST',
                        headers: {
                             'Content-Type': 'application/json'
                         },
                         body: JSON.stringify({
-                          scripture: p.prophecy,
+                          scripture: p.Fulfillments,
                           plainText: true,
                           version:"nkjv"
                       })
-                  }
+                  })
                   p.prophecyScripture = await presponse.text()
                   p.fulfillmentScripture = await fresponse.text()
-                  consol.log('p.prophecyScripture', p.prophecyScripture)
+                  console.log('p.prophecyScripture', p.prophecyScripture)
                   this.selectedProphecy = p
                 }
 
@@ -1220,9 +1220,3 @@
         </script>
     </body>
 </html>
-fetch('https://api.churchandfamilylife.com/controllers/scripture/query')
-                       method: 'POST',
-                       headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify({ prophecy: p })

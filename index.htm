@@ -107,9 +107,11 @@
                 <div class="grid grid-cols-1 nd:grid-cols-2 gap-4">
                     <div class="p-2 border rounded bg-gray-50">
                         <div>{{ selectedProphecy.Prophecy }}</div>
+                        <div class="text-sm">{{ selectedProphecy.prophecyScripture }}</div>
                     </div>
                     <div class="p-2 border rounded bg-gray-50">
                         <div>{{ selectedProphecy.Fulfillments }}</div>
+                        <div class="text-sm">{{ selectedProphecy.fulfillmentScripture }}</div>
                     </div>
                 </div>
             </div>
@@ -1184,19 +1186,32 @@
           },
             methods: {
                 async selectProphecy(p) {
-                    p.prophecyScripture = await fetch('https://api.churchandfamilylife.com/controllers/scripture/query'){
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify({
-                        scripture: p.prophecy,
-                        plainText: true,
-                        version:"nkjv"
+                      let presponse = await fetch('https://api.churchandfamilylife.com/controllers/scripture/query'){
+                        method: 'POST',
+                        headers: {
+                          'Content-Type': 'application/json'
+                      },
+                      body: JSON.stringify({
+                          scripture: p.prophecy,
+                          plainText: true,
+                          version:"nkjv"
+                      })
                     })
-                }
-                    consol.log('p.prophecyScripture', p.prophecyScripture)
-                    this.selectedProphecy = p
+                    let fresponse = await fetch('https://api.churchandfamilylife.com/controllers/scripture/query'){
+                       method: 'POST',
+                       headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({
+                          scripture: p.prophecy,
+                          plainText: true,
+                          version:"nkjv"
+                      })
+                  })
+                  p.prophecyScripture = await presponse.text()
+                  p.fulfillmentScripture = await fresponse.text()
+                  consol.log('p.prophecyScripture', p.prophecyScripture)
+                  this.selectedProphecy = p
                 }
 
             }

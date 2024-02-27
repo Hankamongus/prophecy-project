@@ -1,10 +1,10 @@
 <template>
     <div style="max-width: 100ch;">
        <h1 style="display: flex; width: 100%; justify-content: center; text-align: center;">
-        <strong>The one the Prophets Fortold</strong>&nbsp;
+        <strong>{{ title }}</strong>&nbsp;
      </h1>
-
-    </div>
+     </div>
+     <button @click="handleClick">click me</button>
   <link href="https://fonts.googleapis.com/css?family=Lato: 100,300,400,700|Luckiest+Guy|Oxygen:300,400" rel="stylesheet">
   <link href="style.css" type="text/css" rel="stylesheet">
 
@@ -77,13 +77,52 @@
 
         </div>
     </div>
-    <div><a href="https://www.youtube.com/watch?v=VKh8CEFa8PE">video</a></div>
-      <div class="audio-container; z-6 p-16 bg-white/25 backdrop-blur rounded-lg border-2 space-y-8 space-x-1" style="display: flex; width: 100%; justify-content: center; text-align: center; ">
-            <img src="https://cfl-mango.s3.amazonaws.com/uploads/downloads/henry-pastor-profile-2.jpg" alt="Profile Picture" class="profile-pic">
-            <audio controls>
-                 <source src="https://cfl-mango.s3.amazonaws.com/uploads/downloads/The%20Glorious%20Incarnation.mp3" type="audio/mp3">
-            </audio>
-        </div>
+       <!-- this is the beginning of the div -->
+
+
+       <div class="flex-col flex w-full justify-center">
+                               <div class="flex w-full justify-center">
+                                <img src="https://cfl-mango.s3.amazonaws.com/uploads/downloads/proto-evangelium-transparent-bg.png" class="w-full max-w-md">
+                               </div>
+                            </div>
+
+
+                            <div class="flex flex-col w-full justify-center py-20">
+                               <div class="">
+                                  <div class="text-3xl font-serif mb-4">
+                                   <a href="https://www.sermonaudio.com/saplayer/playpopup.asp?SID=1218231313312511" class="hover:underline text-slate-300" target="_blank">The Glorious Incarnation</a>
+                                   <div class="text-sm font-sans text-slate-400">
+                                    <span>Dec 17, 2023</span>
+                                    <span> || </span>
+                                    <span>John 1:1-14</span>
+                                   </div>
+                                  </div>
+                                  <div class="text-xs text-gray-500">
+                                  <img src="https://cfl-mango.s3.amazonaws.com/uploads/downloads/henry-pastor-profile-2.jpg" class="rounded-full w-10 h-10 inline-flex" /><span class="ml-2 text-base text-slate-300 font-serif">Henry Arterburn</span>
+                                  </div>
+                               </div>
+
+
+                      <!-- top of the audio div -->
+                          <div class="w-full my-6 sm:my-12">
+                              <div class="justify-center w-full flex items-center divide-x-[1px] divide-white dark:divide-black">
+                                <div class="w-full max-w-2xl h-2 ml-2 dark:bg-slate-400 relative overflow-hidden rounded">
+                                    <div :style="{ width: progressBar + '%'}" class="h-full bg-ul-blue-600"></div>
+                                  </div>
+                                </div>
+
+                                <div class="flex items-center w-full justify-center py-4">
+                                    <button class="flex items-center fill-current cursor-pointer self-center select-none mr-2">
+                                  <img src="https://cfl-mango.s3.amazonaws.com/uploads/downloads/skip-15-backward.png" class="w-full max-w-[1.4rem]"/>
+                                </button>
+                                  <button @click="playAudio" class="text-lg uppercase font-bold font-serif border border-slate-600 p-2 rounded-full hover:bg-ul-blue-700">{{ isPlaying ? 'Pause' : 'Play' }}</button>
+                                  <audio ref="audio" :src="audioSource" @timeupdate="updateProgressBar" class="hidden"></audio>
+                                  <button class="flex items-center fill-current cursor-pointer self-center select-none ml-2">
+                                  <img src="https://cfl-mango.s3.amazonaws.com/uploads/downloads/skip-15.png" class="w-full max-w-[1.5rem]"/>
+                                </button>
+                            </div>
+                            </div>
+    </div>
         <div style="display: flex; width: 100%; justify-content: center; text-align: center;">
             <p class=" text-red-800">Mighty Christmas</p>
         </div>
@@ -94,10 +133,19 @@
 
 <script>
 export default {
-    data() {
-    return {
-        selectedProphecy: null,
-        prophecies:[
+    components: { ULHeader, TitleDescription },
+data() {
+  return {
+      rating: [],
+      progressBar: 0,
+      isPlaying: false,
+      prophecy: '',
+      prophecies: [],
+      positive: [],
+      terms: false,
+      audioSource: 'https://cfl-mango.s3.amazonaws.com/uploads/downloads/The%20Glorious%20Incarnation.mp3',
+
+    prophecies:[
         {
             Prophecy: "Gen 3:15",
             Descriptions: "The Serpent Slaying Savior",
@@ -1132,6 +1180,23 @@ export default {
         }
     },
     methods: {
+    playAudio() {
+      const audioElement = this.$refs.audio;
+      if (this.isPlaying) {
+
+
+       audioElement.pause();
+       } else {
+       audioElement.play();
+       }
+       this.isPlaying = !this.isPlaying;
+       },
+       updateProgressBar() {
+       const audioElement = this.$refs.audio;
+       },
+        handleClick() {
+         console.log(this.$refs)
+        },
         async selectProphecy(p) {
                 let presponse = await fetch('https://api.churchandfamilylife.com/controllers/scripture/query', {
                 method: 'POST',
@@ -1188,13 +1253,8 @@ h1 {
     border-color: rgb(215, 3, 3);
     font-size: xx-large;
 }
-tr{
-    margin: 15px;
-}
-td{
-    margin: 50px;
-}
-p{
+
+p {
     margin-left: 20xp;
     margin-right: 20xp;
     font-size: large;

@@ -56,7 +56,7 @@
             </div>
           </div>
 
-        </div>
+    </div>
         <div v-if="selectedProphecy" @click="selectedProphecy = null" class="fixed w-full h-screen flex items-center justify-center bg-black/50 backdrop-blur z-50 top-0 left-0">
             <div @click.stop class="bg-white rounded-lg p-8 max-w-2xl">
                 <div class="text-center mb-4">
@@ -77,7 +77,13 @@
 
         </div>
     </div>
-
+<div><a href="https://www.youtube.com/watch?v=VKh8CEFa8PE">video</a></div>
+      <div class="audio-container; z-6 p-16 bg-white/25 backdrop-blur rounded-lg border-2 space-y-8 space-x-1" style="display: flex; width: 100%; justify-content: center; text-align: center; ">
+            <img src="https://cfl-mango.s3.amazonaws.com/uploads/downloads/henry-pastor-profile-2.jpg" alt="Profile Picture" class="profile-pic">
+            <audio controls>
+                 <source src="https://cfl-mango.s3.amazonaws.com/uploads/downloads/The%20Glorious%20Incarnation.mp3" type="audio/mp3">
+            </audio>
+        </div>
         <div style="display: flex; width: 100%; justify-content: center; text-align: center;">
             <p class=" text-red-800">Mighty Christmas</p>
         </div>
@@ -87,8 +93,11 @@
 </template>
 
 <script>
+export default {
     data() {
         return {
+title: 'The one the Prophets Foretold',
+        selectedProphecy: null,
             prophecies:[
         {
             Prophecy: "Gen 3:15",
@@ -1124,6 +1133,9 @@
         }
     },
     methods: {
+handleClick() {
+         console.log(this.$refs)
+        },
         async selectProphecy(p) {
                 let presponse = await fetch('https://api.churchandfamilylife.com/controllers/scripture/query', {
                 method: 'POST',

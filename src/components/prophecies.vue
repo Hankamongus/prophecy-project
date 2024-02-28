@@ -1,15 +1,21 @@
 <template>
+<div class=" mb-5">
+    <button class="mr-3" @click="handleClick">Home</button>
+    <button class="mr-3" @click="handleClick">About</button>
+    <button class="mr-3" @click="handleClick">Donate</button>
+    <button class="mr-3" @click="handleClick">Contact</button>
+    <button class="mr-3" @click="handleClick">Prophicies</button>
+</div>
     <div style="max-width: 100ch;">
        <h1 style="display: flex; width: 100%; justify-content: center; text-align: center;">
         <strong>{{ title }}</strong>&nbsp;
      </h1>
      </div>
-     <button @click="handleClick">click me</button>
+<!--Header Image!!-->
   <link href="https://fonts.googleapis.com/css?family=Lato: 100,300,400,700|Luckiest+Guy|Oxygen:300,400" rel="stylesheet">
   <link href="style.css" type="text/css" rel="stylesheet">
-
     <div style="display: flex; width: 100%; justify-content: center; margin-top: 50px; margin-bottom: 20px;">
-      <div style="display: grid; grid-template-columns: repeat(3, 1fr);">
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr);">
         <img style="width: 100%; max-width: 300px; border-top-left-radius: 0.375rem; border-bottom-left-radius: 0.375rem;" src="https://3.bp.blogspot.com/-ZgG1vQtMum4/VnzPHaGh8xI/AAAAAAAAFzI/MaLuQ5gnr_Y/s1600/1933828_10153356334768105_6931868804865898509_n.jpg">
 
         <img style="width: 100%; max-width: 300px; position: relative; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); border-radius: 0.375rem; transform: scale(1.35);" src="https://mlqbbna2acyz.i.optimole.com/cb:rBSz.118f4/w:828/h:621/q:mauto/f:best/https://media.sharefaith.com/wp-content/uploads/2022/11/1478198557036_552.jpg">
@@ -17,29 +23,60 @@
         <img style="width: 100%; max-width: 300px; border-top-right-radius: 0.375rem; border-bottom-right-radius: 0.375rem;" src="https://www.scripturecatholic.com/wp-content/uploads/2018/08/the-three-wise-men.jpg">
       </div>
     </div>
-      <!-- <div style="display: flex; width: 100%; justify-content: center; margin-top: 50px; margin-bottom: 20px;">
-        <ol>
-          <li><a href="#genesis">Genesis</a></li>
-          <li><a href="#exodus">Exodus</a></li>
-           <li><a href="#leviticus">Leviticus</a></li>
-          </ol>
-      </div> -->
-      <div style="display: flex; width: 100%; justify-content: center; margin-top: 50px; margin-bottom: 20px;">
+    <!--Bible verse header-->
+    <div style="display: flex; width: 100%; justify-content: center; margin-top: 50px;">
+        <p class="text-red-800"><em><strong>{{ text1 }}</strong></em></p>
+      </div>
+      <div style="display: flex; width: 100%; justify-content: center;">
+        <p class="text-red-800"><em><strong>{{ text2 }}</strong></em></p>
+      </div>
+      <div style="display: flex; width: 100%; justify-content: center;">
+        <p class="text-red-800"><strong>{{ text3 }}</strong></p>
+      </div>
+<!--AUDIO STUFF-->
+<div class="flex flex-col w-full justify-center py-20">
+   <div class="">
+      <div class="text-3xl font-serif mb-2">
+       <a href="https://www.sermonaudio.com/saplayer/playpopup.asp?SID=1218231313312511" class="hover:underline text-slate-300" target="_blank">{{ SermonTitle }}</a>
+       <div style="color: grey;" class="text-sm font-sans text-slate-400">
+        <span>Dec 17, 2023</span>
+        <span> || </span>
+        <span>John 1:1-14</span>
+       </div>
+      </div>
+      <div class="text-xs text-gray-500">
+      <img src="https://cfl-mango.s3.amazonaws.com/uploads/downloads/henry-pastor-profile-2.jpg" class="rounded-full w-10 h-10 inline-flex" /><span class="ml-2 text-base text-slate-300 font-serif">{{ Name }}</span>
+      </div>
+   </div>
+<!-- top of the audio div -->
+
+
+                <div class="flex items-center w-full justify-center py-4">
+                    <button @click="skipBackward" class="flex items-center fill-current cursor-pointer self-center select-none mr-2">
+                  <img src="https://cfl-mango.s3.amazonaws.com/uploads/downloads/skip-15-backward.png" class="w-full max-w-[1.4rem]"/>
+                </button>
+                  <button @click="playAudio" class="text-lg uppercase font-bold font-serif border border-slate-600 p-2 rounded-full hover:bg-ul-blue-700">{{ isPlaying ? 'Pause' : 'Play' }}</button>
+                  <audio ref="audio" :src="audioSource" @timeupdate="updateProgressBar" class="hidden"></audio>
+                  <button @click="skipForward" class="flex items-center fill-current cursor-pointer self-center select-none ml-2">
+                  <img src="https://cfl-mango.s3.amazonaws.com/uploads/downloads/skip-15.png" class="w-full max-w-[1.5rem]"/>
+                </button>
+                </div>
+                <div class="w-full my-6 sm:my-12">
+              <div class="justify-center w-full flex items-center divide-x-[1px] divide-white dark:divide-black">
+                <div class="w-full max-w-2xl h-2 ml-2 bg-slate-400 relative overflow-hidden rounded">
+                    <div :style="{ width: progressBar + '%'}" class="h-full bg-blue-600"></div>
+
+                </div>
+            </div>
+       </div>
+ </div>
+     <!---- <div style="display: flex; width: 100%; justify-content: center; margin-top: 1px; margin-bottom: 20px;">
         <form action="/search" method="get">
           <input type="text" name="q" placeholder="Search..." style="width: 300px; height: 40px; border-radius: 10px;">
-          <input type="submit" value="">
+          <input type="submit" value=" ">
         </form>
-      </div>
-      <div style="display: flex; width: 100%; justify-content: center;">
-        <p class="text-red-800"><em><strong>"Do not think that I have come to abolish the Law or the Prophets; </strong></em></p>
-      </div>
-      <div style="display: flex; width: 100%; justify-content: center;">
-        <p class="text-red-800"><em><strong>I have not come to abolish them but to fulfill them."</strong></em></p>
-      </div>
-      <div style="display: flex; width: 100%; justify-content: center;">
-        <p class="text-red-800"><strong>(Mathew 5:17)</strong></p>
-      </div>
-    <div style= "width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding-top: 10rem; padding-bottom: 5rem; padding-left: 1rem; padding-right: 1rem;">
+      </div> -->
+    <div style= "width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding-top: 1rem; padding-bottom: 5rem; padding-left: 1rem; padding-right: 1rem;">
         <div style="max-width: 100ch; color: white;">
 
 
@@ -74,30 +111,35 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
-<div><a href="https://www.youtube.com/watch?v=VKh8CEFa8PE">video</a></div>
-      <div class="audio-container; z-6 p-16 bg-white/25 backdrop-blur rounded-lg border-2 space-y-8 space-x-1" style="display: flex; width: 100%; justify-content: center; text-align: center; ">
-            <img src="https://cfl-mango.s3.amazonaws.com/uploads/downloads/henry-pastor-profile-2.jpg" alt="Profile Picture" class="profile-pic">
-            <audio controls>
-                 <source src="https://cfl-mango.s3.amazonaws.com/uploads/downloads/The%20Glorious%20Incarnation.mp3" type="audio/mp3">
-            </audio>
-        </div>
-        <div style="display: flex; width: 100%; justify-content: center; text-align: center;">
-            <p class=" text-red-800">Mighty Christmas</p>
-        </div>
-        <div style="display: flex; width: 100%; justify-content: center; text-align: center; margin-bottom: 20px;">
-            <p class="text-red-800">Christ is LORD!</p>
-        </div>
+    <div class="flex-col flex w-full justify-center">
+          <div class="flex w-full justify-center">
+            <img src="https://cfl-mango.s3.amazonaws.com/uploads/downloads/proto-evangelium-transparent-bg.png" class="w-full max-w-md">
+          </div>
+     </div>
+
 </template>
 
 <script>
 export default {
     data() {
         return {
-title: 'The one the Prophets Foretold',
-        selectedProphecy: null,
+            text1: '"Do not think that I have come to abolish the Law or the Prophets;',
+            text2: 'I have not come to abolish them but to fulfill them."',
+            text3:'(Mathew 5:17)',
+            Name:'Henry Bradford Arterburn',
+            SermonTitle:'The Glorious Incarnation',
+            title: 'The one the Prophets Foretold',
+            rating: [],
+            progressBar: 0,
+            isPlaying: false,
+            prophecy: '',
+            prophecies: [],
+            positive: [],
+            terms: false,
+            audioSource: 'https://cfl-mango.s3.amazonaws.com/uploads/downloads/The%20Glorious%20Incarnation.mp3',
+            selectedProphecy: null,
             prophecies:[
         {
             Prophecy: "Gen 3:15",
@@ -1133,7 +1175,34 @@ title: 'The one the Prophets Foretold',
         }
     },
     methods: {
-handleClick() {
+        playAudio() {
+      const audioElement = this.$refs.audio;
+      if (this.isPlaying) {
+        audioElement.pause();
+       } else {
+       audioElement.play();
+       }
+       this.isPlaying = !this.isPlaying;
+       },
+       skipForward() {
+        const audioElement = this.$refs.audio;
+        if (audioElement) {
+            audioElement.currentTime  += 15;
+        }
+       },
+       skipBackward() {
+        const audioElement = this.$refs.audio;
+        if (audioElement) {
+            audioElement.currentTime  -= 15;
+       }
+    },
+       updateProgressBar() {
+        const audioElement = this.$refs.audio;
+        const currentTime = audioElement.currentTime
+        const duration = audioElement.duration
+        this.progressBar = (currentTime/duration)*100
+       },
+       handleClick() {
          console.log(this.$refs)
         },
         async selectProphecy(p) {

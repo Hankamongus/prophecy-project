@@ -1,12 +1,29 @@
-<script setup>
-import Prophecies from './components/prophecies.vue'
-</script>
 
 <template>
-  <Prophecies />
+    <div class=" text-red-800 text-3xl"><strong> Solid Rock Baptist Church</strong></div>
+    <div class="mb-10 mt-5 bg-black text-black p-4 rd-5 rounded-md text-lg">
+        <router-link
+            v-for="button in navButtons"
+            :key="button"
+            class="mr-3"
+            :to="button == 'Home' ? '/' : button.toLowerCase()"
+            v-html="button"
+        />
+    </div>
+    <RouterView></RouterView>
 </template>
 
-<style scoped>
+<script>
+export default {
+    data() {
+        return {
+            navButtons: ['Home', 'About', 'Donate', 'Contact', 'Prophecies']
+        }
+    }
+}
+</script>
+
+<style>
 .logo {
   height: 6em;
   padding: 1.5em;

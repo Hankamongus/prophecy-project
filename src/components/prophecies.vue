@@ -1,13 +1,6 @@
 <template>
-<div class=" mb-5">
-    <button class="mr-3" @click="handleClick">Home</button>
-    <button class="mr-3" @click="handleClick">About</button>
-    <button class="mr-3" @click="handleClick">Donate</button>
-    <button class="mr-3" @click="handleClick">Contact</button>
-    <button class="mr-3" @click="handleClick">Prophicies</button>
-</div>
     <div style="max-width: 100ch;">
-       <h1 style="display: flex; width: 100%; justify-content: center; text-align: center;">
+       <h1 class="text-red-800" style="display: flex; width: 100%; justify-content: center; text-align: center;">
         <strong>{{ title }}</strong>&nbsp;
      </h1>
      </div>
@@ -38,7 +31,7 @@
    <div class="">
       <div class="text-3xl font-serif mb-2">
        <a href="https://www.sermonaudio.com/saplayer/playpopup.asp?SID=1218231313312511" class="hover:underline text-slate-300" target="_blank">{{ SermonTitle }}</a>
-       <div style="color: grey;" class="text-sm font-sans text-slate-400">
+       <div  class="text-sm font-sans text-slate-400 text-white">
         <span>Dec 17, 2023</span>
         <span> || </span>
         <span>John 1:1-14</span>
@@ -97,17 +90,17 @@
         <div v-if="selectedProphecy" @click="selectedProphecy = null" class="fixed w-full h-screen flex items-center justify-center bg-black/50 backdrop-blur z-50 top-0 left-0">
             <div @click.stop class="bg-white rounded-lg p-8 max-w-2xl">
                 <div class="text-center mb-4">
-                    <div class="font-bold text-xl">Prophecy</div>
-                    <div class="text-sm mt-4">{{ selectedProphecy.Descriptions }}</div>
+                    <div class="font-bold text-xl text-black">Prophecy</div>
+                    <div class="text-sm mt-4 text-black">{{ selectedProphecy.Descriptions }}</div>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div class="p-3 border rounded bg-gray-50">
-                        <div class="text-sm">{{ selectedProphecy.prophecyScripture }}</div>
-                        <div class="m-2">- {{ selectedProphecy.Prophecy }}</div>
+                        <div class="text-sm text-black">{{ selectedProphecy.prophecyScripture }}</div>
+                        <div class="m-2 text-black">- {{ selectedProphecy.Prophecy }}</div>
                     </div>
                     <div class="p-2 border rounded bg-gray-50">
-                        <div class="text-sm">{{ selectedProphecy.fulfillmentScripture }}</div>
-                        <div class="mt-2">- {{ selectedProphecy.Fulfillments }}</div>
+                        <div class="text-sm text-black">{{ selectedProphecy.fulfillmentScripture }}</div>
+                        <div class="mt-2 text-black">- {{ selectedProphecy.Fulfillments }}</div>
                     </div>
                 </div>
             </div>
@@ -129,8 +122,7 @@ export default {
             text2: 'I have not come to abolish them but to fulfill them."',
             text3:'(Mathew 5:17)',
             Name:'Henry Bradford Arterburn',
-            SermonTitle:'The Glorious Incarnation',
-            title: 'The one the Prophets Foretold',
+            SermonTitle:'The Glorious Incarnation',title: 'The one the Prophets Foretold',
             rating: [],
             progressBar: 0,
             isPlaying: false,

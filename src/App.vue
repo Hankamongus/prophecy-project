@@ -1,11 +1,12 @@
 
 <template>
-    <div class=" text-red-800 text-3xl"><strong> Solid Rock Baptist Church</strong></div>
-    <div class="mb-10 mt-5 bg-black text-black p-4 rd-5 rounded-md text-lg">
+
+    <div class=" content-justify-center top-0 mb-10 mt-5 bg-black p-10 rd-5 w-full rounded-md text-lg mt-0">
+        <div class=" text-red-800 text-3xl mb-5"><strong> Solid Rock Baptist Church</strong></div>
         <router-link
             v-for="button in navButtons"
             :key="button"
-            class="mr-3"
+            class="mr-7 mb-10 mt-5 bg-white text-black p-4 rd-5 rounded-md text-lg hover:bg-sky-700 hover:text-red-800"
             :to="button == 'Home' ? '/' : button.toLowerCase()"
             v-html="button"
         />
@@ -16,8 +17,9 @@
 <script>
 export default {
     data() {
+
         return {
-            navButtons: ['Home', 'About', 'Donate', 'Contact', 'Prophecies']
+            navButtons: ['Home', 'About', 'Donate', 'Contact', 'Prophecies', 'Sermons']
         }
     }
 }

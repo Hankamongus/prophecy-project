@@ -10,10 +10,17 @@ const app = createApp(App)
 // We'll talk about nested routes later.
 import Prophecies from './components/prophecies.vue'
 import About from './components/about.vue'
-
+import Donate from './components/donate.vue'
+import Home from './components/home.vue'
+import Contact from './components/contact.vue'
+import Sermons from './components/sermons.vue'
 const routes = [
-    { path: '/', component: Prophecies },
+    { path: '/', component: Home },
     { path: '/about', component: About },
+    { path: '/donate', component: Donate },
+    { path: '/contact', component: Contact },
+    { path: '/prophecies', component: Prophecies },
+    { path: '/sermons', component: Sermons }
 ]
 
 // 3. Create the router instance and pass the `routes` option

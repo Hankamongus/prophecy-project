@@ -11,16 +11,16 @@
         <img style="width: 100%; width: 300px; height: 220px; border-top-right-radius: 0.375rem; border-bottom-right-radius: 0.375rem;" src="https://research.lifeway.com/wp-content/uploads/2021/05/church_plant_closures.jpg">
       </div>
     </div>
-    <div content="width=device-width,initial-scale=1.0" class=" fixed left-0 w-full z-50 top-0 mb-7 bg-black p-5 text-lg mt-0">
-        <div class=" text-red-800 text-3xl mb-5"><strong> Solid Rock Baptist Church</strong></div>
+   <!--Navbar-->
+    <nav content="width=device-width,initial-scale=1.0" class=" fixed left-0 w-full z-50 top-0 mb-7 bg-sky-700 p-5 text-lg mt-0">
+        <div class=" text-black text-md sm:text-xl md:text-2xl xl:text-3xl mb-5"><strong> Solid Rock Baptist Church</strong></div>
         <router-link
             v-for="button in navButtons"
             :key="button"
-            class="mr-7 mb-10 mt-5 bg-white text-black p-4 rd-5 rounded-md text-lg hover:bg-sky-700 hover:text-red-800"
+            class="sm:mr-2 md:mr-7 mb-10 mt-5 bg-white text-gray-400 py-2 px-1 md:px-2 rd-5 rounded-md text-xs sm:text-sm md:text-md xl:text-lg hover: bg-sky-700 hover:text-white hover:border border-black"
             :to="button == 'Home' ? '/' : button.toLowerCase()"
-            v-html="button"
-        />
-    </div>
+            v-html="button"/>
+    </nav>
     <router-view/>
 </template>
 
@@ -36,6 +36,16 @@ export default {
 </script>
 
 <style>
+nav{
+    transition: width 0.3s ease;
+}
+@media (max-width: 640px) {
+    nav{
+        width: 80%;
+    }
+}
+
+
 .logo {
   height: 6em;
   padding: 1.5em;

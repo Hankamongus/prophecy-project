@@ -1223,7 +1223,7 @@ body {
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    margin: 10px;
+    margin: 0;
 }
 
 tbody {

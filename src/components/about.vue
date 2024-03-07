@@ -1,6 +1,6 @@
 <template>
   <div style="max-width: 100ch;">
-       <h1 class="text-red-800" style="display: flex; width: 100%; justify-content: center; text-align: center; mt-20">
+       <h1 class="text-red-800" style="display: flex; width: 100%; justify-content: center; text-align: center;">
         <strong>{{ title }}</strong>&nbsp;
      </h1>
      </div>
@@ -9,11 +9,6 @@
     <div class="z-6 p-10 bg-white/25 backdrop-blur rounded-lg border-2 space-y-8 ">
             <div class="flex justify-between text-2xl mb-5">
                 <div>{{ PurposeStatement }}</div>
-
-
-
-
-
             </div>
     </div>
 </template>

@@ -1,6 +1,6 @@
 <template>
     <div style="max-width: 100ch;">
-         <h1 class="text-red-800 mt-20" style="display: flex; width: 100%; justify-content: center; text-align: center;">
+         <h1 class="text-red-800" style="display: flex; width: 100%; justify-content: center; text-align: center;">
           <strong>{{ title }}</strong>&nbsp;
        </h1>
        </div>

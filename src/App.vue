@@ -4,11 +4,11 @@
   <link href="style.css" type="text/css" rel="stylesheet">
     <div style="display: flex; width: 100%; justify-content: center; margin-top: 200px; margin-bottom: 50px;">
         <div style="display: grid; grid-template-columns: repeat(3, 1fr);">
-        <img style="width: 100%; width: 300px; height: 220px; border-top-left-radius: 0.375rem; border-bottom-left-radius: 0.375rem;" src="https://i.swncdn.com/media/800w/cms/CCOM/46076-old-church.800w.tn.webp">
+        <img class="w-full h-full md:w-full md:h-md lg:w-full lg:h-full xl:w-full xl:h-full" style="border-top-left-radius: 0.375rem; border-bottom-left-radius: 0.375rem;" src="https://i.swncdn.com/media/800w/cms/CCOM/46076-old-church.800w.tn.webp">
 
-        <img style="width: 100%; max-width: 300px; position: relative; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); border-radius: 0.375rem; transform: scale(1.35);" src="https://images.unsplash.com/photo-1536704382439-da99b6ccc0cf?q=80&w=2874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+        <img class="w-full h-lg md:w-full md:h-md lg:w-full lg:h-auto xl:w-full xl:h-auto" style="position: relative; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); border-radius: 0.375rem; transform: scale(1.35);" src="https://images.unsplash.com/photo-1536704382439-da99b6ccc0cf?q=80&w=2874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
 
-        <img style="width: 100%; width: 300px; height: 220px; border-top-right-radius: 0.375rem; border-bottom-right-radius: 0.375rem;" src="https://research.lifeway.com/wp-content/uploads/2021/05/church_plant_closures.jpg">
+        <img class="w-full h-full md:w-full md:h-md lg:w-full lg:h-full xl:w-full xl:h-full" style="border-top-right-radius: 0.375rem; border-bottom-right-radius: 0.375rem;" src="https://research.lifeway.com/wp-content/uploads/2021/05/church_plant_closures.jpg">
       </div>
     </div>
    <!--Navbar-->
@@ -29,7 +29,7 @@ export default {
     data() {
 
         return {
-            navButtons: ['Home', 'About', 'Donate', 'Contact', 'Prophecies', 'Sermons']
+            navButtons: ['Home', 'About', 'Donate', 'Contact', 'Prophecies', 'Sermons', 'Directory']
         }
     }
 }

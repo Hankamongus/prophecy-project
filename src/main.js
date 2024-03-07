@@ -21,6 +21,7 @@ const routes = [
     { path: '/contact', component: Contact },
     { path: '/prophecies', component: Prophecies },
     { path: '/sermons', component: Sermons }
+
 ]
 
 // 3. Create the router instance and pass the `routes` option

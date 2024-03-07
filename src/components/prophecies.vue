@@ -1,17 +1,7 @@
 <template>
 
 <!--Header Image!!-->
-  <link href="https://fonts.googleapis.com/css?family=Lato: 100,300,400,700|Luckiest+Guy|Oxygen:300,400" rel="stylesheet">
-  <link href="style.css" type="text/css" rel="stylesheet">
-    <div style="display: flex; width: 100%; justify-content: center; margin-top: 200px; margin-bottom: 20px;">
-        <div style="display: grid; grid-template-columns: repeat(3, 1fr);">
-        <img style="width: 100%; max-width: 300px; border-top-left-radius: 0.375rem; border-bottom-left-radius: 0.375rem;" src="https://3.bp.blogspot.com/-ZgG1vQtMum4/VnzPHaGh8xI/AAAAAAAAFzI/MaLuQ5gnr_Y/s1600/1933828_10153356334768105_6931868804865898509_n.jpg">
 
-        <img style="width: 100%; max-width: 300px; position: relative; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); border-radius: 0.375rem; transform: scale(1.35);" src="https://mlqbbna2acyz.i.optimole.com/cb:rBSz.118f4/w:828/h:621/q:mauto/f:best/https://media.sharefaith.com/wp-content/uploads/2022/11/1478198557036_552.jpg">
-
-        <img style="width: 100%; max-width: 300px; border-top-right-radius: 0.375rem; border-bottom-right-radius: 0.375rem;" src="https://www.scripturecatholic.com/wp-content/uploads/2018/08/the-three-wise-men.jpg">
-      </div>
-    </div>
     <!--Bible verse header-->
     <div style="display: flex; width: 100%; justify-content: center; margin-top: 50px;">
         <p class="text-red-800"><em><strong>{{ text1 }}</strong></em></p>
@@ -86,15 +76,16 @@
         <div v-if="selectedProphecy" @click="selectedProphecy = null" class="fixed w-full h-screen flex items-center justify-center bg-black/50 backdrop-blur z-50 top-0 left-0">
             <div @click.stop class="bg-white rounded-lg p-8 max-w-2xl">
                 <div class="text-center mb-4">
-                    <div class="font-bold text-xl text-black">Prophecy</div>
-                    <div class="text-sm mt-4 text-black">{{ selectedProphecy.Descriptions }}</div>
+                    <div class="text-lg mt-4 text-black"><strong>{{ selectedProphecy.Descriptions }}</strong></div>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div class="p-3 border rounded bg-gray-50">
+                        <div class="center text-m"><strong>Prophecy:</strong></div>
                         <div class="text-sm text-black">{{ selectedProphecy.prophecyScripture }}</div>
                         <div class="m-2 text-black">- {{ selectedProphecy.Prophecy }}</div>
                     </div>
                     <div class="p-2 border rounded bg-gray-50">
+                        <div class="center text-m"><strong>Fulfillment:</strong></div>
                         <div class="text-sm text-black">{{ selectedProphecy.fulfillmentScripture }}</div>
                         <div class="mt-2 text-black">- {{ selectedProphecy.Fulfillments }}</div>
                     </div>
@@ -1232,7 +1223,7 @@ body {
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    margin: 0;
+    margin: 10px;
 }
 
 tbody {

@@ -13,12 +13,54 @@
     </div>
    <!--Navbar-->
 <div>
-    <nav content="width=device-width,initial-scale=1.0" class="fixed left-0 w-full z-50 top-0 mb-7 bg-gradient-to-r from-gray-500 via-sky-700 to-gray-500 to-white p-5 text-lg mt-0">
+    <nav content="width=device-width,initial-scale=1.0" class="fixed left-0 w-full z-50 top-0 mb-7 bg-gradient-to-r from-gray-500 via-sky-700 to-gray-500 to-white p-5 text-lg mt-0 md:w-20">
         <div class=" text-black text-md sm:text-xl md:text-2xl xl:text-3xl mb-5"><strong> Solid Rock Baptist Church</strong></div>
-        <router-link
+
+       <button>
+        <svg xmlns="http://www.w3.org/2000/svg"
+        fill="none" viewBox="0 0 24 24"
+        stroke-width="1.5" stroke="currentColor"
+        class="w-6 h-6">
+
+        <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+        />
+    </svg>
+</button>
+       <router-link
             v-for="button in navButtons"
             :key="button"
-            class="sm:mr-2 md:mr-7 mb-10 mt-5 text-gray-800 py-2 px-1 md:px-2 rd-5 rounded-md text-xs sm:text-sm md:text-md xl:text-lg bg-transparent hover:bg-gray-400  hover:text-sky-700 hover:border border-black"
+            class="
+            w-full
+            min-h-1
+            sm:mr-2 md:mr-7
+            mb-10 mt-5
+            text-gray-800
+            py-2 px-1
+            md:px-2
+            rd-5
+            rounded-md
+            text-xs
+            sm:text-sm
+            md:text-md
+            xl:text-lg
+            bg-transparent
+            hover:bg-gray-400
+            hover:text-sky-700
+            hover:border
+            border-black
+            transform
+            translate-x-full
+            md:relitive
+            md:flex
+            md:min-h-1
+            md:space-x-3
+            md:p-0
+            md:translate-x-0
+            md:w-20"
+
             :to="button == 'Home' ? '/' : button.toLowerCase()"
             v-html="button"/>
     </nav>
@@ -48,6 +90,14 @@ nav{
 @media (max-width: 640px) {
     nav{
         width: 80%;
+    }
+}
+nav {
+    transition: height 0.3s ease;
+}
+@media (max-height: 480px) {
+    nav {
+        padding: 1px;
     }
 }
 

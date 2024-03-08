@@ -13,12 +13,12 @@
     </div>
    <!--Navbar-->
 <div>
-    <nav content="width=device-width,initial-scale=1.0" class="fixed left-0 w-full z-50 top-0 mb-7 bg-sky-700 p-5 text-lg mt-0">
+    <nav content="width=device-width,initial-scale=1.0" class="fixed left-0 w-full z-50 top-0 mb-7 bg-gradient-to-r from-gray-500 via-sky-700 to-gray-500 to-white p-5 text-lg mt-0">
         <div class=" text-black text-md sm:text-xl md:text-2xl xl:text-3xl mb-5"><strong> Solid Rock Baptist Church</strong></div>
         <router-link
             v-for="button in navButtons"
             :key="button"
-            class="sm:mr-2 md:mr-7 mb-10 mt-5 bg-transparent text-gray-400 py-2 px-1 md:px-2 rd-5 rounded-md text-xs sm:text-sm md:text-md xl:text-lg hover: bg-transparent hover:text-white hover:border border-black"
+            class="sm:mr-2 md:mr-7 mb-10 mt-5 text-gray-800 py-2 px-1 md:px-2 rd-5 rounded-md text-xs sm:text-sm md:text-md xl:text-lg bg-transparent hover:bg-gray-400  hover:text-sky-700 hover:border border-black"
             :to="button == 'Home' ? '/' : button.toLowerCase()"
             v-html="button"/>
     </nav>

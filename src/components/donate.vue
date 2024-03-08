@@ -1,7 +1,7 @@
 <template>
 
 <div style="max-width: 100ch;">
-       <h1 class="text-red-800" style="display: flex; width: 100%; justify-content: center; text-align: center;">
+       <h1 class="text-red-800" style="display: flex; width: 100%; justify-content: center; text-align: center; margin-top: 100px;">
         <strong>{{ title }}</strong>&nbsp;
      </h1>
      </div>
@@ -13,7 +13,7 @@
                 <form action="/submit" method="post">
                     <label for="user Input"></label>
                     <input type="submit" value="" id="user Input" name="user Input">
-                    <input type="subit" value="$" class="rounded-lg bg-gray-300 p-4">
+                    <input type="subit" value="$" class="rounded-lg bg-gray-300 p-1">
                 </form>
             </div>
         </div>

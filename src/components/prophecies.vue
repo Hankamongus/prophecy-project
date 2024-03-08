@@ -3,14 +3,14 @@
 <!--Header Image!!-->
 
     <!--Bible verse header-->
-    <div style="display: flex; width: 100%; justify-content: center; margin-top: 50px;">
-        <p class="text-red-800"><em><strong>{{ text1 }}</strong></em></p>
+    <div style="display: flex; width: 100%; justify-content: center; margin-top: 100px;">
+        <p class="text-red-800 text-2xl"><em><strong>{{ text1 }}</strong></em></p>
       </div>
       <div style="display: flex; width: 100%; justify-content: center;">
-        <p class="text-red-800"><em><strong>{{ text2 }}</strong></em></p>
+        <p class="text-red-800 text-2xl"><em><strong>{{ text2 }}</strong></em></p>
       </div>
       <div style="display: flex; width: 100%; justify-content: center;">
-        <p class="text-red-800"><strong>{{ text3 }}</strong></p>
+        <p class="text-red-800 text-2xl"><strong>{{ text3 }}</strong></p>
       </div>
 <!--AUDIO STUFF-->
 <div class="flex flex-col w-full justify-center py-20">
@@ -55,7 +55,7 @@
           <input type="submit" value=" ">
         </form>
       </div> -->
-    <div style= "width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding-top: 1rem; padding-bottom: 5rem; padding-left: 1rem; padding-right: 1rem;">
+    <div style= "width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding-top: 1rem; padding-bottom: 5rem;">
         <div style="max-width: 100ch; color: white;">
 
 

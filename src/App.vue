@@ -12,15 +12,17 @@
       </div>
     </div>
    <!--Navbar-->
-    <nav content="width=device-width,initial-scale=1.0" class=" fixed left-0 w-full z-50 top-0 mb-7 bg-sky-700 p-5 text-lg mt-0">
+<div>
+    <nav content="width=device-width,initial-scale=1.0" class="class="{ 'fixed top-0 w-full bg-white shadow-lg': isNavBarFixed, 'h-16': !isNavBarShrunk, 'h-12': isNavBarShrunk }" fixed left-0 w-full z-50 top-0 mb-7 bg-sky-700 p-5 text-lg mt-0">
         <div class=" text-black text-md sm:text-xl md:text-2xl xl:text-3xl mb-5"><strong> Solid Rock Baptist Church</strong></div>
         <router-link
             v-for="button in navButtons"
             :key="button"
-            class="sm:mr-2 md:mr-7 mb-10 mt-5 bg-white text-gray-400 py-2 px-1 md:px-2 rd-5 rounded-md text-xs sm:text-sm md:text-md xl:text-lg hover: bg-sky-700 hover:text-white hover:border border-black"
+            class="sm:mr-2 md:mr-7 mb-10 mt-5 bg-white text-gray-400 py-2 px-1 md:px-2 rd-5 rounded-md text-xs sm:text-sm md:text-md xl:text-lg hover: bg-transparent hover:text-white hover:border border-black"
             :to="button == 'Home' ? '/' : button.toLowerCase()"
             v-html="button"/>
     </nav>
+</div>
     <router-view/>
 </template>
 
@@ -29,13 +31,35 @@ export default {
     data() {
 
         return {
-            navButtons: ['Home', 'About', 'Donate', 'Contact', 'Prophecies', 'Sermons', 'Directory']
-        }
-    }
-}
+            navButtons: ['Home', 'About', 'Donate', 'Contact', 'Prophecies', 'Sermons', 'Directory'],
+            scrolled: false
+        };
+
+  },
+mounted() {
+    window.addEventListener('scroll', this.handleScroll);
+  },
+  beforeDestroy() {
+    window.removeEventListener('scroll', this.handleScroll);
+  },
+  methods: {
+    handleScroll() {
+      if (window.scrollY > 0) {
+        nav.classList.add('.shrink-nav');
+      } else {
+        header.classList.remove('.shrink-nav')
+      }
+    },
+  },
+};
 </script>
 
-<style>
+
+<style scoped>
+.shrink-nav {
+  transition: width 0.3s ease;
+}
+
 nav{
     transition: width 0.3s ease;
 }
@@ -45,6 +69,9 @@ nav{
     }
 }
 
+</style>
+
+<style>
 
 .logo {
   height: 6em;

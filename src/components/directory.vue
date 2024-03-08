@@ -1,5 +1,5 @@
 <template>
-    <div>Hello Johny</div>
+    <div class="text-black">wake up</div>
 </template>
 <script>
 import { defineComponent } from '@vue/composition-api'

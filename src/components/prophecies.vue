@@ -60,10 +60,10 @@
 
 
           <div class="z-6 p-16 bg-white/25 backdrop-blur rounded-lg border-2 space-y-8">
-            <div class="flex justify-between text-2xl mb-5">
-              <div><strong>Prophecy</strong></div>
-              <div><strong>Descriptions</strong></div>
-              <div><strong>Fulfillments</strong></div>
+            <div class="flex justify-between text-sm md:text-2xl mb-5">
+              <div class="text-black"><strong>Prophecy:</strong></div>
+              <div class="text-black"><strong>Descriptions:</strong></div>
+              <div class="text-black"><strong>Fulfillments:</strong></div>
             </div>
             <div v-for="p in prophecies" @click="selectProphecy(p)" class="flex justify-between space-x-4 space-y-1">
               <div>{{ p.Prophecy }}</div>

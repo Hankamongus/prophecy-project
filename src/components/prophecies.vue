@@ -59,7 +59,7 @@
         <div style="max-width: 100ch; color: white;">
 
 
-          <div class="z-6 p-16 bg-white/25 backdrop-blur rounded-lg border-2 space-y-8">
+          <div class="z-6 p-16 bg-white/25 backdrop-blur rounded-lg border-2 space-y-8 z-10">
             <div class="flex justify-between text-sm md:text-2xl mb-5">
               <div class="text-black"><strong>Prophecy:</strong></div>
               <div class="text-black"><strong>Descriptions:</strong></div>

@@ -8,14 +8,14 @@
           <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
 
             <!-- Mobile menu button-->
-            <button @click="navOpen = !navOpen" type="button" class=" md:hidden relative inline-flex items-center justify-center left-0 rounded-md p-2 text-gray-400 bg-black hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+            <button @click="navOpen = !navOpen" type="button" class=" md:hidden relative inline-flex items-center justify-center fixed left-0 z-10 rounded-md p-2 text-gray-400 bg-black hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
               <span class="absolute -inset-0.5"></span>
               <span class="sr-only">Open main menu</span>
               <!--
                 Icon when the menu is closed.
                 Menu open: "hidden", Menu closed: "block"
               -->
-              <svg v-if="!navOpen" class="block h-6 w-6 left-0" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+              <svg v-if="!navOpen" class="block h-6 w-6 fixed left-0 z-5" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
               </svg>
               <!--
@@ -83,13 +83,13 @@
     <!--Image Header-->
 <link href="https://fonts.googleapis.com/css?family=Lato: 100,300,400,700|Luckiest+Guy|Oxygen:300,400" rel="stylesheet">
   <link href="style.css" type="text/css" rel="stylesheet">
-    <div class="filter grayscale hover:filter-none transition duration-500" style="display: flex; width: 100%; justify-content: center; margin-top: 200px; margin-bottom: 50px;">
+    <div class=" relative filter grayscale hover:filter-none transition duration-500" style="display: flex; width: 100%; justify-content: center; margin-top: 200px; margin-bottom: 50px;">
         <div style="display: grid; grid-template-columns: repeat(3, 1fr);">
-        <img class="w-full h-full md:w-full md:h-md lg:w-full lg:h-full xl:w-full xl:h-full" style="border-top-left-radius: 0.375rem; border-bottom-left-radius: 0.375rem;" src="https://i.swncdn.com/media/800w/cms/CCOM/46076-old-church.800w.tn.webp">
+        <img class="transition duration-300 transform hover:scale-110 w-full h-full md:w-full md:h-md lg:w-full lg:h-full xl:w-full xl:h-full hover:md:w-full" style="border-top-left-radius: 0.375rem; border-bottom-left-radius: 0.375rem;" src="https://i.swncdn.com/media/800w/cms/CCOM/46076-old-church.800w.tn.webp">
 
-        <img class="w-full h-lg md:w-full md:h-md lg:w-full lg:h-auto xl:w-full xl:h-auto" style="position: relative; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); border-radius: 0.375rem; transform: scale(1.35);" src="https://images.unsplash.com/photo-1536704382439-da99b6ccc0cf?q=80&w=2874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+        <img class="transition duration-300 transform hover:scale-110 w-full h-lg md:w-full md:h-md lg:w-full lg:h-auto xl:w-full xl:h-auto hover:md:w-full" style="position: relative; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); border-radius: 0.375rem; transform: scale(1.35);" src="https://images.unsplash.com/photo-1536704382439-da99b6ccc0cf?q=80&w=2874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
 
-        <img class="w-full h-full md:w-full md:h-md lg:w-full lg:h-full xl:w-full xl:h-full" style="border-top-right-radius: 0.375rem; border-bottom-right-radius: 0.375rem;" src="https://research.lifeway.com/wp-content/uploads/2021/05/church_plant_closures.jpg">
+        <img class="transition duration-300 transform hover:scale-110 w-full h-full md:w-full md:h-md lg:w-full lg:h-full xl:w-full xl:h-full hover:md:w-full" style="border-top-right-radius: 0.375rem; border-bottom-right-radius: 0.375rem;" src="https://research.lifeway.com/wp-content/uploads/2021/05/church_plant_closures.jpg">
       </div>
     </div>
     <router-view/>

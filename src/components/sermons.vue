@@ -1,11 +1,11 @@
 <template>
     <div style="max-width: 100ch;">
-         <h1 class="text-red-800" style="display: flex; width: 100%; justify-content: center; text-align: center;">
+         <h1 class="text-red-800 mt-24" style="display: flex; width: 100%; justify-content: center; text-align: center;">
           <strong>{{ title }}</strong>&nbsp;
        </h1>
        </div>
 
-  <div class="flex items-center space-x-4">
+  <div class="flex items-center space-x-4 mt-20">
     <img src="https://media.sermonaudio.com/images/speakers/thumbnail/23550-0001.png" alt="Profile Picture" class="w-16 h-16 rounded-full">
     <audio controls class="max-w-xs">
       <source src="" type="audio/mp3">

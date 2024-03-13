@@ -12,31 +12,33 @@
       <div style="display: flex; width: 100%; justify-content: center;">
         <p class="text-red-800 text-2xl"><strong>{{ text3 }}</strong></p>
       </div>
-<!--AUDIO STUFF-->
+<!--Speaker Profile-->
 <div class="flex flex-col w-full justify-center py-20">
    <div class="">
       <div class="text-3xl font-serif mb-2">
-       <a href="https://www.sermonaudio.com/saplayer/playpopup.asp?SID=1218231313312511" class="hover:underline text-slate-300" target="_blank">{{ SermonTitle }}</a>
-       <div  class="text-sm font-sans text-slate-400 text-white">
+       <a href="https://www.sermonaudio.com/saplayer/playpopup.asp?SID=1218231313312511" class="text-sky-700 hover:underline" target="_blank">{{ SermonTitle }}</a>
+       <div  class="text-sm font-sans text-sky-700">
         <span>Dec 17, 2023</span>
         <span> || </span>
         <span>John 1:1-14</span>
        </div>
       </div>
-      <div class="text-xs text-gray-500">
-      <img src="https://cfl-mango.s3.amazonaws.com/uploads/downloads/henry-pastor-profile-2.jpg" class="rounded-full w-10 h-10 inline-flex" /><span class="ml-2 text-base text-slate-300 font-serif">{{ Name }}</span>
-      </div>
+      <div class="text-xs text-sky-700">
+      <a href="https://www.sermonaudio.com/solo/srbcaudio/sermons/speakers/Henry%20Arterburn/">
+        <img src="https://cfl-mango.s3.amazonaws.com/uploads/downloads/henry-pastor-profile-2.jpg" class="rounded-full w-10 h-10 inline-flex hover:brightness-50" /><span class="ml-2 text-base text-sky-700 font-serif">{{ Name }}</span>
+      </a>
+     </div>
    </div>
 <!-- top of the audio div -->
 
 
                 <div class="flex items-center w-full justify-center py-4">
-                    <button @click="skipBackward" class="flex items-center fill-current cursor-pointer self-center select-none mr-2">
+                    <button @click="skipBackward" class="flex items-center fill-current cursor-pointer self-center select-none mr-2 text-sky-700 bg-white hover:bg-black border-black">
                   <img src="https://cfl-mango.s3.amazonaws.com/uploads/downloads/skip-15-backward.png" class="w-full max-w-[1.4rem]"/>
                 </button>
-                  <button @click="playAudio" class="text-lg uppercase font-bold font-serif border border-slate-600 p-2 rounded-full hover:bg-ul-blue-700">{{ isPlaying ? 'Pause' : 'Play' }}</button>
+                  <button @click="playAudio" class="text-lg text-sky-700 uppercase font-bold font-serif border border-slate-600 p-2 rounded-full bg-white hover:bg-ul-blue-700 hover:bg-black ">{{ isPlaying ? 'Pause' : 'Play' }}</button>
                   <audio ref="audio" :src="audioSource" @timeupdate="updateProgressBar" class="hidden p-3 bg-black"></audio>
-                  <button @click="skipForward" class="flex items-center fill-current cursor-pointer self-center select-none ml-2">
+                  <button @click="skipForward" class="flex items-center fill-current cursor-pointer self-center select-none ml-2 text-sky-700 bg-white hover:bg-black border-black">
                   <img src="https://cfl-mango.s3.amazonaws.com/uploads/downloads/skip-15.png" class="w-full max-w-[1.5rem]"/>
                 </button>
                 </div>
@@ -59,7 +61,7 @@
         <div style="max-width: 100ch; color: white;">
 
 
-          <div class="z-6 p-16 bg-white/25 backdrop-blur rounded-lg border-2 space-y-8 z-10">
+          <div class="z-6 p-16 bg-gray-500 backdrop-blur rounded-lg border-2 space-y-8 z-10">
             <div class="flex justify-between text-sm md:text-2xl mb-5">
               <div class="text-black"><strong>Prophecy:</strong></div>
               <div class="text-black"><strong>Descriptions:</strong></div>
@@ -80,12 +82,12 @@
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div class="p-3 border rounded bg-gray-50">
-                        <div class="center text-m"><strong>Prophecy:</strong></div>
+                        <div class="center text-m text-black"><strong>Prophecy:</strong></div>
                         <div class="text-sm text-black">{{ selectedProphecy.prophecyScripture }}</div>
                         <div class="m-2 text-black">- {{ selectedProphecy.Prophecy }}</div>
                     </div>
                     <div class="p-2 border rounded bg-gray-50">
-                        <div class="center text-m"><strong>Fulfillment:</strong></div>
+                        <div class="center text-m text-black"><strong>Fulfillment:</strong></div>
                         <div class="text-sm text-black">{{ selectedProphecy.fulfillmentScripture }}</div>
                         <div class="mt-2 text-black">- {{ selectedProphecy.Fulfillments }}</div>
                     </div>
@@ -1218,14 +1220,6 @@ export default {
 </script>
 
 <style>
-body {
-    background-image: url('https://images.unsplash.com/photo-1596788874635-b768b4a27108?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    margin: 0;
-}
-
 tbody {
     color: brown;
     border: 4px color goldenrod;

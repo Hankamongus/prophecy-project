@@ -6,7 +6,7 @@
      </div>
 <!--Header Image!!-->
 
-    <div class="z-6 p-10 bg-white/25 backdrop-blur rounded-lg border-2 space-y-8 ">
+    <div class="z-6 p-10 bg-gray-500 backdrop-blur rounded-lg border-2 space-y-8 ">
             <div class="flex justify-between text-2xl mb-5">
                 <div>{{ PurposeStatement }}</div>
             </div>

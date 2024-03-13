@@ -25,6 +25,7 @@
 
                 <div v-if="navOpen" class="px-8 sm:hidden p-4 rounded border mt-56 bg-black">
                     <ul>
+                        <li><router-link to="/#/" class="text-red-800 hover:text-sky-700">Home:</router-link></li>
                         <li><router-link to="contact" class="text-red-800 hover:text-sky-700">Contact:</router-link></li>
                         <li><router-link to="about" class="text-red-800 hover:text-sky-700">About:</router-link></li>
                         <li><router-link to="prophecies" class="text-red-800 hover:text-sky-700">Prophecies:</router-link></li>

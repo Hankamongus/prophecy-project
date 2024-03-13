@@ -3,7 +3,7 @@
     <!--Navbar---->
     <nav id="navbar" class="w-full left-0 right-0 mt-0 bg-gradient-to-r from-gray-500 via-sky-700 to-gray-500 fixed left-0 w-full z-30 top-0 mb-5 p-1 text-lg transition-transform duration-300 transform">
 
-        <div class="text-black"><strong>Solid Rock Baptist</strong></div>
+        <div class="text-black text-sm sm:text-xl md:text-2xl"><strong>Solid Rock Baptist</strong></div>
 
         <div class="mx-auto max-w-8xl px-2 sm:px-6 lg:px-8">
 
@@ -34,11 +34,11 @@
                     </ul>
                 </div>
 
-                <div class="hidden sm:flex w-full justify-between">
+                <div class="hidden sm:justify-center sm:items-center sm:ml-6 sm:block w-full">
                     <router-link
                         v-for="button in navButtons"
                         :key="button"
-                        class="px-2 py-1 hover:border rounded hover:bg-gray-500 text-black hover:text-white hover:border-black"
+                        class="sm:mr-4 px-1 py-1 md:px-2 hover:border rounded hover:bg-gray-500 text-black hover:text-white hover:border-black"
                         :to="button == 'Home' ? '/' : button.toLowerCase()"
                         v-html="button"
                     />

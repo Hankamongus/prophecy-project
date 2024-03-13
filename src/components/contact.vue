@@ -8,7 +8,7 @@
     <div id="app" class="justify-center z-10 p-16  rounded-lg border-2 space-y-8 w-full h-full bg-gray-500">
         <div class="profile-section">
         <a href="https://www.sermonaudio.com/solo/srbcaudio/sermons/speakers/Kyle%20Reeder/">
-            <img class="profile-picture hover:brightness-50" src="https://media.sermonaudio.com/images/speakers/thumbnail/23550-0001.png" alt="Profile Picture">
+            <img class="profile-picture hover:brightness-50 flex-justify-center" src="https://media.sermonaudio.com/images/speakers/thumbnail/23550-0001.png" alt="Profile Picture">
         </a>
         <a href="https://www.sermonaudio.com/solo/srbcaudio/sermons/speakers/Kyle%20Reeder/" class="text-4xl font-bold text-sky-700 mb-4 hover:underline hover:text-sky-700 hover:underline">Kyle Reeder</a>
         <ul class="text-lg text-white list-disc list-inside">
@@ -18,16 +18,16 @@
         </ul>
       </div>
         <div class="profile-section">
-        <a href="https://www.sermonaudio.com/solo/srbcaudio/sermons/speakers/Charley%20Lynch/">
-            <img class="profile-picture hover:brightness-50" src="https://media.sermonaudio.com/images/speakers/thumbnail/27721-0001.PNG" alt="Profile Picture">
-       </a>
-       <a href="https://www.sermonaudio.com/solo/srbcaudio/sermons/speakers/Charley%20Lynch/" class="text-4xl font-bold mb-4 text-sky-700 hover:text-sky-700 hover:underline">Charlie Lynch</a>
-        <ul class="text-lg text-white list-disc list-inside">
-          <li class="mb-2">Elder</li>
-          <li class="mb-2">Email: </li>
-          <li>Phone: (270) 564-0033</li>
-        </ul>
-      </div>
+            <a href="https://www.sermonaudio.com/solo/srbcaudio/sermons/speakers/Charley%20Lynch/">
+                <img class="profile-picture hover:brightness-50 flex-justify-center" src="https://media.sermonaudio.com/images/speakers/thumbnail/27721-0001.PNG" alt="Profile Picture">
+            </a>
+            <a href="https://www.sermonaudio.com/solo/srbcaudio/sermons/speakers/Charley%20Lynch/" class="text-4xl font-bold mb-4 text-sky-700 hover:text-sky-700 hover:underline">Charlie Lynch</a>
+            <ul class="text-lg text-white list-disc list-inside">
+                <li class="mb-2">Elder</li>
+                <li class="mb-2">Email: </li>
+                <li>Phone: (270) 564-0033</li>
+            </ul>
+         </div>
 
       <div class="profile-section">
         <a href="https://www.sermonaudio.com/solo/srbcaudio/sermons/speakers/Brent%20Madding/">

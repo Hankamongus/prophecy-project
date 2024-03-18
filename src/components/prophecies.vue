@@ -4,13 +4,13 @@
 
     <!--Bible verse header-->
     <div style="display: flex; width: 100%; justify-content: center; margin-top: 100px;">
-        <p class="text-red-800 text-2xl"><em><strong>{{ text1 }}</strong></em></p>
+        <p class="text-red-800 text-sm sm:text-xl md:text-2xl"><em><strong>{{ text1 }}</strong></em></p>
       </div>
       <div style="display: flex; width: 100%; justify-content: center;">
-        <p class="text-red-800 text-2xl"><em><strong>{{ text2 }}</strong></em></p>
+        <p class="text-red-800 text-sm sm:text-xl md:text-2xl"><em><strong>{{ text2 }}</strong></em></p>
       </div>
       <div style="display: flex; width: 100%; justify-content: center;">
-        <p class="text-red-800 text-2xl"><strong>{{ text3 }}</strong></p>
+        <p class="text-red-800 text-sm sm:text-xl md:text-2xl"><strong>{{ text3 }}</strong></p>
       </div>
 <!--Speaker Profile-->
 <div class="flex flex-col w-full justify-center py-20">
@@ -61,11 +61,11 @@
         <div style="max-width: 100ch; color: white;">
 
 
-          <div class="z-6 p-16 bg-gray-500 backdrop-blur rounded-lg border-2 space-y-8 z-10">
-            <div class="flex justify-between text-sm md:text-2xl mb-5">
-              <div class="text-black"><strong>Prophecy:</strong></div>
-              <div class="text-black"><strong>Descriptions:</strong></div>
-              <div class="text-black"><strong>Fulfillments:</strong></div>
+         <div class="z-6 p-16 bg-gray-500 backdrop-blur rounded-lg border-4 border-sky-800 p-8 space-y-8 z-10 hover:border-sky-800 hover:border-4">
+             <div class="flex justify-between text-sm md:text-2xl mb-5">
+              <div class="text-black text-sm md:text-2xl mb-5"><strong>Prophecy:</strong></div>
+              <div class="text-black sm:text-sm md:text-2xl mb-5"><strong>Descriptions:</strong></div>
+              <div class="text-black text-sm md:text-2xl mb-5"><strong>Fulfillments:</strong></div>
             </div>
             <div v-for="p in prophecies" @click="selectProphecy(p)" class="flex justify-between space-x-4 space-y-1">
               <div>{{ p.Prophecy }}</div>
@@ -76,7 +76,7 @@
 
     </div>
         <div v-if="selectedProphecy" @click="selectedProphecy = null" class="fixed w-full h-screen flex items-center justify-center bg-black/50 backdrop-blur z-50 top-0 left-0">
-            <div @click.stop class="bg-white rounded-lg p-8 max-w-2xl">
+            <div @click.stop class="bg-white rounded-lg max-w-2xl">
                 <div class="text-center mb-4">
                     <div class="text-lg mt-4 text-black"><strong>{{ selectedProphecy.Descriptions }}</strong></div>
                 </div>
@@ -225,7 +225,7 @@ export default {
         {
             Prophecy: "Ex 12:21-27",
             Descriptions: "Christ is our Passover",
-            Fulfillments: "Cor 5:7"
+            Fulfillments: "1 Cor 5:7"
         },
         {
             Prophecy: "Ex 12:46",

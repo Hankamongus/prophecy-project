@@ -1,7 +1,7 @@
 
 <template>
     <!--Navbar---->
-    <nav id="navbar" class="w-full left-0 right-0 mt-0 bg-gradient-to-r from-gray-500 via-sky-700 to-gray-500 fixed left-0 w-full z-30 top-0 mb-5 p-1 text-lg transition-transform duration-300 transform">
+    <nav id="navbar" class="w-full left-0 right-0 mt-0 bg-gradient-to-r from-gray-500 via-sky-800 to-gray-500 fixed left-0 w-full z-30 top-0 mb-5 p-1 text-lg transition-transform duration-300 transform">
 
         <div class="text-black text-sm sm:text-xl md:text-2xl"><strong>Solid Rock Baptist</strong></div>
 
@@ -15,7 +15,7 @@
                     <button @click="navOpen = !navOpen" type="button" class="md:hidden relative flex items-center justify-center focus:!outline-none !border-none" aria-controls="mobile-menu" aria-expanded="false">
 
                     <svg class="block h-6 w-6 fixed left-0 bg-black rounded-lg hover:bg-gray-700 hover:text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                        <path v-if="!navOpen" stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        <path v-if="navOpen" stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                         <path v-else stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                     </svg>
 
@@ -23,7 +23,7 @@
 
                 </div>
 
-                <div v-if="navOpen" class="px-8 sm:hidden p-4 rounded border mt-56 bg-black">
+                <div v-if="navOpen" class="px-8 sm:hidden p-4 rounded border mt-56 bg-black bg-white dark:bg-black">
                     <ul>
                         <li><router-link to="/#/" class="text-red-800 hover:text-sky-700">Home:</router-link></li>
                         <li><router-link to="contact" class="text-red-800 hover:text-sky-700">Contact:</router-link></li>
@@ -39,7 +39,7 @@
                     <router-link
                         v-for="button in navButtons"
                         :key="button"
-                        class="sm:mr-4 px-1 py-1 md:px-2 hover:border rounded hover:bg-gray-500 text-black hover:text-white hover:border-black"
+                        class="sm:mr-4 px-1 py-1 md:px-2 hover:border rounded hover:bg-sky-700 text-black hover:text-white hover:border-black"
                         :to="button == 'Home' ? '/' : button.toLowerCase()"
                         v-html="button"
                     />
@@ -87,7 +87,7 @@ export default {
         navbar.style.transform = 'translateY(0)';
       } else {
         // Scroll down: Hide the navbar
-        navbar.style.transform = `translateY(-${navbar.offsetHeight}px)`;
+        navbar.style.transform = `translateY(-${navbar.offsetHeight / 2}px)`;
       }
       prevScrollpos = currentScrollPos;
     };
@@ -97,7 +97,8 @@ export default {
 
 <style>
 body {
-  background: whitesmoke;
+  background: hover-red;
+  background: linear-gradient(-45deg, transparent 50%, #000 50%) -1px -1px;
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;

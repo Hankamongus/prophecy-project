@@ -28,10 +28,14 @@ const routes = [
 // You can pass in additional options here, but let's
 // keep it simple for now.
 const router = createRouter({
-    // 4. Provide the history implementation to use. We
-    // are using the hash history for simplicity here.
     history: createWebHashHistory(),
     routes, // short for `routes: routes`
+    scrollBehavior(to, from, savedPosition) {
+
+        if (savedPosition) return savedPosition
+        return { top: 0 }
+
+    },
 })
 
 app.use(router)

@@ -13,14 +13,11 @@
 
                     <!-- Mobile menu button-->
                     <button @click="navOpen = !navOpen" type="button" class="md:hidden relative flex items-center justify-center focus:!outline-none !border-none" aria-controls="mobile-menu" aria-expanded="false">
-
-                    <svg class="block h-6 w-6 fixed left-0 bg-black rounded-lg hover:bg-gray-700 hover:text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                        <path v-if="navOpen" stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                        <path v-else stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                    </svg>
-
+                        <svg class="block h-8 w-9 fixed left-3 bg-black rounded-lg hover:bg-gray-700 hover:text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                            <path v-if="navOpen" stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                            <path v-else stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
                     </button>
-
                 </div>
 
                 <div v-if="navOpen" class="px-8 sm:hidden p-4 rounded border mt-56 bg-black bg-white dark:bg-black">
@@ -80,7 +77,7 @@ export default {
   mounted() {
     let prevScrollpos = window.pageYOffset;
     const navbar = document.getElementById('navbar');
-    window.onscroll = function () {
+    window.onscroll = () => {
       const currentScrollPos = window.pageYOffset;
       if (prevScrollpos > currentScrollPos) {
         // Scroll up: Show the navbar
@@ -91,6 +88,21 @@ export default {
       }
       prevScrollpos = currentScrollPos;
     };
+
+    // Event listener to close navbar when clicked outside
+    document.addEventListener('click', this.closeNavbarOnClickOutside);
+  },
+  beforeDestroy() {
+    // Remove event listener to avoid memory leaks
+    document.removeEventListener('click', this.closeNavbarOnClickOutside);
+  },
+  methods: {
+    closeNavbarOnClickOutside(event) {
+      if (!event.target.closest('.md:hidden')) {
+        // Clicked outside the navbar, so close it
+        this.navOpen = false;
+      }
+    }
   }
 };
 </script>

@@ -33,12 +33,12 @@
 
 
                 <div class="flex items-center w-full justify-center py-4">
-                    <button @click="skipBackward" class="flex items-center fill-current cursor-pointer self-center select-none mr-2 text-sky-700 bg-white hover:bg-black border-black">
-                  <img src="https://cfl-mango.s3.amazonaws.com/uploads/downloads/skip-15-backward.png" class="w-full max-w-[1.4rem]"/>
+                    <button @click="skipBackward" class="flex items-center fill-current cursor-pointer self-center select-none mr-2 text-sky-700 bg-sky-800 hover:bg-white dark:bg-white dark:hover:bg-black border-black dark:hover:border-sky-800">
+                        <img src="https://cfl-mango.s3.amazonaws.com/uploads/downloads/skip-15-backward.png" class="w-full max-w-[1.4rem]"/>
                 </button>
-                  <button @click="playAudio" class="text-lg text-sky-700 uppercase font-bold font-serif border border-slate-600 p-2 rounded-full bg-white hover:bg-ul-blue-700 hover:bg-black ">{{ isPlaying ? 'Pause' : 'Play' }}</button>
+                  <button @click="playAudio" class="text-lg text-sky-700 uppercase font-bold font-serif border border-slate-600 p-2 rounded-full bg-black hover:bg-white dark:bg-white hover:bg-ul-blue-700 dark:hover:bg-black ">{{ isPlaying ? 'Pause' : 'Play' }}</button>
                   <audio ref="audio" :src="audioSource" @timeupdate="updateProgressBar" class="hidden p-3 bg-black"></audio>
-                  <button @click="skipForward" class="flex items-center fill-current cursor-pointer self-center select-none ml-2 text-sky-700 bg-white hover:bg-black border-black">
+                  <button @click="skipForward" class="flex items-center fill-current cursor-pointer self-center select-none ml-2 text-sky-700 bg-sky-800 hover:bg-white dark:bg-white dark:hover:bg-black border-black dark:hover:border-sky-800">
                   <img src="https://cfl-mango.s3.amazonaws.com/uploads/downloads/skip-15.png" class="w-full max-w-[1.5rem]"/>
                 </button>
                 </div>

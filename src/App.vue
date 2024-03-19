@@ -1,9 +1,10 @@
 
 <template>
+<div class="">
     <!--Navbar---->
     <nav id="navbar" class="w-full left-0 right-0 mt-0 bg-gradient-to-r from-gray-500 via-sky-800 to-gray-500 fixed left-0 w-full z-30 top-0 mb-5 p-1 text-lg transition-transform duration-300 transform">
 
-        <div class="text-black text-sm sm:text-xl md:text-2xl"><strong>Solid Rock Baptist</strong></div>
+        <div class="text-white dark:text-black text-sm sm:text-xl md:text-3xl"><strong>Solid Rock Baptist</strong></div>
 
         <div class="mx-auto max-w-8xl px-2 sm:px-6 lg:px-8">
 
@@ -13,15 +14,16 @@
 
                     <!-- Mobile menu button-->
                     <button @click="navOpen = !navOpen" type="button" class="md:hidden relative flex items-center justify-center focus:!outline-none !border-none" aria-controls="mobile-menu" aria-expanded="false">
-                        <svg class="block h-8 w-9 fixed left-3 bg-black rounded-lg hover:bg-gray-700 hover:text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                        <svg class="block h-8 w-9 fixed left-3 bg-white dark:bg-black rounded-lg hover:bg-gray-700 hover:text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
                             <path v-if="navOpen" stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                             <path v-else stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                         </svg>
                     </button>
                 </div>
 
-                <div v-if="navOpen" class="px-8 sm:hidden p-4 rounded border mt-56 bg-black bg-white dark:bg-black">
-                    <ul>
+                <div v-if="navOpen" class="px-8 sm:hidden p-4 rounded border mt-56 bg-white dark:bg-black">
+                     <div class="w-full h-screen fixed z-10 top-0 left-0" @click="navOpen = false"></div>
+                    <ul class="z-20" @click.stop>
                         <li><router-link to="/#/" class="text-red-800 hover:text-sky-700">Home:</router-link></li>
                         <li><router-link to="contact" class="text-red-800 hover:text-sky-700">Contact:</router-link></li>
                         <li><router-link to="about" class="text-red-800 hover:text-sky-700">About:</router-link></li>
@@ -63,7 +65,7 @@
 </div>
 
     <router-view/>
-
+</div>
 </template>
 
 <script>
@@ -96,20 +98,11 @@ export default {
     // Remove event listener to avoid memory leaks
     document.removeEventListener('click', this.closeNavbarOnClickOutside);
   },
-  methods: {
-    closeNavbarOnClickOutside(event) {
-      if (!event.target.closest('.md:hidden')) {
-        // Clicked outside the navbar, so close it
-        this.navOpen = false;
-      }
-    }
-  }
 };
 </script>
 
 <style>
 body {
-  background: hover-red;
   background: linear-gradient(-45deg, transparent 50%, #000 50%) -1px -1px;
   background-size: cover;
   background-attachment: fixed;

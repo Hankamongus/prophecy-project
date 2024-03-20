@@ -33,12 +33,12 @@
 
 
                 <div class="flex items-center w-full justify-center py-4">
-                    <button @click="skipBackward" class="flex items-center fill-current cursor-pointer self-center select-none mr-2 text-sky-700 bg-sky-800 hover:bg-white dark:bg-white dark:hover:bg-black border-black dark:hover:border-sky-800">
+                    <button @click="skipBackward" class="flex items-center fill-current cursor-pointer self-center select-none mr-2 text-sky-700 hover:border-sky-800 bg-gray-800 hover:bg-white dark:bg-white dark:hover:bg-black border-1 hover:border-2 border-black ">
                         <img src="https://cfl-mango.s3.amazonaws.com/uploads/downloads/skip-15-backward.png" class="w-full max-w-[1.4rem]"/>
                 </button>
-                  <button @click="playAudio" class="text-lg text-sky-700 uppercase font-bold font-serif border border-slate-600 p-2 rounded-full bg-black hover:bg-white dark:bg-white hover:bg-ul-blue-700 dark:hover:bg-black ">{{ isPlaying ? 'Pause' : 'Play' }}</button>
+                  <button @click="playAudio" class="text-lg text-sky-700 uppercase font-bold font-serif rounded-full border-slate-600 hover:border-sky-800 bg-gray-800 hover:bg-white dark:bg-white hover:bg-ul-blue-700 dark:hover:bg-black border-1 hover:border-2 ">{{ isPlaying ? 'Pause' : 'Play' }}</button>
                   <audio ref="audio" :src="audioSource" @timeupdate="updateProgressBar" class="hidden p-3 bg-black"></audio>
-                  <button @click="skipForward" class="flex items-center fill-current cursor-pointer self-center select-none ml-2 text-sky-700 bg-sky-800 hover:bg-white dark:bg-white dark:hover:bg-black border-black dark:hover:border-sky-800">
+                  <button @click="skipForward" class="flex items-center fill-current cursor-pointer self-center select-none ml-2 border-black hover:border-sky-800 text-sky-700 bg-gray-800 hover:bg-white dark:bg-white dark:hover:bg-black border-1 hover:border-2 ">
                   <img src="https://cfl-mango.s3.amazonaws.com/uploads/downloads/skip-15.png" class="w-full max-w-[1.5rem]"/>
                 </button>
                 </div>
@@ -68,9 +68,9 @@
               <div class="text-black text-sm md:text-2xl mb-5"><strong>Fulfillments:</strong></div>
             </div>
             <div v-for="p in prophecies" @click="selectProphecy(p)" class="flex justify-between space-x-4 space-y-1">
-              <div>{{ p.Prophecy }}</div>
-              <div class="hover:underline text-blue-800">{{ p.Descriptions }}</div>
-              <div>{{ p.Fulfillments }}</div>
+              <div class="text-slate-800 dark:text-white">{{ p.Prophecy }}</div>
+              <div class="text-blue-900 hover:underline">{{ p.Descriptions }}</div>
+              <div class="text-slate-800 dark:text-white">{{ p.Fulfillments }}</div>
             </div>
           </div>
 

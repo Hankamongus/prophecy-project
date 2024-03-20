@@ -1,10 +1,12 @@
 
 <template>
-<div class="">
+<div class="fixed -translate-y-full -translate-x-2/3 scale-[200%] w-full h-full rotate-45 bg-gray-200 dark:bg-gray-800 z-10" />
+<div class="relative z-20">
+
     <!--Navbar---->
     <nav id="navbar" class="w-full left-0 right-0 mt-0 bg-gradient-to-r from-gray-500 via-sky-800 to-gray-500 fixed left-0 w-full z-30 top-0 mb-5 p-1 text-lg transition-transform duration-300 transform">
 
-        <div class="text-white dark:text-black text-sm sm:text-xl md:text-3xl"><strong>Solid Rock Baptist</strong></div>
+        <div class="text-white dark:text-black text-lg sm:text-xl md:text-3xl"><strong>Solid Rock Baptist</strong></div>
 
         <div class="mx-auto max-w-8xl px-2 sm:px-6 lg:px-8">
 
@@ -23,7 +25,7 @@
 
                 <div v-if="navOpen" class="px-8 sm:hidden p-4 rounded border mt-56 bg-white dark:bg-black">
                      <div class="w-full h-screen fixed z-10 top-0 left-0" @click="navOpen = false"></div>
-                    <ul class="z-20" @click.stop>
+                    <ul class="z-20 relative" @click.stop="navOpen = false">
                         <li><router-link to="/#/" class="text-red-800 hover:text-sky-700">Home:</router-link></li>
                         <li><router-link to="contact" class="text-red-800 hover:text-sky-700">Contact:</router-link></li>
                         <li><router-link to="about" class="text-red-800 hover:text-sky-700">About:</router-link></li>
@@ -65,6 +67,7 @@
 </div>
 
     <router-view/>
+
 </div>
 </template>
 
@@ -102,13 +105,6 @@ export default {
 </script>
 
 <style>
-body {
-  background: linear-gradient(-45deg, transparent 50%, #000 50%) -1px -1px;
-  background-size: cover;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  margin: 0;
-}
 nav{
     transition: width 0.3s ease;
 }

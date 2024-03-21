@@ -8,7 +8,7 @@
 <div v-for="person in people" :key="person" class="h-32 hover:h-64 mb-4 hover:mb-1 gap-4 z-6 p-16 brightness-75 dark:brightness-100 backdrop-blur rounded-lg border-2 border-sky-800 p-8 space-y-8 z-10 hover:border-sky-800 hover:border-4">
     <div class="flex flex-col w-full justify-center py-24 hover:mt-0 h-12 hover:h-60 mt-0">
         <div class="">
-            <div class="text-3xl font-serif mb-1">
+            <div class="text-lg sm:text-2xl md:text-3xl font-serif mb-1">
                 <a :href="person.sermonAudio" class="text-sky-700 hover:underline" target="_blank">{{ person.sermonTitle }}</a>
             <div class="text-sm font-sans text-sky-700">
                 <span>{{ person.date }}</span>

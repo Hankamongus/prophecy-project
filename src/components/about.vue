@@ -1,7 +1,7 @@
 
 <template>
     <div style="max-width: 100ch;">
-      <h1 class="text-red-900 lex justify-center" style="display: flex; width: 100%; margin-top: 100px;">
+        <h1 class="text-red-800 flex w-full justify-center items-center text-center mt-20 text-2xl md:text-3xl">
        <strong>{{ title }}</strong>&nbsp;
     </h1>
     </div>

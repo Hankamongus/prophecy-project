@@ -1,10 +1,10 @@
 
 <template>
-<div class="fixed -translate-y-full -translate-x-2/3 scale-[200%] w-full h-full rotate-45 bg-gray-200 dark:bg-gray-800 z-10" />
+<div class="fixed -translate-y-full -translate-x-2/3 scale-[200%] w-full h-full rotate-45 bg-gray-300 dark:bg-gray-900 z-10" />
 <div class="relative z-20">
 
     <!--Navbar---->
-    <nav id="navbar" class="w-full left-0 right-0 mt-0 bg-gradient-to-r from-gray-500 via-sky-800 to-gray-500 fixed left-0 w-full z-30 top-0 mb-5 p-1 text-lg transition-transform duration-300 transform">
+    <nav id="navbar" class="w-full left-0 right-0 mt-0 bg-gradient-to-r from-gray-400 via-sky-800 to-gray-400 dark:from-gray-800 dark:via-sky-800 dark:to-gray-800 fixed left-0 w-full z-30 top-0 mb-5 p-1 text-lg transition-transform duration-300 transform">
 
         <div class="text-white dark:text-black text-lg sm:text-xl md:text-3xl"><strong>Solid Rock Baptist</strong></div>
 

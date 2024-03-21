@@ -34,7 +34,7 @@ export default {
           title: 'Pastor',
           name: 'Kyle Reeder',
           email: 'kyle.reeder@example.com',
-          phone: '(123) 456-7890',
+          phone: '(270) 978-2792',
           bio: 'Pastor Kyle Reeder, a devoted shepherd in Benton, Kentucky, leads his congregation with unwavering dedication rooted in Reformed Baptist theology. Born and raised in Benton, Pastor Kyle`s spiritual journey began with a profound encounter that ignited his passion for faith. Now, as the pastor of a vibrant church, he guides his flock with humility and empathy, offering wisdom drawn from Scripture and the transformative power of redemption. Beyond the pulpit, Pastor Kyle`s engagement in the community reflects his commitment to service, partnering with local organizations and extending a helping hand to those in need. His ministry embodies the spirit of servant leadership, inspiring others with his compassionate mentorship and unwavering belief in the redeeming grace of God.',
           image: 'https://media.sermonaudio.com/images/speakers/thumbnail/23550-0001.png',
           sa: 'https://www.sermonaudio.com/solo/srbcaudio/sermons/speakers/Kyle%20Reeder/'
@@ -43,7 +43,7 @@ export default {
           title: 'Elder',
           name: 'Charlie Lynch',
           email: 'charlie.lynch@example.com',
-          phone: '(234) 567-8901',
+          phone: '(270) 564-0033',
           bio: 'Charlie Lynch, an esteemed elder at Solid Rock Baptist Church in Benton, Kentucky, brings a wealth of knowledge and devotion to his role, coupled with a unique proficiency in Biblical Greek. With a heart dedicated to deepening understanding and fostering spiritual growth, Charlies fluency in Biblical Greek enriches the congregations study of scripture and strengthens their connection to the teachings of the Bible. His commitment to serving the church community is characterized by his passion for sharing the wisdom and insights gleaned from his linguistic expertise, guiding fellow believers on a journey of discovery and enlightenment. Through his leadership and linguistic acumen, Charlie Lynch leaves an indelible mark on Solid Rock Baptist Church, empowering its members to delve deeper into their faith and engage more profoundly with the sacred texts that form the foundation of their beliefs.',
           image: 'https://media.sermonaudio.com/images/speakers/thumbnail/27721-0001.PNG',
           sa: 'https://www.sermonaudio.com/solo/srbcaudio/sermons/speakers/Charley%20Lynch/'
@@ -52,7 +52,7 @@ export default {
           title: 'Elder',
           name: 'Brent Madding',
           email: 'brent.madding@example.com',
-          phone: '(345) 678-9012',
+          phone: '(270) 970-1668',
           bio: 'Brent Madding, a devoted elder at Solid Rock Baptist Church in Benton, Kentucky, stands as a pillar of strength and integrity within both his church community and the broader Marshall County as its sheriff. With unwavering dedication, Brent fulfills his dual roles with grace and humility, embodying the values of service, justice, and compassion. Whether guiding the flock at the church or safeguarding the community as sheriff, Brents leadership is characterized by a profound sense of duty and a deep-rooted commitment to uplifting those around him. Through his exemplary service, Brent Madding exemplifies the essence of servant leadership, leaving a lasting legacy of faith, honor, and selflessness in Benton and beyond.',
           image: 'https://media.sermonaudio.com/images/speakers/thumbnail/29666-0001.png',
           sa: 'https://www.sermonaudio.com/solo/srbcaudio/sermons/speakers/Brent%20Madding/'
@@ -61,7 +61,7 @@ export default {
           title: 'Elder',
           name: 'Brian Sims',
           email: 'brian.sims@example.com',
-          phone: '(456) 789-0123',
+          phone: '(270) 205-6625',
           bio: 'Brian Sims serves as an esteemed elder at Solid Rock Baptist Church in Benton, Kentucky, embodying a steadfast commitment to the congregations spiritual growth and well-being. With a heart devoted to service, Brian tirelessly advocates for the churchs mission, imparting wisdom and guidance drawn from his deep-rooted faith. Through his dedicated leadership, Brian fosters a nurturing environment where individuals can flourish in their relationship with God and each other, making an indelible impact on the community and exemplifying the churchs values of compassion, integrity, and grace.',
           image: 'https://media.sermonaudio.com/images/speakers/thumbnail/24152-0001.png',
           sa: 'https://www.sermonaudio.com/solo/srbcaudio/sermons/speakers/Brian%20Sims/'

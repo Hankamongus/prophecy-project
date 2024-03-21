@@ -14,8 +14,8 @@
         <a href="https://www.google.com/maps/place/The+Solid+Rock+Baptist+Church/@36.9297529,-88.3411535,17z/data=!3m1!4b1!4m6!3m5!1s0x887a42bc802dd477:0x3046b7e3359d6952!8m2!3d36.9297486!4d-88.3385786!16s%2Fg%2F11c380rcrx?entry=ttu" class="text-4xl font-bold mb-4 hover:underline text-white hover:text-sky-700">Location:</a>
        <ul>
          <li class="mb-2"><a href="https://www.google.com/maps/place/The+Solid+Rock+Baptist+Church/@36.9297529,-88.3411535,17z/data=!3m1!4b1!4m6!3m5!1s0x887a42bc802dd477:0x3046b7e3359d6952!8m2!3d36.9297486!4d-88.3385786!16s%2Fg%2F11c380rcrx?entry=ttu" class="text-black hover:text-sky-700">3223 US-641, Benton, KY 42025</a></li>
-         <li class="mb-2">Email: <a href="mailto:joyoconnell@outlook.com?subject=Contact Solid Rock" class="text-black hover:text-sky-700">joyoconnell@outlook.com</a></li>
-         <li class="mb-2">Phone: <a href="tel:2705272957" class="text-black hover:text-sky-700">(270) 527-2957</a></li>
+         <li class="mb-2">Email: <a href="mailto:joyoconnell@outlook.com?subject=Contact Solid Rock" class="text-black hover:text-sky-700 hover:underline">joyoconnell@outlook.com</a></li>
+         <li class="mb-2">Phone: <a href="tel:2705272957" class="text-black hover:text-sky-700 hover:underline">(270) 527-2957</a></li>
        </ul>
        <div class="text-4xl font-bold mb-4 text-white">Services:</div>
        <ul>

@@ -7,7 +7,7 @@
      </div>
 <!--Header Image!!-->
 
-    <div class="z-6 p-10 bg-gray-500 backdrop-blur rounded-lg border-2 space-y-8 border-sky-800">
+    <div class="z-6 p-10 bg-gray-500 dark:bg-gray-800 backdrop-blur rounded-lg border-2 space-y-8 border-sky-800">
             <div class="flex justify-between text-2xl mb-5">
                 <div><strong>How much do you want to give?</strong></div>
                 <form action="/submit" method="post">

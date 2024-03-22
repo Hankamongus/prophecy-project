@@ -6,7 +6,7 @@
   </div>
  <div class="w-full grid grid-cols-1 md:grid-cols-2 px-8 gap-4 md:gap-8">
 
-    <div v-for="person in people" :key="person" class="group left-0 ml-0 z-10 p-16  rounded-lg border-2 space-y-8 w-full h-full hover:h-screen bg-gray-500 border-sky-800 mb-4">
+    <div v-for="person in people" :key="person" class="group left-0 ml-0 z-10 p-16  rounded-lg border-2 space-y-8 w-full h-full hover:h-screen bg-gray-500 dark:bg-gray-800 border-sky-800 mb-4">
     <div class="profile-section mt-0 flex flex-col items-center"> <!-- Modified this line -->
         <a :href="person.sa">
             <img class="profile-picture hover:brightness-50 rounded-full border-2 border-sky-800" :src="person.image" alt="Profile Picture">

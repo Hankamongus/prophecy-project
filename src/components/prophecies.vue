@@ -61,7 +61,7 @@
         <div style="max-width: 100ch; color: white;">
 
 
-         <div class="z-6 p-16 bg-gray-500 backdrop-blur rounded-lg border-4 border-sky-800 p-8 space-y-8 z-10 hover:border-sky-800 hover:border-4">
+         <div class="z-6 p-16 bg-gray-500 dark:bg-gray-800 backdrop-blur rounded-lg border-4 border-sky-800 p-8 space-y-8 z-10 hover:border-sky-800 hover:border-4">
              <div class="flex justify-between text-sm md:text-2xl mb-5">
               <div class="text-black text-sm md:text-2xl mb-5"><strong>Prophecy:</strong></div>
               <div class="text-black sm:text-sm md:text-2xl mb-5"><strong>Descriptions:</strong></div>
@@ -69,7 +69,7 @@
             </div>
             <div v-for="p in prophecies" @click="selectProphecy(p)" class="flex justify-between space-x-4 space-y-1">
               <div class="text-slate-800 dark:text-white">{{ p.Prophecy }}</div>
-              <div class="text-blue-900 hover:underline">{{ p.Descriptions }}</div>
+              <div class="text-sky-800 hover:underline">{{ p.Descriptions }}</div>
               <div class="text-slate-800 dark:text-white">{{ p.Fulfillments }}</div>
             </div>
           </div>

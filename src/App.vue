@@ -7,7 +7,9 @@
     <nav id="navbar" class="w-full left-0 right-0 mt-0 bg-gradient-to-r from-gray-400 via-sky-800 to-gray-400 dark:from-gray-800 dark:via-sky-800 dark:to-gray-800 fixed left-0 w-full z-30 top-0 mb-5 p-1 text-lg transition-transform duration-300 transform">
 
         <div class="group flex flex-col items-center">
-
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-ear" viewBox="0 0 16 16">
+                 <path d="M12 3v18m-6-7h12"/>
+            </svg>
             <div class="flex items-center space-x-2">
                 <p class="text-center font-bold text-white dark:text-black text-lg sm:text-xl md:text-3xl">Solid Rock Baptist</p>
 
@@ -154,7 +156,7 @@ export default {
   data() {
     return {
       navOpen: false,
-      navButtons: ['Home', 'About',  'Donate', 'Contact', 'Prophecies', 'Sermons', 'Directory'],
+      navButtons: ['Home ', 'Contact',  'About', 'Donate $', 'Sermons', 'Prophecies', 'Directory'],
       contactOpen: false
     };
   },

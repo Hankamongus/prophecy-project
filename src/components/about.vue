@@ -14,7 +14,13 @@
         <a href="https://www.google.com/maps/place/The+Solid+Rock+Baptist+Church/@36.9297529,-88.3411535,17z/data=!3m1!4b1!4m6!3m5!1s0x887a42bc802dd477:0x3046b7e3359d6952!8m2!3d36.9297486!4d-88.3385786!16s%2Fg%2F11c380rcrx?entry=ttu" class="text-4xl font-bold mb-4 hover:underline text-white hover:text-sky-700">Location:</a>
        <ul>
          <li class="mb-2"><a href="https://www.google.com/maps/place/The+Solid+Rock+Baptist+Church/@36.9297529,-88.3411535,17z/data=!3m1!4b1!4m6!3m5!1s0x887a42bc802dd477:0x3046b7e3359d6952!8m2!3d36.9297486!4d-88.3385786!16s%2Fg%2F11c380rcrx?entry=ttu" class="text-black hover:text-sky-700">3223 US-641, Benton, KY 42025</a></li>
-         <li class="mb-2">Email: <a href="mailto:joyoconnell@outlook.com?subject=Contact Solid Rock" class="text-black hover:text-sky-700 hover:underline">joyoconnell@outlook.com</a></li>
+         <li class="mb-2 flex items-center">
+            <a href="mailto:joyoconnell@outlook.com?subject=Contact Solid Rock" class="text-black hover:text-sky-700 hover:underline">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="h-8 w-8 mt-4 bi bi-envelope" viewBox="0 0 16 16">
+                    <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/>
+                </svg>
+            </a>
+        </li>
          <li class="mb-2">Phone: <a href="tel:2705272957" class="text-black hover:text-sky-700 hover:underline">(270) 527-2957</a></li>
        </ul>
        <div class="text-4xl font-bold mb-4 text-white">Services:</div>

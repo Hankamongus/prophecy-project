@@ -63,7 +63,13 @@
                         <div v-if="navOpen" class="px-8 sm:hidden p-4 rounded border mt-56 bg-white dark:bg-black">
                             <div class="w-full h-screen fixed z-10 top-0 left-0" @click="navOpen = false"></div>
                             <ul class="z-20 relative" @click.stop="navOpen = false">
-                                <li><router-link to="/#/" class="text-red-800 hover:text-sky-700">Home</router-link>▾</li>
+                                <li>
+                                    <router-link to="/#/" class="flex items-center space-x-1 text-red-800 hover:text-sky-700">
+                                    <p>Home</p>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-house h-4 w-4" viewBox="0 0 16 16">
+                                        <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"/>
+                                    </svg>
+                                </router-link></li>
                                 <li><router-link to="contact" class="text-red-800 hover:text-sky-700">Contact</router-link>▾</li>
                                 <li><router-link to="about" class="text-red-800 hover:text-sky-700">About</router-link>▾</li>
                                 <li><router-link to="prophecies" class="text-red-800 hover:text-sky-700">Prophecies</router-link>▾</li>

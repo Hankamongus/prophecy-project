@@ -6,23 +6,30 @@
     </div>
 
     <!--Sermon cols-->
-    <div class="flex flex-col gap-4">
-        <div v-for="person in people" :key="person" class="flex flex-col w-full justify-center p-8 bg-gray-500 dark:bg-gray-800 group border-sky-800 border-2 rounded-lg">
+    <div class="flex flex-col gap-4 ">
+        <div v-for="person in people" :key="person" class="shadow-lg backdrop-blur flex flex-col w-full justify-center p-8 bg-gray-500 dark:bg-gray-800 group border-sky-800 border-2 rounded-lg">
 
             <div class="text-lg sm:text-2xl md:text-3xl font-serif mb-1">
-                <a :href="person.sermonAudio" class="text-sky-700 hover:underline" target="_blank">{{ person.sermonTitle }}</a>
-                <div class="text-sm font-sans text-sky-700">
-                    <span>{{ person.date }}</span>
-                    <span> || </span>
-                    <span>{{ text.scripture }}</span>
+                <div class="text-xs text-sky-700">
+                <div class="flex content justify-left">
+                    <div>
+                      <a :href="person.sa">
+                            <img :src="person.image" class="border-2 border-sky-800 rounded-full w-14 h-14 inline-flex hover:brightness-50" target="_blank" />
+                        <p class="ml-2 text-base text-sky-700 font-serif">{{ person.name }}</p>
+                      </a>
+                    </div>
+                   <div>
+                    <span><a :href="person.sermonAudio" class="text-sky-700 text-3xl hover:underline" target="_blank">{{ person.sermonTitle }}</a></span>
                 </div>
             </div>
-
-            <div class="text-xs text-sky-700">
-                <a :href="person.sa">
-                    <img :src="person.image" class="rounded-full w-10 h-10 inline-flex hover:brightness-50" target="_blank" /><span class="ml-2 text-base text-sky-700 font-serif">{{ person.name }}</span>
-                </a>
+                <div class="text-sm sm:text-lg font-sans text-red-900">
+                    <span>{{ person.date }}</span>
+                    <span class="ml-2 mr-2 text-slate-400"> || </span>
+                    <span>{{ person.text }}</span>
+                </div>
             </div>
+        </div>
+
 
             <div class="hidden group-hover:block">
                 <div class="flex items-center w-full justify-center py-2">
@@ -69,7 +76,8 @@
           image: 'https://media.sermonaudio.com/images/speakers/thumbnail/23550-0001.png',
           sa: 'https://www.sermonaudio.com/solo/srbcaudio/sermons/speakers/Kyle%20Reeder/',
           audioSource: 'https://cfl-mango.s3.amazonaws.com/uploads/downloads/The%20Glorious%20Incarnation.mp3',
-          date: '',
+          date: 'Jan, 1st, 2024',
+          text: 'Hebrews 2:1-5',
           sermonAudio:'https://www.sermonaudio.com/solo/srbcaudio/sermons/31824114221364/'
 
 
@@ -80,7 +88,8 @@
           image: 'https://media.sermonaudio.com/images/speakers/thumbnail/27721-0001.PNG',
           sa: 'https://www.sermonaudio.com/solo/srbcaudio/sermons/speakers/Charley%20Lynch/',
           audioSource: 'https://cfl-mango.s3.amazonaws.com/uploads/downloads/The%20Glorious%20Incarnation.mp3',
-          date: 'Feb 24 2024',
+          date: 'Feb 24, 2024',
+          text: 'Hebrews 2:1-5',
           sermonAudio:''
 
         },
@@ -90,17 +99,19 @@
           image: 'https://media.sermonaudio.com/images/speakers/thumbnail/29666-0001.png',
           sa: 'https://www.sermonaudio.com/solo/srbcaudio/sermons/speakers/Brent%20Madding/',
           audioSource: 'https://cfl-mango.s3.amazonaws.com/uploads/downloads/The%20Glorious%20Incarnation.mp3',
-          date: '',
+          date: 'Jan, 1st, 2024',
+          text: 'Hebrews 2:1-5',
           sermonAudio:''
 
         },
         {
           name: 'Brian Sims',
-          sermonTitle: 'Jesus Loses NONE',
+          sermonTitle: 'Jesus Loses None',
           image: 'https://media.sermonaudio.com/images/speakers/thumbnail/24152-0001.png',
           sa: 'https://www.sermonaudio.com/solo/srbcaudio/sermons/speakers/Brian%20Sims/',
           audioSource: 'https://cfl-mango.s3.amazonaws.com/uploads/downloads/The%20Glorious%20Incarnation.mp3',
-          date: '',
+          date: 'Jan, 1st, 2024',
+          text: 'Hebrews 2:1-5',
           sermonAudio:''
         }
       ]

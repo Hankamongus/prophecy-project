@@ -7,19 +7,30 @@
     <nav id="navbar" class="w-full left-0 right-0 mt-0 bg-gradient-to-r from-gray-400 via-sky-800 to-gray-400 dark:from-gray-800 dark:via-sky-800 dark:to-gray-800 fixed left-0 w-full z-30 top-0 mb-5 p-1 text-lg transition-transform duration-300 transform">
 
         <div class="group flex flex-col items-center">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-ear" viewBox="0 0 16 16">
-                 <path d="M12 3v18m-6-7h12"/>
-            </svg>
-            <div class="flex items-center space-x-2">
+             <div class="flex items-center space-x-2">
+                <a href="tel:2705272957">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAYUlEQVR4nGNgIAJMY2L6jw8zUAvQ3SIGIsXJBsgG4mKPcIumERHp2NjTSE0kdLeIgchgxAVIsoiQa6cR6evBYxFdgm7asEl1dMuwuMCoRWSD0aAjGwzvoEMG04Z8c4sSiwDcmXK4MA6BhgAAAABJRU5ErkJggg==">
+                </a>
                 <p class="text-center font-bold text-white dark:text-black text-lg sm:text-xl md:text-3xl">Solid Rock Baptist</p>
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAYUlEQVR4nGNgIAJMY2L6jw8zUAvQ3SIGIsXJBsgG4mKPcIumERHp2NjTSE0kdLeIgchgxAVIsoiQa6cR6evBYxFdgm7asEl1dMuwuMCoRWSD0aAjGwzvoEMG04Z8c4sSiwDcmXK4MA6BhgAAAABJRU5ErkJggg==">
+
 
                 <button @click="contactOpen = !contactOpen" class="flex items-center justify-center items-center text-white font-bold py-1 px-1 rounded-full hover:border-sky-900 p-1">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 bg-sky-900 rounded-full" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 sm:w-6 sm:h-6 bg-sky-900 rounded-full transition-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path v-if="contactOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
                         <path v-else stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
                     </svg>
                 </button>
             </div>
+            <!----<div :class="{ 'dark': darkMode, 'light': !darkMode }">
+                    <button @click="toggleDarkMode" class="hover:border-transparent border-8 bg-transparent font-bold">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="border-0 h-8 w-8 bi bi-sun-fill" viewBox="0 0 16 16">
+                            <path v-if="darkMode" class="text-white hover:text-yellow-500" d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708"/>
+                            <path v-else class="text-black  hover:text-white" d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278M4.858 1.311A7.27 7.27 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.32 7.32 0 0 0 5.205-2.162q-.506.063-1.029.063c-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286"/>
+                         </svg>
+                    </button>
+                </div>-->
+
 
             <div id="contact" v-if="contactOpen" class="flex justify-center border-black border-4 rounded-lg h-auto w-28 bg-gray-500">
                 <ul class="text-lg">
@@ -156,11 +167,31 @@ export default {
   data() {
     return {
       navOpen: false,
-      navButtons: ['Home ', 'Contact',  'About', 'Donate $', 'Sermons', 'Prophecies', 'Directory'],
-      contactOpen: false
+      navButtons: ['Home', 'Contact',  'About', 'Donate', 'Sermons', 'Prophecies', 'Directory'],
+      contactOpen: false,
+      darkMode: false
     };
   },
+  methods: {
+    toggleDarkMode() {
+      this.darkMode = !this.darkMode;
+      // You can also save the user's preference in local storage to persist the mode
+      localStorage.setItem('darkMode', this.darkMode);
+    }
+  },
+  methods: {
+    toggleDarkMode() {
+      this.darkMode = !this.darkMode;
+      // You can also save the user's preference in local storage to persist the mode
+      localStorage.setItem('darkMode', this.darkMode);
+    }
+  },
   mounted() {
+    const savedMode = localStorage.getItem('darkMode');
+    if (savedMode) {
+      this.darkMode = JSON.parse(savedMode);
+    }
+
     let prevScrollpos = window.pageYOffset;
     const navbar = document.getElementById('navbar');
     window.onscroll = () => {
@@ -186,6 +217,7 @@ export default {
 </script>
 
 <style>
+
 nav{
     transition: width 0.3s ease;
 }

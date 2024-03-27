@@ -1259,9 +1259,4 @@ audio-container{
     text-align: center;
     padding: 50px;
   }
-
-  .dark-mode {
-    background-color: #333;
-    color: #fff;
-  }
 </style>

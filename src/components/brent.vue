@@ -55,26 +55,31 @@
    </div>
  </div>
    </div>
-       <div class="h-5xl w-lg bg-gray-800 top-64 fixed left-0 z-10 rounded-lg border-2 border-sky-700">
-           <ul class="">
-           <li class="text-white font-bold text-2xl mb-4">Contact:</li>
-           <li class="text-white rounded-lg mb-4 group">
+   <div class="h-full w-2 hover:w-full sm:hover:w-64 bg-gray-800  fixed left-0 z-20 rounded-lg border-black border-2  hover:border-sky-700 group top-8">
+            <span class="group-hover:hidden text-red-800">
+                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class=" bi bi-arrow-bar-right mt-64" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M6 8a.5.5 0 0 0 .5.5h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L12.293 7.5H6.5A.5.5 0 0 0 6 8m-2.5 7a.5.5 0 0 1-.5-.5v-13a.5.5 0 0 1 1 0v13a.5.5 0 0 1-.5.5"/>
+                </svg>
+            </span>
+           <ul class="hidden group-hover:block mt-24">
+           <li class="text-red-800 sm:text-white font-serif font-bold text-4xl mb-4">Contact:</li>
+           <li class="text-red-800 sm:text-white font-serif rounded-lg mb-24 group">
             <span class="flex items-center text-white"><strong>Leadership</strong>
-                <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 hover:ml-4 h-2 w-2 sm:w-4 sm:h-4 bg-sky-900 rounded-full transition-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 hover:ml-4 h-2 w-2 sm:w-4 sm:h-4 bg-sky-900 rounded-full transition-300 font-bold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path v-if="contactOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
                     <path v-else stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
                 </svg>
             </span>
                <ul class="hidden group-hover:block">
-                <li class="hover:bg-white rounded-lg"><router-link to="brent" class="text-white hover:text-sky-800 hover:underline hover:bg-white rounded-lg"><strong>Elder~</strong>Brent Madding</router-link></li>
-                <li class="hover:bg-white rounded-lg"><router-link to="kyle" class="text-white hover:text-sky-800 hover:underline hover:bg-white rounded-lg"><strong>Pastor~</strong>  Kyle Reeder</router-link></li>
-                <li class="hover:bg-white rounded-lg"><router-link to="charlie" class="text-white hover:text-sky-800 hover:underline hover:bg-white rounded-lg"><strong>Elder~</strong>  Charlie Lynch</router-link></li>
-                <li class="hover:bg-white rounded-lg"><router-link to="brian" class="text-white hover:text-sky-800 hover:underline hover:bg-white rounded-lg"><strong>Elder~</strong> Brian Sims</router-link></li>
+                <li class="hover:bg-gray-500 mb-12 text-2xl"><router-link to="kyle" class="text-red-800 sm:text-white font-serif hover:text-sky-800 hover:underline"><strong>Pastor~</strong> Kyle Reeder</router-link></li>
+                <li class="hover:bg-gray-500 mb-12 text-2xl"><router-link to="brent" class="text-red-800 sm:text-white font-serif hover:text-sky-800 hover:underline"><strong>Elder~</strong> Brent Madding</router-link></li>
+                <li class="hover:bg-gray-500 mb-12 text-2xl"><router-link to="charlie" class="text-red-800 sm:text-white font-serif hover:text-sky-800 hover:underline"><strong>Elder~</strong> Charlie Lynch</router-link></li>
+                <li class="hover:bg-gray-500 mb-12 text-2xl"><router-link to="brian" class="text-red-800 sm:text-white font-serif hover:text-sky-800 hover:underline"><strong>Elder~</strong> Brian Sims</router-link></li>
                </ul>
            </li>
-           <li class="hover:bg-white rounded-lg mb-4"><router-link to="leadership" class="text-white hover:text-sky-800 hover:underline">Front Desk~</router-link></li>
-           <li class="hover:bg-white rounded-lg mb-4"><router-link to="leadership" class="text-white hover:text-sky-800 hover:underline">Help~</router-link></li>
-           <li class="hover:bg-white rounded-lg mb-4"><router-link to="leadership" class="text-white hover:text-sky-800 hover:underline">Outreach~</router-link></li>
+           <li class="hover:bg-gray-500 hover:text-sky-800 mb-12 text-2xl"><router-link to="leadership" class="text-red-800 sm:text-white font-serif hover:text-sky-800 hover:underline">Front Desk~</router-link></li>
+           <li class="hover:bg-gray-500 hover:text-sky-800 mb-12 text-2xl"><router-link to="leadership" class="text-red-800 sm:text-white font-serif hover:text-sky-800 hover:underline">Help~</router-link></li>
+           <li class="hover:bg-gray-500 hover:text-sky-800 mb-12 text-2xl"><router-link to="leadership" class="text-red-800 sm:text-white font-serif hover:text-sky-800 hover:underline">Outreach~</router-link></li>
        </ul>
    </div>
 

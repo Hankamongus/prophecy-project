@@ -73,57 +73,57 @@
                                 </svg>
                             </button>
                         </div>
-                        <div v-if="navOpen" class="px-8 sm:hidden p-4 rounded border mt-56 bg-white dark:bg-black">
+                        <div v-if="navOpen" class="px-8 sm:hidden p-4 h-screen w-screen fixed inset-0 mt-24 bg-black/50 backdrop-blur z-50">
                             <div class="w-full h-screen fixed z-10 top-0 left-0" @click="navOpen = false"></div>
-                            <ul class="z-20 relative" @click.stop="navOpen = false">
-                                <li>
-                                    <router-link to="/#/" class="flex items-center space-x-1 text-red-800 hover:text-sky-700">
-                                    <p>Home</p>
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-house h-4 w-4" viewBox="0 0 16 16">
+                            <ul class="z-20 relative font-serif text-3xl" @click.stop="navOpen = false">
+                                <li class="hover:bg-white roounded-lg">
+                                    <router-link to="/#/" class="text-3xl flex items-center space-x-1 text-red-800 hover:text-sky-700 mb-24">
+                                    <p class="text-3xl border-b rounded-lg">Home</p>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-house h-8 w-8" viewBox="0 0 16 16">
                                         <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"/>
                                     </svg>
                                 </router-link>
                             </li>
-                            <li>
-                                <router-link to="contact" class="flex items-center space-x-1 text-red-800 hover:text-sky-700">
-                                    <p>Contact</p>
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="h-4 w-4 bi bi-envelope" viewBox="0 0 16 16">
+                            <li class="hover:bg-white roounded-lg">
+                                <router-link to="contact" class="flex items-center space-x-1 text-red-800 hover:text-sky-700 mb-24">
+                                    <p class="text-3xl border-b rounded-lg">Contact</p>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="h-8 w-8 bi bi-envelope" viewBox="0 0 16 16">
                                         <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/>
                                     </svg>
                                 </router-link>
                             </li>
-                            <li>
-                                <router-link to="about" class="flex items-center space-x-1 text-red-800 hover:text-sky-700">
-                                    <p>About</p>
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-question-octagon w-4 h-4" viewBox="0 0 16 16">
+                            <li class="hover:bg-white roounded-lg">
+                                <router-link to="about" class="flex items-center space-x-1 text-red-800 hover:text-sky-700 mb-24">
+                                    <p class="text-3xl border-b rounded-lg">About</p>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-question-octagon w-8 h-8" viewBox="0 0 16 16">
                                         <path d="M4.54.146A.5.5 0 0 1 4.893 0h6.214a.5.5 0 0 1 .353.146l4.394 4.394a.5.5 0 0 1 .146.353v6.214a.5.5 0 0 1-.146.353l-4.394 4.394a.5.5 0 0 1-.353.146H4.893a.5.5 0 0 1-.353-.146L.146 11.46A.5.5 0 0 1 0 11.107V4.893a.5.5 0 0 1 .146-.353zM5.1 1 1 5.1v5.8L5.1 15h5.8l4.1-4.1V5.1L10.9 1z"/>
                                         <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286m1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94"/>
                                     </svg>
                                 </router-link>
                             </li>
 
-                            <li>
-                                <router-link to="sermons" class="flex items-center space-x-1 text-red-800 hover:text-sky-700">
-                                    <p>Sermons</p>
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-4 h-4 bi bi-ear" viewBox="0 0 16 16">
+                            <li class="hover:bg-white roounded-lg">
+                                <router-link to="sermons" class="flex items-center space-x-1 text-red-800 hover:text-sky-700 mb-24">
+                                    <p class="text-3xl border-b rounded-lg">Sermons</p>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-8 h-8 bi bi-ear" viewBox="0 0 16 16">
                                         <path d="M8.5 1A4.5 4.5 0 0 0 4 5.5v7.047a2.453 2.453 0 0 0 4.75.861l.512-1.363a5.6 5.6 0 0 1 .816-1.46l2.008-2.581A4.34 4.34 0 0 0 8.66 1zM3 5.5A5.5 5.5 0 0 1 8.5 0h.16a5.34 5.34 0 0 1 4.215 8.618l-2.008 2.581a4.6 4.6 0 0 0-.67 1.197l-.51 1.363A3.453 3.453 0 0 1 3 12.547zM8.5 4A1.5 1.5 0 0 0 7 5.5v2.695q.168-.09.332-.192c.327-.208.577-.44.72-.727a.5.5 0 1 1 .895.448c-.256.513-.673.865-1.079 1.123A9 9 0 0 1 7 9.313V11.5a.5.5 0 0 1-1 0v-6a2.5 2.5 0 0 1 5 0V6a.5.5 0 0 1-1 0v-.5A1.5 1.5 0 0 0 8.5 4"/>
                                     </svg>
                                 </router-link>
                             </li>
 
-                             <li>
-                                <router-link to="donate" class="flex items-center space-x-1 text-red-800 hover:text-sky-700">
-                                    <p>Donate</p>
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="h-4 w-4 bi bi-currency-dollar" viewBox="0 0 16 16">
+                             <li class="hover:bg-white roounded-lg">
+                                <router-link to="donate" class="flex items-center space-x-1 text-red-800 hover:text-sky-700 mb-24">
+                                    <p class="text-3xl border-b rounded-lg">Donate</p>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="h-8 w-8 bi bi-currency-dollar" viewBox="0 0 16 16">
                                         <path d="M4 10.781c.148 1.667 1.513 2.85 3.591 3.003V15h1.043v-1.216c2.27-.179 3.678-1.438 3.678-3.3 0-1.59-.947-2.51-2.956-3.028l-.722-.187V3.467c1.122.11 1.879.714 2.07 1.616h1.47c-.166-1.6-1.54-2.748-3.54-2.875V1H7.591v1.233c-1.939.23-3.27 1.472-3.27 3.156 0 1.454.966 2.483 2.661 2.917l.61.162v4.031c-1.149-.17-1.94-.8-2.131-1.718zm3.391-3.836c-1.043-.263-1.6-.825-1.6-1.616 0-.944.704-1.641 1.8-1.828v3.495l-.2-.05zm1.591 1.872c1.287.323 1.852.859 1.852 1.769 0 1.097-.826 1.828-2.2 1.939V8.73z"/>
                                     </svg>
                                 </router-link>
                             </li>
-                            <li>
-                                <router-link to="prophecies" class="text-red-800 hover:text-sky-700">Prophecies</router-link>▾
+                            <li class="hover:bg-white roounded-lg">
+                                <div class="flex"><router-link to="prophecies" class="border-b rounded-lg text-red-800 hover:text-sky-700 mb-24">Prophecies</router-link>▾</div>
                             </li>
-                            <li>
-                                <router-link to="directory" class="text-red-800 hover:text-sky-700">Directory</router-link>▾
+                            <li class="hover:bg-white roounded-lg">
+                                <div class="flex"><router-link to="directory" class="border-b rounded-lg text-red-800 hover:text-sky-700 mb-24">Directory</router-link>▾</div>
                              </li>
                            </ul>
                         </div>

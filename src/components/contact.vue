@@ -36,9 +36,9 @@
 
     <!-- Main Content -->
     <div class="container mx-auto py-12">
-    <div class="max-w-3xl mx-auto bg-black dark:bg-white rounded-lg overflow-hidden">
+    <div class="max-w-xl sm:max-w-3xl mx-auto bg-black dark:bg-white rounded-lg overflow-hidden">
       <div class="px-6 py-4">
-        <h2 class="text-2xl text-white dark:text-black font-semibold mb-2">Contact SRBC</h2>
+        <h2 class="text-xl sm:text-2xl text-white dark:text-black font-semibold mb-2">Contact SRBC</h2>
         <form @submit.prevent="sendEmail">
           <div class="mb-4">
             <label for="email" class="block text-sm font-bold mb-2 text-white dark:text-black">Email</label>

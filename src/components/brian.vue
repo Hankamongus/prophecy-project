@@ -66,10 +66,11 @@
                 </svg>
             </span>
                <ul class="hidden group-hover:block">
-                <li><router-link to="kyle" class="text-white hover:text-sky-800 hover:underline hover:bg-white rounded-lg">Pastor~ Kyle Reeder</router-link></li>
-                <li><router-link to="brent" class="text-white hover:text-sky-800 hover:underline hover:bg-white rounded-lg">Elder~ Brent Madding</router-link></li>
-                <li><router-link to="charlie" class="text-white hover:text-sky-800 hover:underline hover:bg-white rounded-lg">Elder~ Charlie Lynch</router-link></li>
-                <li><router-link to="brian" class="text-white hover:text-sky-800 hover:underline hover:bg-white rounded-lg">Elder~ Brian Sims</router-link></li>
+                <li class="hover:bg-white rounded-lg"><router-link to="brian" class="text-white hover:text-sky-800 hover:underline hover:bg-white rounded-lg"><strong>Elder~</strong class="hover:bg-white rounded-lg">Brian Sims</router-link></li>
+                <li class="hover:bg-white rounded-lg"><router-link to="kyle" class="text-white hover:text-sky-800 hover:underline hover:bg-white rounded-lg"><strong>Pastor~</strong>Kyle Reeder</router-link></li>
+                <li class="hover:bg-white rounded-lg"><router-link to="brent" class="text-white hover:text-sky-800 hover:underline hover:bg-white rounded-lg"><strong>Elder~</strong>Brent Madding</router-link></li>
+                <li class="hover:bg-white rounded-lg"><router-link to="charlie" class="text-white hover:text-sky-800 hover:underline hover:bg-white rounded-lg"><strong>Elder~</strong> Charlie Lynch</router-link></li>
+
                </ul>
            </li>
            <li class="hover:bg-white rounded-lg mb-4"><router-link to="leadership" class="text-white hover:text-sky-800 hover:underline">Front Desk~</router-link></li>

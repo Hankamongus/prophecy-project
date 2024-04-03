@@ -4,19 +4,19 @@
 
     <!--Bible verse header-->
     <div style="display: flex; width: 100%; justify-content: center; margin-top: 100px;">
-        <p class="text-red-800 text-sm sm:text-xl md:text-2xl"><em><strong>{{ text1 }}</strong></em></p>
+        <p class="font-serif text-red-800 text-sm sm:text-xl md:text-2xl"><em><strong>{{ text1 }}</strong></em></p>
       </div>
       <div style="display: flex; width: 100%; justify-content: center;">
-        <p class="text-red-800 text-sm sm:text-xl md:text-2xl"><em><strong>{{ text2 }}</strong></em></p>
+        <p class="font-serif text-red-800 text-sm sm:text-xl md:text-2xl"><em><strong>{{ text2 }}</strong></em></p>
       </div>
       <div style="display: flex; width: 100%; justify-content: center;">
-        <p class="text-red-800 text-sm sm:text-xl md:text-2xl"><strong>{{ text3 }}</strong></p>
+        <p class="font-serif text-red-800 text-sm sm:text-xl md:text-2xl border-red-800 border-b rounded-lg"><strong>{{ text3 }}</strong></p>
       </div>
 <!--Speaker Profile-->
 <div class="flex flex-col w-full justify-center py-20">
    <div class="">
       <div class="text-3xl font-serif mb-2">
-       <a href="https://www.sermonaudio.com/saplayer/playpopup.asp?SID=1218231313312511" class="text-sky-700 hover:border-b hover:text-sky-600" target="_blank">{{ SermonTitle }}</a>
+       <a href="https://www.sermonaudio.com/saplayer/playpopup.asp?SID=1218231313312511" class="text-sky-700 rounded-lg hover:border-b border-gray-500 hover:text-sky-600" target="_blank">{{ SermonTitle }}</a>
        <div  class="text-sm font-sans text-sky-700">
         <span>Dec 17, 2023</span>
         <span> || </span>
@@ -112,7 +112,7 @@ export default {
         return {
             text1: '"Do not think that I have come to abolish the Law or the Prophets;',
             text2: 'I have not come to abolish them but to fulfill them."',
-            text3:'(Mathew 5:17)',
+            text3:'Mathew 5:17',
             Name:'Henry Bradford Arterburn',
             SermonTitle:'The Glorious Incarnation',title: 'The one the Prophets Foretold',
             rating: [],

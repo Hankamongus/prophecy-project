@@ -16,7 +16,7 @@
 <div class="flex flex-col w-full justify-center py-20">
    <div class="">
       <div class="text-3xl font-serif mb-2">
-       <a href="https://www.sermonaudio.com/saplayer/playpopup.asp?SID=1218231313312511" class="text-sky-700 hover:underline" target="_blank">{{ SermonTitle }}</a>
+       <a href="https://www.sermonaudio.com/saplayer/playpopup.asp?SID=1218231313312511" class="text-sky-700 hover:border-b hover:text-sky-600" target="_blank">{{ SermonTitle }}</a>
        <div  class="text-sm font-sans text-sky-700">
         <span>Dec 17, 2023</span>
         <span> || </span>
@@ -57,20 +57,22 @@
           <input type="submit" value=" ">
         </form>
       </div> -->
-    <div style= "width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; padding-top: 1rem; padding-bottom: 5rem;">
-        <div style="max-width: 100ch; color: white;">
+      <div class="w-full flex flex-col items-center justify-center py-4">
+  <div class="max-w-screen-md text-white">
 
 
-         <div class="z-6 p-16 bg-gray-500 dark:bg-gray-800 backdrop-blur rounded-lg border-4 border-sky-800 p-8 space-y-8 z-10 hover:border-sky-800 hover:border-4">
+
+         <div class="z-6 p-16 bg-slate-700 rounded-lg backdrop-blur rounded-lg p-8 space-y-8 z-10">
+            <div class="p-8 relative translate-x-10 -translate-y-10 bg-slate-800 mb-8 backdrop-blur rounded-lg border-sky-800 p-8 space-y-8 z-10">
              <div class="flex justify-between text-sm md:text-2xl mb-5">
-              <div class="text-black text-sm md:text-2xl mb-5"><strong>Prophecy:</strong></div>
-              <div class="text-black sm:text-sm md:text-2xl mb-5"><strong>Descriptions:</strong></div>
-              <div class="text-black text-sm md:text-2xl mb-5"><strong>Fulfillments:</strong></div>
+              <div class="text-black text-sm md:text-2xl mb-5 font-serif"><strong>Prophecy:</strong></div>
+              <div class="text-black sm:text-sm md:text-2xl mb-5 font-serif"><strong>Descriptions:</strong></div>
+              <div class="text-black text-sm md:text-2xl mb-5 font-serif"><strong>Fulfillments:</strong></div>
             </div>
             <div v-for="p in prophecies" @click="selectProphecy(p)" class="flex justify-between space-x-4 space-y-1">
-              <div class="text-slate-800 dark:text-white">{{ p.Prophecy }}</div>
-              <div class="text-sky-800 hover:underline">{{ p.Descriptions }}</div>
-              <div class="text-slate-800 dark:text-white">{{ p.Fulfillments }}</div>
+              <div class="py-4 text-center dark:hover:text-red-600 dark:hover:font-normal dark:text-red-800 uppercase">{{ p.Prophecy }}</div>
+              <div class="py-2 border-gray-500 border-b text-center capitalize font-bold font-serif hover:bg-slate-600/30 rounded-lg">{{ p.Descriptions }}</div>
+              <div class="py-4  text-center dark:hover:text-red-600 dark:text-red-800 uppercase">{{ p.Fulfillments }}</div>
             </div>
           </div>
 
@@ -94,6 +96,7 @@
                 </div>
             </div>
         </div>
+  </div>
     </div>
     <div class="flex-col flex w-full justify-center">
           <div class="flex w-full justify-center">

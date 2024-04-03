@@ -14,13 +14,25 @@ import Donate from './components/donate.vue'
 import Home from './components/home.vue'
 import Contact from './components/contact.vue'
 import Sermons from './components/sermons.vue'
+import Leadership from './components/leadership.vue'
+import Brent from './components/brent.vue'
+import Kyle from './components/kyle.vue'
+import Charlie from './components/charlie.vue'
+import Brian from './components/brian.vue'
+
 const routes = [
     { path: '/', component: Home },
     { path: '/about', component: About },
     { path: '/donate', component: Donate },
     { path: '/contact', component: Contact },
     { path: '/prophecies', component: Prophecies },
-    { path: '/sermons', component: Sermons }
+    { path: '/sermons', component: Sermons },
+    { path: '/leadership', component: Leadership },
+    { path: '/brent', component: Brent },
+    { path: '/kyle', component: Kyle },
+    { path: '/brian', component: Brian },
+    { path: '/charlie', component: Charlie }
+
 
 ]
 

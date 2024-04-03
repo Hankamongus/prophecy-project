@@ -1,13 +1,14 @@
 <template>
     <div>
-        <h1 class="text-red-800 flex w-full justify-center items-center text-center mt-20 text-2xl md:text-3xl">
+        <h1 class="text-red-800 flex w-full justify-center items-center text-center mt-20 text-2xl md:text-3xl mb-24">
           <strong>{{ title }}</strong>&nbsp;
         </h1>
     </div>
 
     <!--Sermon cols-->
     <div class="flex flex-col gap-4 ">
-        <div v-for="person in people" :key="person" class="shadow-lg backdrop-blur flex flex-col w-full justify-center p-8 bg-gray-500 dark:bg-gray-800 group border-sky-800 border-2 rounded-lg">
+        <div v-for="person in people" :key="person" class="group bg-slate-700 rounded-lg backdrop-blur shadow-lg backdrop-blur flex flex-col w-full justify-center  rounded-lg mb-20">
+            <div class="p-8 relative translate-x-10 -translate-y-10 bg-slate-800 mb-2 backdrop-blur rounded-lg border-sky-800 p-8 space-y-8 z-10">
 
             <div class="text-lg sm:text-2xl md:text-3xl font-serif mb-1">
                 <div class="text-xs text-sky-700">
@@ -15,11 +16,11 @@
                     <div>
                       <a :href="person.sa">
                             <img :src="person.image" class="border-2 border-sky-800 rounded-full w-14 h-14 inline-flex hover:brightness-50" target="_blank" />
-                        <p class="ml-2 text-base text-sky-700 font-serif">{{ person.name }}</p>
+                        <p class="ml-2 text-base text-sky-700 font-serif hover:border-b">{{ person.name }}</p>
                       </a>
                     </div>
                    <div>
-                    <span><a :href="person.sermonAudio" class="text-sky-700 text-3xl hover:underline" target="_blank">{{ person.sermonTitle }}</a></span>
+                    <span><a :href="person.sermonAudio" class="text-sky-700 text-3xl hover:text-sky-600 hover:border-b" target="_blank">{{ person.sermonTitle }}</a></span>
                 </div>
             </div>
                 <div class="text-sm sm:text-lg font-sans text-red-900">
@@ -29,6 +30,7 @@
                 </div>
             </div>
         </div>
+            </div>
 
 
             <div class="hidden group-hover:block">

@@ -8,7 +8,6 @@
 <!--Header Image!!-->
 <body>
    <div id="app" class="justify-center z-10 p-16  rounded-lg border-2 space-y-8 w-full h-full bg-gray-500 dark:bg-gray-800 border-sky-800 border-3">
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAYUlEQVR4nGNgIAJMY2L6jw8zUAvQ3SIGIsXJBsgG4mKPcIumERHp2NjTSE0kdLeIgchgxAVIsoiQa6cR6evBYxFdgm7asEl1dMuwuMCoRWSD0aAjGwzvoEMG04Z8c4sSiwDcmXK4MA6BhgAAAABJRU5ErkJggg==">
     <div class="flex justify-center text-2xl mb-5 text-red-900">
                <div><strong>Solid Rock Baptist Church exixts to proclaim the Glory of Christ!</strong></div>
        </div>

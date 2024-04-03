@@ -6,7 +6,7 @@
                 <strong>{{ title }}</strong>&nbsp;
             </h1>
         </div>
-        <div class="h-full w-2 hover:w-64 bg-gray-800  fixed left-0 z-10 rounded-lg border-black border-2  hover:border-sky-700 group top-8">
+        <div class="h-full w-2 hover:w-full sm:hover:w-64 bg-gray-800  fixed left-0 z-10 rounded-lg border-black border-2  hover:border-sky-700 group top-8">
             <span class="group-hover:hidden text-red-800">
                 <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class=" bi bi-arrow-bar-right mt-64" viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M6 8a.5.5 0 0 0 .5.5h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L12.293 7.5H6.5A.5.5 0 0 0 6 8m-2.5 7a.5.5 0 0 1-.5-.5v-13a.5.5 0 0 1 1 0v13a.5.5 0 0 1-.5.5"/>

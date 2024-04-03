@@ -32,7 +32,7 @@
                 </div>-->
 
 
-            <div id="contact" v-if="contactOpen" class="flex justify-center border-black border-4 rounded-lg h-auto w-28 bg-gray-500">
+            <div id="contact" v-if="contactOpen" class="flex justify-center border-black border-4 rounded-lg h-full w-full bg-gray-500">
                 <ul class="text-lg">
                     <li>
 

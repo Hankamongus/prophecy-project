@@ -32,8 +32,8 @@
                 </div>-->
 
 
-            <div id="contact" v-if="contactOpen" class="flex justify-center border-black border-4 rounded-lg h-full w-full bg-gray-500">
-                <ul class="text-lg">
+            <div id="contact" v-if="contactOpen" class="flex justify-center  h-full w-full ">
+                <ul class="text-lg border-black border-4 rounded-lg bg-gray-500 p-4">
                     <li>
 
                         <a href="tel:2705272957">

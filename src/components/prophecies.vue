@@ -67,8 +67,11 @@
 
 
 
-         <div class=" h-auto w-7/8 sm:w-auto z-6 p-16 bg-slate-700 rounded-lg backdrop-blur rounded-lg p-8 space-y-8 z-10">
-            <div class="h-auto w-7/8 sm:w-auto p-8 relative translate-x-10 -translate-y-10 bg-slate-800 mb-8 backdrop-blur rounded-lg border-sky-800 p-8 space-y-8 z-10">
+         <div class="h-auto w-7/8 sm:w-auto z-6 p-16 bg-slate-700 rounded-lg backdrop-blur rounded-lg p-8 space-y-8 z-10 relative">
+            <!-- Shadow Block -->
+            <div class="absolute inset-0 h-full w-full translate-x-4 -translate-y-4 bg-slate-800 rounded-lg" />
+
+            <div class="h-auto w-7/8 sm:w-auto p-8 relative translate-x-4 -translate-y-4 bg-slate-800 mb-8 backdrop-blur rounded-lg border-sky-800 p-8 space-y-8 z-10">
              <div class="flex justify-between text-sm md:text-2xl mb-5">
               <div class="text-gray-400 text-sm md:text-2xl mb-5 font-serif"><strong>Prophecy:</strong></div>
               <div class="text-gray-400 sm:text-sm md:text-2xl mb-5 font-serif"><strong>Descriptions:</strong></div>

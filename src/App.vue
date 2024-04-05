@@ -6,22 +6,23 @@
     <!--Navbar---->
     <nav id="navbar" class="w-full left-0 right-0 mt-0 bg-gradient-to-r from-gray-400 via-sky-800 to-gray-400 dark:from-gray-800 dark:via-sky-800 dark:to-gray-800 fixed left-0 w-full z-30 top-0 mb-5 p-1 text-lg transition-transform duration-300 transform">
 
-        <div class="group flex flex-col items-center">
-             <div class="flex items-center space-x-2">
-                <a href="tel:2705272957">
-                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAYUlEQVR4nGNgIAJMY2L6jw8zUAvQ3SIGIsXJBsgG4mKPcIumERHp2NjTSE0kdLeIgchgxAVIsoiQa6cR6evBYxFdgm7asEl1dMuwuMCoRWSD0aAjGwzvoEMG04Z8c4sSiwDcmXK4MA6BhgAAAABJRU5ErkJggg==">
-                </a>
-                <p class="text-center font-bold text-white dark:text-black text-lg sm:text-xl md:text-3xl">Solid Rock Baptist</p>
-                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAYUlEQVR4nGNgIAJMY2L6jw8zUAvQ3SIGIsXJBsgG4mKPcIumERHp2NjTSE0kdLeIgchgxAVIsoiQa6cR6evBYxFdgm7asEl1dMuwuMCoRWSD0aAjGwzvoEMG04Z8c4sSiwDcmXK4MA6BhgAAAABJRU5ErkJggg==">
 
-
-                <button @click="contactOpen = !contactOpen" class="flex items-center justify-center items-center text-white font-bold py-1 px-1 rounded-full hover:border-sky-900 p-1">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 sm:w-6 sm:h-6 bg-sky-900 rounded-full transition-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path v-if="contactOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-                        <path v-else stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                    </svg>
-                </button>
+        <div class="w-full flex items-center justify-between">
+            <div>
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAYUlEQVR4nGNgIAJMY2L6jw8zUAvQ3SIGIsXJBsgG4mKPcIumERHp2NjTSE0kdLeIgchgxAVIsoiQa6cR6evBYxFdgm7asEl1dMuwuMCoRWSD0aAjGwzvoEMG04Z8c4sSiwDcmXK4MA6BhgAAAABJRU5ErkJggg=="></div>
+            <div class="flex items-center space-x-4">
+                <div class="text-center font-bold text-white dark:text-black text-lg sm:text-xl md:text-3xl">Solid Rock Baptist</div>
+                <div>
+                    <button @click="contactOpen = !contactOpen" class="flex items-center justify-center items-center text-white font-bold py-1 px-1 rounded-full hover:border-sky-900 p-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 sm:w-6 sm:h-6 bg-sky-900 rounded-full transition-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path v-if="contactOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                            <path v-else stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                </div>
             </div>
+            <div>&nbsp;</div>
+
             <!----<div :class="{ 'dark': darkMode, 'light': !darkMode }">
                     <button @click="toggleDarkMode" class="hover:border-transparent border-8 bg-transparent font-bold">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="border-0 h-8 w-8 bi bi-sun-fill" viewBox="0 0 16 16">
@@ -63,6 +64,7 @@
 
             </div>
                 <div class="mx-auto max-w-8xl px-2 sm:px-6 lg:px-812">
+
                     <!-- Mobile menu button-->
                     <div class="relative flex h-16 items-center justify-between">
                         <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -120,10 +122,10 @@
                                 </router-link>
                             </li>
                             <li class="hover:bg-white roounded-lg">
-                                <div class="flex"><router-link to="prophecies" class="border-b rounded-lg text-red-800 hover:text-sky-700 mb-16">Prophecies</router-link>▾</div>
+                                <div class="flex"><router-link to="prophecies" class="flex items-center space-x-1 text-red-800 hover:text-sky-700 mb-16"><p class="text-3xl border-b rounded-lg">Prophecies</p></router-link>▾</div>
                             </li>
                             <li class="hover:bg-white roounded-lg">
-                                <div class="flex"><router-link to="directory" class="border-b rounded-lg text-red-800 hover:text-sky-700">Directory</router-link>▾</div>
+                                <div class="flex rounded-lg"><router-link to="directory" class="border-b rounded-lg text-red-800 hover:text-sky-700"><p class="text-3xl border-b rounded-lg">Directory</p></router-link>▾</div>
                              </li>
                            </ul>
                         </div>

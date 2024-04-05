@@ -1,4 +1,7 @@
-readFile('./hello.txt', 'utf-8', (err, txt) => {
-    console.log(txt)
-});
-console.log('do this ASAP')
+import { EventEmitter } from 'events'
+const eventEmitter = new EventEmitter();
+eventEmitter.on('lunch', () => {
+    console.log('yum')
+})
+eventEmitter.emit('lunch');
+eventEmitter.emit('lunch');

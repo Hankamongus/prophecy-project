@@ -1,6 +1,6 @@
 
 <template>
-<div class="fixed sm:-translate-y-[125%] sm:-translate-x-2/3 scale-[200%] w-full h-full rotate-45 bg-gray-300 dark:bg-gray-900 z-10"/>
+<div class="fixed md:-translate-y-[125%] md:-translate-x-2/3 scale-[200%] w-full h-full rotate-45 bg-gray-300 dark:bg-gray-900 z-10"/>
 <div class="relative z-20">
 
     <!--Navbar---->

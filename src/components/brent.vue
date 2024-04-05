@@ -16,20 +16,10 @@
             </span>
            <ul class="hidden group-hover:block mt-24">
            <li class="text-red-800 sm:text-white font-serif font-bold text-4xl mb-4">Contact:</li>
-           <li class="text-red-800 sm:text-white font-serif rounded-lg mb-24 group">
-            <span class="flex items-center text-white"><strong>Leadership</strong>
-                <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 hover:ml-4 h-2 w-2 sm:w-4 sm:h-4 bg-sky-900 rounded-full transition-300 font-bold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path v-if="contactOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-                    <path v-else stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                </svg>
-            </span>
-               <ul class="hidden group-hover:block">
-                <li class="hover:bg-gray-500 mb-12 text-2xl"><router-link to="kyle" class="text-red-800 sm:text-white font-serif hover:text-sky-800 hover:underline"><strong>Pastor~</strong> Kyle Reeder</router-link></li>
-                <li class="hover:bg-gray-500 mb-12 text-2xl"><router-link to="brent" class="text-red-800 sm:text-white font-serif hover:text-sky-800 hover:underline"><strong>Elder~</strong> Brent Madding</router-link></li>
-                <li class="hover:bg-gray-500 mb-12 text-2xl"><router-link to="charlie" class="text-red-800 sm:text-white font-serif hover:text-sky-800 hover:underline"><strong>Elder~</strong> Charlie Lynch</router-link></li>
-                <li class="hover:bg-gray-500 mb-12 text-2xl"><router-link to="brian" class="text-red-800 sm:text-white font-serif hover:text-sky-800 hover:underline"><strong>Elder~</strong> Brian Sims</router-link></li>
-               </ul>
-           </li>
+           <li class="hover:bg-gray-500 mb-12 text-2xl"><router-link to="kyle" class="text-red-800 sm:text-white font-serif hover:text-sky-800 hover:underline"><strong>Pastor~</strong> Kyle Reeder</router-link></li>
+           <li class="hover:bg-gray-500 mb-12 text-2xl"><router-link to="brent" class="text-red-800 sm:text-white font-serif hover:text-sky-800 hover:underline"><strong>Elder~</strong> Brent Madding</router-link></li>
+           <li class="hover:bg-gray-500 mb-12 text-2xl"><router-link to="charlie" class="text-red-800 sm:text-white font-serif hover:text-sky-800 hover:underline"><strong>Elder~</strong> Charlie Lynch</router-link></li>
+           <li class="hover:bg-gray-500 mb-12 text-2xl"><router-link to="brian" class="text-red-800 sm:text-white font-serif hover:text-sky-800 hover:underline"><strong>Elder~</strong> Brian Sims</router-link></li>
            <li class="hover:bg-gray-500 hover:text-sky-800 mb-12 text-2xl"><router-link to="leadership" class="text-red-800 sm:text-white font-serif hover:text-sky-800 hover:underline">Front Desk~</router-link></li>
            <li class="hover:bg-gray-500 hover:text-sky-800 mb-12 text-2xl"><router-link to="leadership" class="text-red-800 sm:text-white font-serif hover:text-sky-800 hover:underline">Help~</router-link></li>
            <li class="hover:bg-gray-500 hover:text-sky-800 mb-12 text-2xl"><router-link to="leadership" class="text-red-800 sm:text-white font-serif hover:text-sky-800 hover:underline">Outreach~</router-link></li>

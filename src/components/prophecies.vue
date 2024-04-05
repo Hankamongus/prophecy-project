@@ -62,7 +62,7 @@
 
 
 
-         <div class="h-auto w-7/8 sm:w-auto z-6 p-16 bg-slate-700 rounded-lg backdrop-blur rounded-lg p-8 space-y-8 z-10">
+         <div class=" h-auto w-7/8 sm:w-auto z-6 p-16 bg-slate-700 rounded-lg backdrop-blur rounded-lg p-8 space-y-8 z-10">
             <div class="h-auto w-7/8 sm:w-auto p-8 relative translate-x-10 -translate-y-10 bg-slate-800 mb-8 backdrop-blur rounded-lg border-sky-800 p-8 space-y-8 z-10">
              <div class="flex justify-between text-sm md:text-2xl mb-5">
               <div class="text-black text-sm md:text-2xl mb-5 font-serif"><strong>Prophecy:</strong></div>

@@ -1,9 +1,14 @@
 <template>
 
 <!--Header Image!!-->
+<div class="flex-col flex w-full justify-center mt-24">
+          <div class="flex w-full justify-center">
+            <img src="https://cfl-mango.s3.amazonaws.com/uploads/downloads/proto-evangelium-transparent-bg.png" class="w-full max-w-md">
+          </div>
+     </div>
 
     <!--Bible verse header-->
-    <div style="display: flex; width: 100%; justify-content: center; margin-top: 100px;">
+    <div style="display: flex; width: 100%; justify-content: center;" class="">
         <p class="font-serif text-red-800 text-sm sm:text-xl md:text-2xl"><em><strong>{{ text1 }}</strong></em></p>
       </div>
       <div style="display: flex; width: 100%; justify-content: center;">
@@ -65,14 +70,14 @@
          <div class=" h-auto w-7/8 sm:w-auto z-6 p-16 bg-slate-700 rounded-lg backdrop-blur rounded-lg p-8 space-y-8 z-10">
             <div class="h-auto w-7/8 sm:w-auto p-8 relative translate-x-10 -translate-y-10 bg-slate-800 mb-8 backdrop-blur rounded-lg border-sky-800 p-8 space-y-8 z-10">
              <div class="flex justify-between text-sm md:text-2xl mb-5">
-              <div class="text-black text-sm md:text-2xl mb-5 font-serif"><strong>Prophecy:</strong></div>
-              <div class="text-black sm:text-sm md:text-2xl mb-5 font-serif"><strong>Descriptions:</strong></div>
-              <div class="text-black text-sm md:text-2xl mb-5 font-serif"><strong>Fulfillments:</strong></div>
+              <div class="text-gray-400 text-sm md:text-2xl mb-5 font-serif"><strong>Prophecy:</strong></div>
+              <div class="text-gray-400 sm:text-sm md:text-2xl mb-5 font-serif"><strong>Descriptions:</strong></div>
+              <div class="text-gray-400 text-sm md:text-2xl mb-5 font-serif"><strong>Fulfillments:</strong></div>
             </div>
-            <div v-for="p in prophecies" @click="selectProphecy(p)" class="flex justify-between space-x-4 space-y-1">
-              <div class="py-4 text-center dark:hover:text-red-600 dark:hover:font-normal dark:text-red-800 uppercase">{{ p.Prophecy }}</div>
-              <div class="py-2 border-gray-500 border-b text-center capitalize font-bold font-serif hover:bg-slate-600/30 rounded-lg">{{ p.Descriptions }}</div>
-              <div class="py-4  text-center dark:hover:text-red-600 dark:text-red-800 uppercase">{{ p.Fulfillments }}</div>
+            <div v-for="p in prophecies" @click="selectProphecy(p)" class="flex justify-between space-x-4 space-y-1 hover:bg-slate-600/30 rounded-lg border-gray-500 border-b text-center">
+              <div class="py-4 text-sky-800 text-center dark:hover:text-red-600 dark:hover:font-normal dark:text-red-800 uppercase">{{ p.Prophecy }}</div>
+              <div class="py-2 border-gray-500  capitalize font-bold font-serif ">{{ p.Descriptions }}</div>
+              <div class="py-4  text-sky-800 text-center dark:hover:text-red-600 dark:text-red-800 uppercase">{{ p.Fulfillments }}</div>
             </div>
           </div>
 

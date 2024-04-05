@@ -2,7 +2,7 @@
 
     <div>
        <div>
-            <h1 class="text-red-800 flex w-full justify-center items-center text-center mt-20 text-2xl md:text-3xl">
+            <h1 class="text-red-800 flex w-full justify-center items-center text-center mt-24 text-2xl md:text-3xl font-serif">
                <strong>{{ title }}</strong>&nbsp;
            </h1>
        </div>

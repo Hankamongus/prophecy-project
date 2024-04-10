@@ -1,7 +1,3 @@
-import { EventEmitter } from 'events'
-const eventEmitter = new EventEmitter();
-eventEmitter.on('lunch', () => {
-    console.log('yum')
-})
-eventEmitter.emit('lunch');
-eventEmitter.emit('lunch');
+app.get('/', async (request, resposne) => {
+    response.send(await readFile('.prophecies.vue', 'utf8'));
+});

@@ -7,7 +7,7 @@
     </div>
 <!--Header Image!!-->
 <div class="flex justify-center">
-   <div id="app" class="justify-center z-10 p-16  rounded-lg border-2 space-y-8 bg-gray-500 dark:bg-gray-800 border-sky-800 border-3 h-auto w-3/4">
+   <div id="app" class="justify-center z-10 p-16  rounded-lg border-2 space-y-8 bg-gray-500 dark:bg-gray-800 border-sky-800 border-3 h-auto w-screen sm:w-3/4">
     <div class="flex justify-center text-2xl mb-5 text-red-900">
                <div><strong>Solid Rock Baptist Church exists to proclaim the Glory of Christ!</strong></div>
        </div>

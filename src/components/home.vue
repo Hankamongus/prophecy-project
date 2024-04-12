@@ -2,7 +2,7 @@
     <link href="https://fonts.googleapis.com/css?family=Lato: 100,300,400,700|Luckiest+Guy|Oxygen:300,400" rel="stylesheet">
   <link href="style.css" type="text/css" rel="stylesheet">
   <div>
-        <h1 class="text-red-800 flex justify-center w-full mt-24 text-2xl md:text-3xl">
+        <h1 class="text-red-800 flex justify-center w-full mt-28 text-2xl md:text-3xl">
           <strong class="font-serif">{{ title }}</strong>&nbsp;
        </h1>
     </div>
@@ -17,7 +17,7 @@
 
   <!--Header Image!!-->
 <div class="flex justify-center mt-24">
-    <div class="flex justify-center z-6 p-10 bg-gray-500 dark:bg-gray-800 backdrop-blur rounded-lg border-4 space-y-8 border-sky-800 h-auto w-3/4">
+    <div class="flex justify-center z-6 p-10 bg-gray-500 dark:bg-gray-800 backdrop-blur rounded-lg border-4 space-y-8 border-sky-800 h-auto w-screen sm:w-3/4">
         <div class="flex justify-between text-2xl mb-5">
             <div>{{ PurposeStatement }}</div>
         </div>

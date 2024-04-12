@@ -105,13 +105,7 @@
             </div>
         </div>
   </div>
-    </div>
-    <div class="flex-col flex w-full justify-center">
-          <div class="flex w-full justify-center">
-            <img src="https://cfl-mango.s3.amazonaws.com/uploads/downloads/proto-evangelium-transparent-bg.png" class="w-full max-w-md">
-          </div>
-     </div>
-
+</div>
 </template>
 
 <script>

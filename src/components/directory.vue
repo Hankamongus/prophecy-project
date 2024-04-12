@@ -1,23 +1,48 @@
 <template>
-    <div class="text-black">wake up</div>
-</template>
-<script>
-import { defineComponent } from '@vue/composition-api'
 
-export default defineComponent({
-    setup() {
+   <!-- Main Content -->
+   <div class="container mx-auto py-12">
+   <div class="max-w-xl sm:max-w-3xl mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
+     <div class="px-6 py-4">
+        <div class="flex content justify-center">
+            <span class="text-xl sm:text-2xl font-semibold text-gray-800 mb-2">Login {{ name }}</span>
+        </div>
+       <form @submit.prevent="sendEmail">
+         <div class="mb-4">
+           <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email \ Username</label>
+           <input type="email" v-model="email" id="email" name="email" class="appearance-none border rounded w-64 h-4 py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline hover:border-sky-700">
+         </div>
+         <div>Password</div>
+         <div class="mb-4 flex justify-center">
 
-    },
-})
-</script>
-<!--<template>
-  <div class="flex justify-center w-full mt-64 mb-50" @mouseover="hover = true" @mouseleave="hover = false">
-    <div class="flex -space-x-8 w-full">
-      <div v-for="(image, index) in images" :key="index" :class="[aspectVideoClass, hover ? 'hovered' : '']">
-        <img :src="image.url" :alt="'Image ' + (index + 1)">
-      </div>
-    </div>
-  </div>
+            <label for="password" class="block text-sm font-medium text-gray-700 "></label>
+            <input
+            type="password"
+            v-model="password"
+            id="password"
+            name="password"
+            class=" mt-1 border-2 hover:border-sky-800 focus:ring-indigo-500 focus:border-indigo-500 block w-64 shadow-sm sm:text-sm border-gray-300 rounded-md h-6"
+            placeholder="Enter your password"
+            >
+        </div>
+            <div class="mb-4 flex justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg"  fill="currentColor" class="w-6 h-6 bi bi-eye-fill" viewBox="0 0 16 16">
+                <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0"/>
+                <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8m8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7"/>
+            </svg>
+        </div>
+
+
+
+         <div class="flex justify-end">
+           <router-link to="lost">
+            <button @click="sendEmail" type="submit" class="bg-blue-500 hover:bg-sky-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Login</button>
+           </router-link>
+         </div>
+       </form>
+     </div>
+   </div>
+</div>
 </template>
 
 <script>
@@ -55,4 +80,3 @@ export default {
   transform: translateX(-20px);
 }
 </style>
--->

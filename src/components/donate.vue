@@ -1,13 +1,13 @@
 <template>
 
 <div>
-    <h1 class="text-red-800 flex w-full justify-center items-center text-center mt-24 text-2xl md:text-3xl">
-        <strong>{{ title }}</strong>&nbsp;
+    <h1 class="text-red-800 flex w-full justify-center items-center text-center top-24 text-2xl md:text-3xl mb-24">
+        <strong class="font-serif">{{ title }}</strong>&nbsp;
      </h1>
      </div>
 <!--Header Image!!-->
-
-    <div class="z-6 p-10 bg-gray-500 dark:bg-gray-800 backdrop-blur rounded-lg border-2 space-y-8 border-sky-800">
+<div class="flex justify-center">
+    <div class="z-6 p-10 bg-gray-500 dark:bg-gray-800 backdrop-blur rounded-lg border-2 space-y-8 border-sky-800 h-auto w-3/4">
             <div class="flex justify-between text-2xl mb-5">
                 <div><strong>How much do you want to give?</strong></div>
                 <form action="/submit" method="post">
@@ -17,6 +17,8 @@
                 </form>
             </div>
         </div>
+</div>
+
   </template>
 
   <script>

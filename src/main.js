@@ -19,6 +19,8 @@ import Brent from './components/brent.vue'
 import Kyle from './components/kyle.vue'
 import Charlie from './components/charlie.vue'
 import Brian from './components/brian.vue'
+import Directory from './components/directory.vue'
+import Lost from './components/lost.vue'
 
 const routes = [
     { path: '/', component: Home },
@@ -31,7 +33,9 @@ const routes = [
     { path: '/brent', component: Brent },
     { path: '/kyle', component: Kyle },
     { path: '/brian', component: Brian },
-    { path: '/charlie', component: Charlie }
+    { path: '/charlie', component: Charlie },
+    { path: '/directory', component: Directory },
+    { path: '/lost', component: Lost }
 
 
 ]

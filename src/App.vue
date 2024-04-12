@@ -8,7 +8,7 @@
 
 
         <div class="w-full flex items-center justify-between">
-            <div class="ml-4 mt-4 opacity-0 sm:opacity-100"><img src="https://i.ibb.co/WsXVtCc/screenshot-2024-04-11-at-2-17-19-pm-720.png" class="h-10 sm:w-14 w-10 sm:h-14 rounded-full"></div>
+            <div class="ml-4 mt-2"><img src="https://i.ibb.co/WsXVtCc/screenshot-2024-04-11-at-2-17-19-pm-720.png" class="h-10 sm:w-14 w-10 sm:h-14 rounded-full opacity-0 sm:opacity-100"></div>
             <div class="flex items-center space-x-4">
                 <div class="text-center font-bold text-white dark:text-black text-lg sm:text-xl md:text-3xl">Solid Rock Baptist</div>
 

@@ -26,7 +26,7 @@
        </ul>
    </div>
 <div class="mt-24 max-w-3xl mx-auto px-8 gap-4 md:gap-8 content justify-center">
-    <div class="content justify-center p-8 relative translate-x-10 -translate-y-10 bg-slate-800 mb-8 backdrop-blur rounded-lg border-sky-800 p-8 space-y-8 z-10">
+    <div class="content justify-center p-8 relative  bg-slate-800 mb-8 backdrop-blur rounded-lg border-sky-800 p-8 space-y-8 z-10">
         <div class="group left-0 ml-0 z-10 p-16  rounded-lg border-2 space-y-8 w-full h-full bg-gray-500 dark:bg-gray-800 border-sky-800 mb-4">
         <div class="profile-section mt-0 flex flex-col items-center">
             <a :href="sa">

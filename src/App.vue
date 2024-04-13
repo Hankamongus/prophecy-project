@@ -62,17 +62,17 @@
                                 <div class="absolute inset-y-0 left-0 flex items-center md:hidden">
                                     <div @click.stop="navOpen = !navOpen" class="flex flex-col lg:hidden relative cursor-pointer order-3">
                                         <div v-if="!navOpen" class="bg-red-800 py-px px-4 my-[4px] transition-transform ease-in delay-100 rounded"></div>
-                                    <div :class="{ 'rotate-45 absolute': navOpen }" class="bg-red-800 py-px px-4 my-[4px] transition-transform rounded ease-in-out"></div>
-                                    <div :class="{ '-rotate-45': navOpen }" class="bg-red-800 py-px px-4 my-[4px] transition-transform rounded ease-in-out"></div>
+                                    <div :class="{ '-rotate-45 absolute': navOpen }" class="bg-red-800 py-px px-4 my-[4px] transition-transform rounded ease-in-out"></div>
+                                    <div :class="{ 'rotate-45': navOpen }" class="bg-red-800 py-px px-4 my-[4px] transition-transform rounded ease-in-out"></div>
                                 </div>
                             </div>
                                 <div
                                     :class="{'-translate-x-full': navOpen}"
                                     class="px-8 md:hidden p-4 h-screen w-screen sm:h-screen sm:w-64 transition-all
-                                    fixed inset-0 mt-32 bg-black/50 backdrop-blur z-50 rounded-lg"
+                                    fixed inset-0 mt-28 sm:mt-32 bg-black/50 backdrop-blur z-5 rounded-lg"
                                 >
                                     <div class=" w-full h-screen fixed z-10 top-0 left-0" @click="navOpen = false"></div>
-                                    <ul class="z-20 relative font-serif text-3xl" @click.stop="navOpen = false">
+                                    <ul class="z-10 relative font-serif text-3xl" @click.stop="navOpen = false">
                                         <li class="hover:bg-white roounded-lg">
                                             <router-link to="/#/" class="text-3xl flex items-center space-x-1 text-red-800 hover:text-sky-700 mb-12">
                                             <p class="text-3xl border-b rounded-lg">Home</p>

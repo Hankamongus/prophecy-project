@@ -1,6 +1,6 @@
 <template>
-
 <div>
+    <div>
     <h1 class="text-red-800 flex w-full justify-center items-center text-center top-24 text-2xl md:text-3xl mb-24">
         <strong class="font-serif">{{ title }}</strong>&nbsp;
      </h1>
@@ -18,6 +18,8 @@
             </div>
         </div>
 </div>
+</div>
+
 
   </template>
 

@@ -67,7 +67,7 @@
                                 </div>
                             </div>
                                 <div
-                                    :class="{'-translate-x-full': navOpen}"
+                                    :class="{'-translate-x-full': !navOpen}"
                                     class="px-8 md:hidden p-4 h-screen w-screen sm:h-screen sm:w-64 transition-all
                                     fixed inset-0 mt-28 sm:mt-32 bg-black/50 backdrop-blur z-5 rounded-lg"
                                 >

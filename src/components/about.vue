@@ -1,6 +1,7 @@
 
 <template>
     <div>
+    <div>
         <h1 class="text-red-800 flex w-full justify-center items-center text-center mt-24 text-2xl md:text-3xl font-serif mb-8">
        <strong>{{ title }}</strong>&nbsp;
     </h1>
@@ -65,6 +66,7 @@
            <li><a href="https://hymnsofgrace.com/collections/hymns-of-grace-hymnal-editions?gad_source=1&gclid=Cj0KCQjwlN6wBhCcARIsAKZvD5iwZt1YQ9_gUljxzATd8q3TkitBP3pqStaqipQ0OqJ8bBWXznVXFcwaAosVEALw_wcB" class="text-black dark:text-white hover:underline hover:text-sky-800 hover:text-xl">Pslams Hymns and Spiritual Songs</a></li>
        </ul>
    </div>
+</div>
 </div>
 </div>
  </template>

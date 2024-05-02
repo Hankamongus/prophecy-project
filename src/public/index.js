@@ -11,11 +11,8 @@ const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology:
 client.connect()
     .then(() => {
         console.log('Connected to MongoDB');
-        const db = client.db(); // Get the database object
-
-        // Define routes that use the MongoDB connection
-
-        // Serve the index.html file when someone accesses the root URL
+        const db = client.db(); 
+        
         app.get('/', (req, res) => {
             fs.readFile('index.html', 'utf8', (err, data) => {
                 if (err) {
@@ -26,21 +23,24 @@ client.connect()
             });
         });
 
-        // Example route
+        // Example route 
         app.get('/hello', (req, res) => {
             res.send('Hello, MongoDB!');
         });
 
         // Define API endpoints
         app.post('/api/data', (req, res) => {
-            // Handle POST request and fetch data from MongoDB
+            const requestData = req.body; 
+            res.send('Data received and processed');
         });
 
         app.get('/api/data', (req, res) => {
-            // Handle GET request and fetch data from MongoDB
+            const requestData = req.body; // Access the data sent in the request body
+    // Process the data (e.g., store it in MongoDB)
+    res.send('Data received and processed');
         });
 
-        // Start the server
+         
         app.listen(PORT, () => {
             console.log(`Server is running on port ${PORT}`);
         });

@@ -13,7 +13,7 @@
         <div class="flex flex-col w-full justify-center py-20" v-for="person in peoples" :key="person">
             <div class="">
                 <div class="text-3xl font-serif mb-2">
-                    <a href="https://www.sermonaudio.com/saplayer/playpopup.asp?SID=1218231313312511"
+                    <a :href= "person.sa"
                         class="text-sky-700 rounded-lg hover:border-b border-gray-500 hover:text-sky-600" target="_blank">{{
                 person.sermonTitle }}</a>
                     <div class="text-sm font-sans text-sky-700">
@@ -23,7 +23,7 @@
                     </div>
                 </div>
                 <div class="text-xs text-sky-700">
-                    <a href="https://www.sermonaudio.com/solo/srbcaudio/sermons/speakers/Henry%20Arterburn/">
+                    <a :href= "person.sermonAudio" >
                         <img :src="person.image"
                             class="rounded-full w-10 h-10 inline-flex hover:brightness-50" /><span
                             class="ml-2 text-base text-sky-700 font-serif">{{ person.name }}</span>
@@ -48,20 +48,19 @@ export default {
 
 
                title: 'Messages from SRBC',
-            //    text1: '"Do not think that I have come to abolish the Law or the Prophets;',
-             //   text2: 'I have not come to abolish them but to fulfill them."',
-            //    text3: 'Mathew 5:17',
                progressBar: 0,
                isPlaying: false,
-               audioSource: '/sermons/kyle-reeder-test-sermon.mp3',
+               audioSource: '/sermons/kyle-reeder-latest.mp3',
                peoples: [
            {
              name: 'Kyle Reeder',
              sermonTitle: 'A Prayer and An Apeal',
              image: 'https://media.sermonaudio.com/images/speakers/thumbnail/23550-0001.png',
+             sa: 'https://www.sermonaudio.com/solo/srbcaudio/sermons/speakers/Kyle%20Reeder/',
              audioSource: '/sermons/kyle-reeder-test-sermon.mp3',
              date: 'Jan, 1st, 2024',
              text: 'Hebrews 2:1-5',
+             sermonAudio:'https://www.sermonaudio.com/solo/srbcaudio/sermons/speakers/Kyle%20Reeder/'
 
 
            },
@@ -71,10 +70,10 @@ export default {
              sermonTitle: 'All is vanity',
              image: 'https://media.sermonaudio.com/images/speakers/thumbnail/27721-0001.PNG',
              sa: 'https://www.sermonaudio.com/solo/srbcaudio/sermons/speakers/Charley%20Lynch/',
-             audioSource: 'https://cfl-mango.s3.amazonaws.com/uploads/downloads/The%20Glorious%20Incarnation.mp3',
+             audioSource: '/sermons/charlie-lynch-latest.mp3',
              date: 'Feb 24, 2024',
              text: 'Hebrews 2:1-5',
-             sermonAudio:''
+             sermonAudio:'https://www.sermonaudio.com/solo/srbcaudio/sermons/speakers/Charley%20Lynch/'
 
            },
            {
@@ -82,10 +81,10 @@ export default {
              sermonTitle: 'Where Grace is reinging grace is training',
              image: 'https://media.sermonaudio.com/images/speakers/thumbnail/29666-0001.png',
              sa: 'https://www.sermonaudio.com/solo/srbcaudio/sermons/speakers/Brent%20Madding/',
-             audioSource: 'https://cfl-mango.s3.amazonaws.com/uploads/downloads/The%20Glorious%20Incarnation.mp3',
+             audioSource: '/sermons/brent-madding-latest.mp3',
              date: 'Jan, 1st, 2024',
              text: 'Hebrews 2:1-5',
-             sermonAudio:''
+             sermonAudio:'https://www.sermonaudio.com/solo/srbcaudio/sermons/speakers/Brent%20Madding/'
 
            },
            {
@@ -93,10 +92,10 @@ export default {
              sermonTitle: 'Jesus Loses None',
              image: 'https://media.sermonaudio.com/images/speakers/thumbnail/24152-0001.png',
              sa: 'https://www.sermonaudio.com/solo/srbcaudio/sermons/speakers/Brian%20Sims/',
-             audioSource: 'https://cfl-mango.s3.amazonaws.com/uploads/downloads/The%20Glorious%20Incarnation.mp3',
+             audioSource: '/sermons/brian-sims-latest.mp3',
              date: 'Jan, 1st, 2024',
              text: 'Hebrews 2:1-5',
-             sermonAudio:''
+             sermonAudio:'https://www.sermonaudio.com/solo/srbcaudio/sermons/speakers/Brian%20Sims/'
            }
          ]
         }

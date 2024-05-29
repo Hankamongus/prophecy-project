@@ -10,12 +10,12 @@
        </span>
        </div>
         <!--Speaker Profile-->
-        <div class="flex flex-col w-full justify-center py-20" v-for="peoples in peoples" :key="peoples">
+        <div class="flex flex-col w-full justify-center py-20" v-for="person in peoples" :key="person">
             <div class="">
                 <div class="text-3xl font-serif mb-2">
                     <a href="https://www.sermonaudio.com/saplayer/playpopup.asp?SID=1218231313312511"
                         class="text-sky-700 rounded-lg hover:border-b border-gray-500 hover:text-sky-600" target="_blank">{{
-                peoples.sermonTitle }}</a>
+                person.sermonTitle }}</a>
                     <div class="text-sm font-sans text-sky-700">
                         <span>Dec 17, 2023</span>
                         <span> || </span>
@@ -24,45 +24,25 @@
                 </div>
                 <div class="text-xs text-sky-700">
                     <a href="https://www.sermonaudio.com/solo/srbcaudio/sermons/speakers/Henry%20Arterburn/">
-                        <img :src="peoples.image"
+                        <img :src="person.image"
                             class="rounded-full w-10 h-10 inline-flex hover:brightness-50" /><span
-                            class="ml-2 text-base text-sky-700 font-serif">{{ peoples.name }}</span>
+                            class="ml-2 text-base text-sky-700 font-serif">{{ person.name }}</span>
                     </a>
                 </div>
             </div>
             <!-- top of the audio div -->
 
+            <Audio :src="person.audioSource" />
 
-            <div class="flex items-center w-full justify-center py-4">
-                <button @click="skipBackward"
-                    class="flex items-center fill-current cursor-pointer self-center select-none mr-2 text-sky-700 hover:border-sky-800 bg-gray-800 hover:bg-white dark:bg-white dark:hover:bg-black border-1 hover:border-2 border-black ">
-                    <img src="https://cfl-mango.s3.amazonaws.com/uploads/downloads/skip-15-backward.png"
-                        class="w-full max-w-[1.4rem]" />
-                </button>
-                <button @click="playAudio"
-                    class="text-lg text-sky-700 uppercase font-bold font-serif rounded-full border-slate-600 hover:border-sky-800 bg-gray-800 hover:bg-white dark:bg-white hover:bg-ul-blue-700 dark:hover:bg-black border-1 hover:border-2 ">{{
-                isPlaying ? 'Pause' : 'Play' }}</button>
-                <audio ref="audio" :src="peoples.audioSource" @timeupdate="updateProgressBar" class="hidden p-3 bg-black"></audio>
-                <button @click="skipForward"
-                    class="flex items-center fill-current cursor-pointer self-center select-none ml-2 border-black hover:border-sky-800 text-sky-700 bg-gray-800 hover:bg-white dark:bg-white dark:hover:bg-black border-1 hover:border-2 ">
-                    <img src="https://cfl-mango.s3.amazonaws.com/uploads/downloads/skip-15.png"
-                        class="w-full max-w-[1.5rem]" />
-                </button>
-            </div>
-            <div class="w-full my-6 sm:my-12">
-                <div class="justify-center w-full flex items-center divide-x-[1px] divide-white dark:divide-black">
-                    <div class="w-full max-w-2xl h-2 ml-2 bg-slate-400 relative overflow-hidden rounded">
-                        <div :style="{ width: progressBar + '%' }" class="h-full bg-blue-600"></div>
-
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 </template>
 
 <script>
+import Audio from './audio.vue'
+
 export default {
+    components: {Audio},
     data() {
         return {
 
@@ -122,33 +102,6 @@ export default {
         }
        },
     methods: {
-        playAudio() {
-            const audioElement = this.$refs.audio;
-            if (this.isPlaying) {
-                audioElement.pause();
-            } else {
-                audioElement.play();
-            }
-            this.isPlaying = !this.isPlaying;
-        },
-        skipForward() {
-            const audioElement = this.$refs.audio;
-            if (audioElement) {
-                audioElement.currentTime += 15;
-            }
-        },
-        skipBackward() {
-            const audioElement = this.$refs.audio;
-            if (audioElement) {
-                audioElement.currentTime -= 15;
-            }
-        },
-        updateProgressBar() {
-            const audioElement = this.$refs.audio;
-            const currentTime = audioElement.currentTime
-            const duration = audioElement.duration
-            this.progressBar = (currentTime / duration) * 100
-        },
         handleClick() {
             console.log(this.$refs)
         },

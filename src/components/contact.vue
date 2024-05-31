@@ -2,7 +2,7 @@
 
     <div>
        <div>
-            <h1 class="text-red-800 flex w-full justify-center items-center text-center mt-24 text-2xl md:text-3xl font-serif">
+            <h1 class="text-red-800 flex w-full justify-center items-center text-center mt-0 text-2xl md:text-3xl font-serif">
                <strong>{{ title }}</strong>&nbsp;
            </h1>
        </div>
@@ -14,15 +14,12 @@
                     <path fill-rule="evenodd" d="M6 8a.5.5 0 0 0 .5.5h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L12.293 7.5H6.5A.5.5 0 0 0 6 8m-2.5 7a.5.5 0 0 1-.5-.5v-13a.5.5 0 0 1 1 0v13a.5.5 0 0 1-.5.5"/>
                 </svg>
             </span>
-           <ul class="hidden group-hover:block mt-24">
+           <ul class="hidden group-hover:block mt-32">
            <li class="text-red-800 sm:text-white font-serif font-bold text-4xl mb-4">Contact:</li>
            <li class="hover:bg-gray-500 mb-12 text-2xl"><router-link to="kyle" class="text-red-800 sm:text-white font-serif hover:text-sky-800 hover:underline"><strong>Pastor~</strong> Kyle Reeder</router-link></li>
            <li class="hover:bg-gray-500 mb-12 text-2xl"><router-link to="brent" class="text-red-800 sm:text-white font-serif hover:text-sky-800 hover:underline"><strong>Elder~</strong> Brent Madding</router-link></li>
            <li class="hover:bg-gray-500 mb-12 text-2xl"><router-link to="charlie" class="text-red-800 sm:text-white font-serif hover:text-sky-800 hover:underline"><strong>Elder~</strong> Charlie Lynch</router-link></li>
            <li class="hover:bg-gray-500 mb-12 text-2xl"><router-link to="brian" class="text-red-800 sm:text-white font-serif hover:text-sky-800 hover:underline"><strong>Elder~</strong> Brian Sims</router-link></li>
-           <li class="hover:bg-gray-500 hover:text-sky-800 mb-12 text-2xl"><router-link to="leadership" class="text-red-800 sm:text-white font-serif hover:text-sky-800 hover:underline">Front Desk~</router-link></li>
-           <li class="hover:bg-gray-500 hover:text-sky-800 mb-12 text-2xl"><router-link to="leadership" class="text-red-800 sm:text-white font-serif hover:text-sky-800 hover:underline">Help~</router-link></li>
-           <li class="hover:bg-gray-500 hover:text-sky-800 mb-12 text-2xl"><router-link to="leadership" class="text-red-800 sm:text-white font-serif hover:text-sky-800 hover:underline">Outreach~</router-link></li>
        </ul>
    </div>
 

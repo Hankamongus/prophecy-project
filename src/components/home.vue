@@ -2,7 +2,7 @@
     <link href="https://fonts.googleapis.com/css?family=Lato: 100,300,400,700|Luckiest+Guy|Oxygen:300,400" rel="stylesheet">
   <link href="style.css" type="text/css" rel="stylesheet">
   <div>
-        <h1 class="text-red-800 flex justify-center w-full mt-28 text-2xl md:text-3xl">
+        <h1 class="text-red-800 flex justify-center w-full mt-32 text-2xl md:text-3xl">
           <strong class="font-serif">{{ title }}</strong>&nbsp;
        </h1>
     </div>

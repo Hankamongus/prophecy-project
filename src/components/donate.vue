@@ -1,10 +1,8 @@
 <template>
 <div>
-    <div>
-    <h1 class="text-red-800 flex w-full justify-center items-center text-center top-24 text-2xl md:text-3xl mb-24">
-        <strong class="font-serif">{{ title }}</strong>&nbsp;
-     </h1>
-     </div>
+    <div class="text-red-800 flex w-full justify-center items-center text-center mt-2 text-2xl md:text-3xl mb-24 font-serif">
+             <strong>{{ title }}</strong>&nbsp;
+    </div>
 <!--Header Image!!-->
 <div class="flex justify-center">
     <div class="z-6 p-10 bg-gray-500 dark:bg-gray-800 backdrop-blur rounded-lg border-2 space-y-8 border-sky-800 h-auto w-3/4">

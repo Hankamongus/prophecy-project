@@ -1,19 +1,20 @@
 
 <template>
     <div>
+<!--BackGround-->
 
         <div class="fixed md:-translate-y-[125%] md:-translate-x-2/3 scale-[200%] w-full h-full rotate-45 bg-gray-300 dark:bg-gray-900 z-10"/>
         <div class="relative z-20">
 
-            <!--Navbar---->
-            <nav id="navbar" class="w-full left-0 right-0 mt-0 bg-gradient-to-r from-gray-400 via-sky-800 to-gray-400 dark:from-gray-800 dark:via-sky-800 dark:to-gray-800 fixed left-0 w-full z-30 top-0 mb-5 p-1 text-lg transition-transform duration-300 transform">
+<!--Navbar--->
+            <nav id="navbar" class="h-32 md:h- w-full left-0 right-0 mt-0 z-30 top-0 mb-5 p-1 text-lg bg-gradient-to-r from-gray-400 via-sky-800 to-gray-400 dark:from-gray-800 dark:via-sky-800 dark:to-gray-800 fixed  transition-transform duration-300 transform">
 
 
                 <div class="w-full flex items-center justify-between">
                     <div class="ml-4 mt-2"><img src="https://i.ibb.co/WsXVtCc/screenshot-2024-04-11-at-2-17-19-pm-720.png" class="border-2 border-yellow-600 h-10 sm:w-14 w-10 sm:h-14 rounded-full opacity-0 md:opacity-100"></div>
                     <div class="flex items-center space-x-4">
                         <div class="text-center font-bold text-white dark:text-black text-lg sm:text-xl md:text-3xl">Solid Rock Baptist</div>
-
+<!--Navbar/computer---->
                         <div>
                             <button @click="contactOpen = !contactOpen" class="flex items-center justify-center items-center text-white font-bold py-1 px-1 rounded-full hover:border-sky-900 p-1">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 sm:w-6 sm:h-6 bg-sky-900 rounded-full transition-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -36,7 +37,7 @@
 
 
                     <div id="contact" v-if="contactOpen" class="flex justify-center  h-full w-full">
-                        <div class="flex text-lg border-black border-4 rounded-lg bg-gray-500 p-8 h-4 w-42">
+                        <div class="flex text-lg border-black border-4 rounded-lg bg-gray-500 p-8 h-4 w-42 top-0">
                             <a href="tel:2705272957">
                                     <svg xmlns="http://www.w3.org/2000/svg"  fill="currentColor" class="h-8 w-8 mr-4 bi bi-telephone-outbound text-black hover:text-sky-800" viewBox="0 0 16 16">
                                         <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877zM11 .5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V1.707l-4.146 4.147a.5.5 0 0 1-.708-.708L14.293 1H11.5a.5.5 0 0 1-.5-.5"/>
@@ -57,7 +58,9 @@
                     </div>
                     </div>
                         <div class="mx-auto max-w-8xl px-2 sm:px-6 lg:px-812">
-                             <!-- Mobile menu button-->
+
+
+    <!--NavBar/Mobile-->
                             <div class="relative flex h-16 items-center justify-between">
                                 <div class="absolute inset-y-0 left-0 flex items-center md:hidden">
                                     <div @click.stop="navOpen = !navOpen" class="flex flex-col lg:hidden relative cursor-pointer order-3">
@@ -68,8 +71,8 @@
                             </div>
                                 <div
                                     :class="{'-translate-x-full': !navOpen}"
-                                    class="px-8 md:hidden p-4 h-screen w-screen sm:h-screen sm:w-64 transition-all
-                                    fixed inset-0 mt- sm:mt-32 bg-black/50 backdrop-blur z-5 rounded-lg"
+                                    class="px-8 md:hidden z-50 p-4 h-screen w-screen sm:w-64 transition-all
+                                    fixed inset-0 mt-32 bg-black/50 backdrop-blur z-5 rounded-lg"
                                 >
                                     <div class=" w-full h-screen fixed z-10 top-0 left-0" @click="navOpen = false"></div>
                                     <ul class="z-10 relative font-serif text-3xl" @click.stop="navOpen = false">
@@ -162,7 +165,7 @@ export default {
   data() {
     return {
       navOpen: false,
-      navButtons: ['Home', 'Contact',  'About', 'Donate', 'Sermons', '', 'Directory'],
+      navButtons: ['Home', 'Contact',  'About', 'Donate', 'Sermons', 'Prophecies', 'Directory'],
       contactOpen: false,
       darkMode: false
     };

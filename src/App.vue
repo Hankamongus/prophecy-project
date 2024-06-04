@@ -7,15 +7,17 @@
         <div class="relative z-20">
 
 <!--Navbar--->
-            <nav id="navbar" class="h-32 md:h- w-full left-0 right-0 mt-0 z-30 top-0 mb-5 p-1 text-lg bg-gradient-to-r from-gray-400 via-sky-800 to-gray-400 dark:from-gray-800 dark:via-sky-800 dark:to-gray-800 fixed  transition-transform duration-300 transform">
+            <nav id="navbar" class="h-24 md:h-32 w-full left-0 right-0 mt-0 z-30 top-0 mb-5 p-1 text-lg bg-gradient-to-r from-gray-400 via-sky-800 to-gray-400 dark:from-gray-800 dark:via-sky-800 dark:to-gray-800 fixed  transition-transform duration-300 transform">
 
 
-                <div class="w-full flex items-center justify-between">
-                    <div class="ml-4 mt-2"><img src="https://i.ibb.co/WsXVtCc/screenshot-2024-04-11-at-2-17-19-pm-720.png" class="border-2 border-yellow-600 h-10 sm:w-14 w-10 sm:h-14 rounded-full opacity-0 md:opacity-100"></div>
-                    <div class="flex items-center space-x-4">
-                        <div class="text-center font-bold text-white dark:text-black text-lg sm:text-xl md:text-3xl">Solid Rock Baptist</div>
+                <div class="w-full flex items-center justify-between mt-0">
+                    <div class="ml-4 top-0 mt-0"><img src="https://i.ibb.co/WsXVtCc/screenshot-2024-04-11-at-2-17-19-pm-720.png" class="border-2 border-yellow-600 h-10 sm:w-14 w-10 sm:h-14 rounded-full opacity-0 md:opacity-100 top-0 mt-0"></div>
+                    <div class="flex items-center mt-0">
+                        <div class="content justify center text-center font-bold text-white dark:text-black text-2xl sm:text-2xl md:text-3xl mt-0">Solid Rock Baptist</div>
+                    </div>
+
 <!--Navbar/computer---->
-                        <div>
+                        <!-- <div>
                             <button @click="contactOpen = !contactOpen" class="flex items-center justify-center items-center text-white font-bold py-1 px-1 rounded-full hover:border-sky-900 p-1">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 sm:w-6 sm:h-6 bg-sky-900 rounded-full transition-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path v-if="contactOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
@@ -23,17 +25,17 @@
                                 </svg>
                             </button>
                         </div>
-                    </div>
-                    <div>&nbsp;</div>
+                    </div> -->
+                    <div class="mt-8 md:mt-16">&nbsp;</div>
 
-                    <div :class="{ 'dark': darkMode, 'light': !darkMode }">
+                    <!-- <div :class="{ 'dark': darkMode, 'light': !darkMode }">
                             <button @click="toggleDarkMode" class="hover:border-transparent border-8 bg-transparent font-bold">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="border-0 h-8 w-8 bi bi-sun-fill" viewBox="0 0 16 16">
                                     <path v-if="darkMode" class="text-white hover:text-yellow-500" d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708"/>
                                     <path v-else class="text-black  hover:text-white" d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278M4.858 1.311A7.27 7.27 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.32 7.32 0 0 0 5.205-2.162q-.506.063-1.029.063c-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286"/>
                                  </svg>
                             </button>
-                        </div>
+                        </div> -->
 
 
                     <div id="contact" v-if="contactOpen" class="flex justify-center  h-full w-full">
@@ -56,12 +58,10 @@
                                 </a>
                             </div>
                     </div>
-                    </div>
-                        <div class="mx-auto max-w-8xl px-2 sm:px-6 lg:px-812">
-
-
-    <!--NavBar/Mobile-->
-                            <div class="relative flex h-16 items-center justify-between">
+                </div>
+                         <!--NavBar/Mobile-->
+                         <div class="mx-auto max-w-8xl px-2 sm:px-6 lg:px-812">
+                            <div class="relative flex h-4 items-center justify-between">
                                 <div class="absolute inset-y-0 left-0 flex items-center md:hidden">
                                     <div @click.stop="navOpen = !navOpen" class="flex flex-col lg:hidden relative cursor-pointer order-3">
                                         <div v-if="!navOpen" class="bg-red-800 py-px px-4 my-[4px] transition-transform ease-in delay-100 rounded"></div>

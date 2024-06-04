@@ -2,7 +2,7 @@ vue
 <template>
   <div>
     <div
-      :class="['h-full w-2 fixed left-0 z-20 rounded-lg border-black border-2 top-8', { 'w-full sm:w-64 border-sky-700': isNavOpen }]"
+      :class="['h-full w-2 fixed left-0 z-20 rounded-lg border-black border-2 top-8 bg-gray-800', { 'w-full sm:w-64 border-sky-700': isNavOpen }]"
       @mouseenter="isNavOpen = true"
       @mouseleave="isNavOpen = false"
       @click="isNavOpen = true"
@@ -62,10 +62,7 @@ vue
     </div>
   </div>
 </template>
-```
 
-### Updated Script
-```javascript
 <script>
 export default {
   name: 'nav.vue',
@@ -76,7 +73,7 @@ export default {
   },
   methods: {
     sendEmail() {
-      this.email = '';
+      this.email = '{email}';
       this.message = 'sent';
     }
   }
